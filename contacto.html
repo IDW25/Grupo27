@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>IDW S.A. - Salones para Cumpleaños Infantiles</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Demian Diak" />
+    <meta name="description" content="Pagina de contacto">
+    <link rel="stylesheet" href="estilo.css" type="text/css" />
+    <script>
+        function send() {
+            alert('Mensaje enviado!');
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Contacto</h1>
+    <p>¡Contacte con nosotros!</p>
+    <hr/>
+    
+    <form onsubmit="send(); return false;">
+        <ul>
+            <li>
+              <label for="name">Nombre completo</label>
+              <input type="text" id="name" name="user_name" required />
+            </li>
+            <li>
+              <label for="mail">Correo electrónico</label>
+              <input type="email" id="mail" name="user_mail" required />
+            </li>
+            <li>
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="user_telefono" pattern="[0-9]{10}" placeholder="Ej: 1123456789" required />
+            </li>
+            <li>
+                <label for="asunto">Asunto</label>
+                <input type="text" id="asunto" name="user_asunto" required/>
+            </li>
+            <li>
+              <label for="msg">Mensaje</label>
+              <textarea id="msg" name="user_message" required maxlength="250"></textarea>
+            </li>
+            <li class="button">
+                <button type="submit" >Envíe su mensaje</button>
+              </li>
+          </ul>
+    </form>
+
+</body>
+
+</html>
