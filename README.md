@@ -1,5 +1,5 @@
 Integrantes Grupo 27:
 - Diak Demian
 - Labra Andres
-- Ortiz Micaela
+- Ortiz Micaela Giselle
 - Sanchez Ezequiel Eduardo
