@@ -99,6 +99,11 @@ header {
   .flecha {
     padding-left: 5px;
   }
+
+  .fa-bars {
+    color: white;
+    font-size: 1.8em;
+  }
   
   /*Estilos para hacer la pagina responsive*/
   @media (max-width: 768px) {
