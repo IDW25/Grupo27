@@ -162,3 +162,7 @@ header {
       display: none;
     }
   }
+
+main.main-contacto {
+    padding-top: 120px;
+}
