@@ -87,7 +87,13 @@ header {
   .btn-administracion > a:hover {
     background-color: #9DC5E9;
   }
-  
+
+   /*Estilos del pie de pagina*/
+   .pie-pagina {
+    width: 100%;
+    background-color: linear-gradient(to left, #3AA176, #0072CE);;
+  }
+
   /*Estilos para hacer la pagina responsive*/
   @media (max-width: 768px) {
     nav > ul {
@@ -121,7 +127,8 @@ header {
         display: none;
     }
   }
-  
+
+
   @media (min-width: 769px) and (max-width: 1024px) {
     nav > ul {
       display: none;
@@ -162,3 +169,4 @@ header {
       display: none;
     }
   }
+
