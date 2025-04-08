@@ -91,6 +91,7 @@ header {
    /*Estilos del pie de pagina*/
    .pie-pagina {
     width: 100%;
+    position: fixed;
     background-color: linear-gradient(to left, #3AA176, #0072CE);;
   }
 
