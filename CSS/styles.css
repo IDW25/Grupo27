@@ -1,173 +1,269 @@
 /* Reset estilos del navegador */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 
 /*Estilos del header*/
 header {
-    display: flex;
-    position: fixed;
-    align-items: center;
-    width: 100%;
-    height: 100px;
-    padding: 0 60px;
-    background-color: #514C4C;
-    font-family: "Nunito", sans-serif;
-    font-size: 0.9em;
-  }
-  
-  header > * {
-    flex: 1;
-  }
+  display: flex;
+  position: fixed;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  padding: 0 60px;
+  background-color: #514C4C;
+  font-family: "Nunito", sans-serif;
+  font-size: 0.9em;
+}
 
-  .logo-imagen {
-    width: 200px;
+header > * {
+  flex: 1;
+}
+
+.logo-imagen {
+  width: 200px;
+}
+
+header > nav {
+  display: flex;
+  justify-content: center;
+}
+
+nav > ul {
+  display: flex;
+  position: relative;
+  gap: 20px;
+  list-style-type: none;
+  align-items: center;
+}
+
+.material-symbols-outlined {
+  display: none;
+  cursor: pointer;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+ul > li > a {
+  text-decoration: none;
+  font-size: 1.2em;
+  color: white;
+  padding: 10px 0;
+}
+
+ul > li > a:hover,
+.btn-administracion > li:hover {
+  border-bottom: 3px solid #9DC5E9;
+  color: #9DC5E9;
+}
+
+ul > li > a:active {
+  color: #9DC5E9;
+}
+
+.btn-administracion {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+}
+
+.btn-administracion > a, .admin {
+  background-color: #D9D9D9;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: black;
+}
+
+.admin {
+  display: none;
+}
+
+.btn-administracion > a:hover {
+  background-color: #9DC5E9;
+}
+
+/* Estilos del footer */
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: linear-gradient(to left, #3AA176, #0072CE);
+  color: white;
+  padding: 40px;
+  position: absolute;
+  bottom: 0;
+  font-family: "Nunito", sans-serif;
+}
+
+.pie-pagina {
+  flex: 1;
+  min-width: 250px;
+  margin-right: 20px;
+}
+
+.pie-pagina div h2{
+  font-weight: 800;
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+
+.pie-pagina div h3{
+  font-weight: 800;
+  font-size: 16px;
+  padding: 0;
+  margin-top: 0px;
+}
+
+.pie-pagina h2, .pie-pagina h3 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.pie-pagina p {
+  font-size: 14px;
+}
+
+.pie-pagina ul {
+  list-style: none;
+}
+
+.pie-pagina ul li {
+  display: block; /* Los <li> se apilan verticalmente */
+}
+
+.pie-pagina ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  transition: color 0.3s, transform 0.3s;
+  display: inline-block;
+  padding: 7px;
+  margin-left: 20px;
+}
+
+.icon-social {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.icon-social {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.icon-social:hover,.pie-pagina ul li a:hover {
+  color: #F9BE3C;
+  transition: color 0.3s, transform 0.3s;
+  border: none;
+}
+
+.bt-piepagina {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #ffffff;
+}
+
+.bt-piepagina p {
+  margin-top:10px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/*Estilos para hacer la pagina responsive*/
+@media (max-width: 768px) {
+  nav > ul {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 100px; 
+    right: 0; 
+    width: 200px; 
+    width: 100%; 
+    padding: 10px 0;
+    background-color: #514C4C;
   }
-  
-  header > nav {
+  nav > ul > li {
+    padding: 20px;
+  }
+  .material-symbols-outlined {
+    display: block;
+    position: absolute;
+    right: 60px;
+    top: 38px;
+  }
+  .menu-toggle:checked + label + #enlaces {
     display: flex;
-    justify-content: center;
   }
-  
+  .admin {
+      display: block;
+  }
+  .btn-administracion {
+      display: none;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  nav > ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100px; 
+    right: 0; 
+    width: 100%; 
+    padding: 10px 0;
+    background-color: #514C4C;
+  }
+  nav > ul > li {
+    padding: 20px;
+  }
+  .material-symbols-outlined {
+    display: block;
+    position: absolute;
+    right: 60px;
+    top: 38px;
+  }
+  .menu-toggle:checked + label + #enlaces {
+    display: flex;
+  }
+  .admin {
+      display: block;
+  }
+  .btn-administracion {
+      display: none;
+  }
+}
+
+@media (min-width: 1025px) {
   nav > ul {
     display: flex;
-    position: relative;
-    gap: 20px;
-    list-style-type: none;
-    align-items: center;
+    flex-direction: row;
   }
-  
   .material-symbols-outlined {
     display: none;
-    cursor: pointer;
   }
-  
-  #menu-toggle {
-    display: none;
-  }
-  
-  ul > li > a {
-    text-decoration: none;
-    font-size: 1.2em;
-    color: white;
-    padding: 10px 0;
-  }
-  
-  ul > li > a:hover,
-  .btn-administracion > li:hover {
-    border-bottom: 3px solid #9DC5E9;
-    color: #9DC5E9;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
   }
 
-  ul > li > a:active {
-    color: #9DC5E9;
+  .pie-pagina {
+    margin-bottom: 20px;
+    min-width: 100%;
   }
-
-  .btn-administracion {
-    display: flex;
-    justify-content: flex-end;
-    list-style-type: none;
-  }
-
-  .btn-administracion > a, .admin {
-    background-color: #D9D9D9;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    color: black;
-  }
-
-  .admin {
-    display: none;
-  }
-
-  .btn-administracion > a:hover {
-    background-color: #9DC5E9;
-  }
-
-   /*Estilos del pie de pagina*/
-   .pie-pagina {
-    width: 100%;
-    position: fixed;
-    background-color: linear-gradient(to left, #3AA176, #0072CE);;
-  }
-
-  /*Estilos para hacer la pagina responsive*/
-  @media (max-width: 768px) {
-    nav > ul {
-      display: none;
-      flex-direction: column;
-      gap: 10px;
-      position: absolute;
-      top: 100px; 
-      right: 0; 
-      width: 200px; 
-      width: 100%; 
-      padding: 10px 0;
-      background-color: #514C4C;
-    }
-    nav > ul > li {
-      padding: 20px;
-    }
-    .material-symbols-outlined {
-      display: block;
-      position: absolute;
-      right: 60px;
-      top: 38px;
-    }
-    .menu-toggle:checked + label + #enlaces {
-      display: flex;
-    }
-    .admin {
-        display: block;
-    }
-    .btn-administracion {
-        display: none;
-    }
-  }
-
-
-  @media (min-width: 769px) and (max-width: 1024px) {
-    nav > ul {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 100px; 
-      right: 0; 
-      width: 100%; 
-      padding: 10px 0;
-      background-color: #514C4C;
-    }
-    nav > ul > li {
-      padding: 20px;
-    }
-    .material-symbols-outlined {
-      display: block;
-      position: absolute;
-      right: 60px;
-      top: 38px;
-    }
-    .menu-toggle:checked + label + #enlaces {
-      display: flex;
-    }
-    .admin {
-        display: block;
-    }
-    .btn-administracion {
-        display: none;
-    }
-  }
-  
-  @media (min-width: 1025px) {
-    nav > ul {
-      display: flex;
-      flex-direction: row;
-    }
-    .material-symbols-outlined {
-      display: none;
-    }
-  }
-
+}
