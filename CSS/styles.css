@@ -191,7 +191,7 @@ main.main-contacto {
     bottom: 20px;
     right: 20px;
     z-index: 100;
-    background-color: #25D366; /* verde oficial de WhatsApp */
+    background-color: #25D366;
     color: white;
     width: 45px;
     height: 45px;
@@ -206,4 +206,50 @@ main.main-contacto {
   .btn-whatsapp img.whatsapp-icon {
     width: 25px;
     height: 25px;
+  }
+
+  .faq-background {
+    background-color: #E6F6F7; 
+    width: 100%;                
+    padding: 40px 0;           
+  }
+
+  .faq-container {
+    background-color:white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  }
+  
+  .faq-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  details {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  summary {
+    padding: 10px 15px;
+    cursor: pointer;
+  
+    background-color: #e1efff;
+    list-style: none;
+  }
+  
+  details[open] summary {
+    background-color: #0072CE;
+  }
+  
+  details > div {
+    padding: 10px 15px;
+    background-color: #fff;
+    font-size: 0.95rem;
   }
