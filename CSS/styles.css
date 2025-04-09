@@ -166,3 +166,44 @@ header {
 main.main-contacto {
     padding-top: 120px;
 }
+
+.fab {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: right;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+  }
+  
+  .fab:hover {
+  opacity: 0.7;
+  }
+  
+  .fa-whatsapp {
+  background: #45bbff;
+  color: white;
+  }
+  
+  .btn-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    background-color: #25D366; /* verde oficial de WhatsApp */
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    text-decoration: none;
+  }
+  
+  .btn-whatsapp img.whatsapp-icon {
+    width: 25px;
+    height: 25px;
+  }

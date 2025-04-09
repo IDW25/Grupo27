@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- Enlace a la carpeta de estilos -->
     <link rel="stylesheet" href="CSS/styles.css">
     <script>
@@ -43,21 +44,21 @@
     
     
         <main class="main-contacto">
-            <section class="formulario-container"></section>
                 <h1>Contacto</h1>
                 <p>¡Contacte con nosotros!</p>
                 <hr/>
-                
+
+            <section class="formulario-container">
                 <form onsubmit="send(); return false;">
                     <h2>¿Tenes dudas? Escribinos.</h2>
                     <ul>
                         <li>
-                        <label for="name">Nombre completo</label>
-                        <input type="text" id="name" name="user_name" required />
+                            <label for="name">Nombre completo</label>
+                            <input type="text" id="name" name="user_name" required />
                         </li>
                         <li>
-                        <label for="mail">Correo electrónico</label>
-                        <input type="email" id="mail" name="user_mail" required />
+                            <label for="mail">Correo electrónico</label>
+                            <input type="email" id="mail" name="user_mail" required />
                         </li>
                         <li>
                             <label for="telefono">Teléfono</label>
@@ -68,8 +69,12 @@
                             <input type="text" id="asunto" name="user_asunto" required/>
                         </li>
                         <li>
-                        <label for="msg">Mensaje</label>
-                        <textarea id="msg" name="user_message" required maxlength="250"></textarea>
+                            <label for="msg">Mensaje</label>
+                            <textarea id="msg" name="user_message" required maxlength="250"></textarea>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="cbox1" value="primer_chechbox">
+                            <label for="cbbox1">Acepto las politicas de privacidad y el tratamiento de mis datos personales</label>
                         </li>
                         <li class="button">
                             <button type="submit" >Envíe su mensaje</button>
@@ -82,19 +87,25 @@
                 <h2>Información de contacto</h2>
                 <h3>Ubicación</h3>
                 <p>Calle Falsa 123, CABA, Buenos Aires</p>
-                <h3>Teléfono</h3>
-                <p>+54 11 1234-5678</p>
                 <h3>Email</h3>
                 <p>idw@salones.com</p>
                 <h3>Horario de atención</h3>
                 <p>Lunes a viernes de 9 a 18 horas</p>
                 <p>Sábados de 10 a 14 horas</p>
-                
-                <div class="redes-sociales">
-                  <a href="https://facebook.com" target="_blank">Facebook</a>
-                  <a href="https://instagram.com" target="_blank">Instagram</a>
-                </div>
-              </section>
+            </section>
+
+            <section class="reder-container">
+                <h2>Seguinos!</h2>
+                    <a href="https://facebook.com" target="_blank">Facebook</a>
+                    <a href="https://instagram.com" target="_blank">Instagram</a>
+                    <a href="https://x.com/" target="_blank">Twitter</a>
+                    <a href="https://wa.me/5491132559660"
+                        target="_blank"
+                        class="btn-whatsapp"
+                        aria-label="Comunicate por WhatsApp">
+                        <img src="Assets/Logo-Whatsapp.svg" alt="WhatsApp" class="whatsapp-icon">
+                    </a>         
+                </section>
         </main>
 
         <footer>
@@ -102,10 +113,17 @@
         </footer>
     </div>
 
-    <!-- Agregar caja de informacion-->
     <!-- Agregar desplegable de FAQ-->
-    <!-- Agregar caja de redes-->
+    <!-- hacer el boton de whatsapp como un boton que aparezca siempre-->
     <!-- Agregar mapa-->
+    </a>
 </body>
 
 </html>
+
+<!--
+<div class="redes-sociales">
+                  <a href="https://facebook.com" target="_blank">Facebook</a>
+                  <a href="https://instagram.com" target="_blank">Instagram</a>
+                </div>
+-->
