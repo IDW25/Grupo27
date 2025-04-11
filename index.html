@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IDW S.A. - Salones para Cumpleaños Infantiles</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="/Assets/favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Importación de tipografía Nunito -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Enlace a librería de íconos -->
     <script src="https://kit.fontawesome.com/39373c75b8.js" crossorigin="anonymous"></script>
     <!-- Enlace a la carpeta de estilos -->
     <link rel="stylesheet" href="CSS/styles.css">
 </head>
+
 <body>
     <header>
         <h1>
@@ -18,23 +26,53 @@
             </a>
         </h1>
         <nav>
-          <input type="checkbox" id="menu-toggle" class="menu-toggle">
-          <label for="menu-toggle"><i class="fa-solid fa-bars"></i></label>
-          <ul id="enlaces">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="salones.html">Salones</a></li>
-            <li><a href="servicios.html">Servicios</a></li>
-            <li><a href="presupuesto.html">Presupuesto</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li class="admin-box"><a href="administration.html" class="admin">Administration</a></li>
-          </ul>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle"><i class="fa-solid fa-bars"></i></label>
+            <ul id="enlaces">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="salones.html">Salones</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="presupuesto.html">Presupuesto</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li class="admin-box"><a href="administration.html" class="admin">Administration</a></li>
+            </ul>
         </nav>
         <div class="btn-administracion">
-            <a href="administration.html">Administration<span class="flecha"><i class="fa-solid fa-caret-down"></i></span></a>
+            <a href="administration.html">Administration<span class="flecha"><i
+                        class="fa-solid fa-caret-down"></i></span></a>
         </div>
     </header>
     <main class="content">
+
+        <!-- Sección Hero -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-flex">
+                    <div class="hero-content">
+                        <div>
+                            <img src="/Assets/logo-hero.svg" alt="Incredible Dream Wonderland" class="hero-logo-text">
+                        </div>
+                        <p class="text-hero">
+                            Encontrá todo lo que necesitas para tu cumpleaños infantil.
+                            Te ofrecemos una amplia variedad de salones y servicios
+                            para hacer de este día algo especial.
+                        </p>
+                        <div class="btn-group">
+                            <a href="salones.html" class="btn btn-primary btn-lg">Ver salones</a>
+                            <a href="presupuesto.html" class="btn btn-outline-primary btn-lg">Solicitar presupuesto</a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="hero-image-container">
+                            <img src="/Assets/hero-image.jpg" alt="Niño jugando en un pelotero">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Fin de sección Hero -->
+
     </main>
     <footer>
         <section class="pie-pagina">
@@ -63,10 +101,14 @@
             <p><i class="fa-regular fa-paper-plane"></i> idw@salones.com</p>
 
             <div class="icon-social">
-                <a href="https://facebook.com" target="_blank" class="icon-social"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="https://instagram.com" target="_blank" class="icon-social"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://twitter.com" target="_blank" class="icon-social"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://www.tiktok.com/" target="_blank" class="icon-social"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://facebook.com" target="_blank" class="icon-social"><i
+                        class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://instagram.com" target="_blank" class="icon-social"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://twitter.com" target="_blank" class="icon-social"><i
+                        class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.tiktok.com/" target="_blank" class="icon-social"><i
+                        class="fa-brands fa-tiktok"></i></a>
             </div>
         </section>
 
@@ -75,4 +117,5 @@
         </section>
     </footer>
 </body>
+
 </html>
