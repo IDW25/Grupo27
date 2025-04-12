@@ -276,8 +276,8 @@
      margin-bottom: 50px;
    }
 
-   /* Grid de pasos */
-   .pasos-grid {
+   /* Flex de pasos */
+   .pasos-flex {
      display: flex;
      justify-content: space-between;
      gap: 30px;
@@ -333,7 +333,7 @@
 
    /* Responsive Pasos */
    @media (max-width: 768px) {
-     .pasos-grid {
+     .pasos-flex {
        flex-direction: column;
      }
 
