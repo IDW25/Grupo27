@@ -170,8 +170,8 @@
    /* Estilos para Sección Hero */
    .hero-section {
      background-color: white;
-     padding: 80px 60px;
-     margin-top: 60px;
+     padding: 120px 60px 80px;
+     margin-top: 0;
    }
 
    .hero-content,
@@ -183,8 +183,8 @@
    .hero-flex {
      display: flex;
      flex-wrap: wrap;
-     gap: 2rem;
-     align-items: center;
+     gap: 3rem;
+     align-items: flex-end;
    }
 
    .hero-content {
@@ -197,9 +197,11 @@
 
 
    .text-hero {
-     font-size: 1.25rem;
+     font-size: 1.1rem;
      font-weight: 300;
-     margin-bottom: 1.5rem;
+     margin-bottom: 2rem;
+     padding-right: 1rem;
+     line-height: 1.5;
    }
 
    .hero-logo-text {
@@ -212,7 +214,7 @@
      display: block;
      width: 100%;
      max-height: 400px;
-     border-radius: 10px;
+     border-radius: 15px;
      overflow: hidden;
      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
    }
@@ -223,6 +225,36 @@
      display: block;
      object-fit: cover;
      border-radius: 10px;
+   }
+
+   /* Responsive hero */
+   @media (max-width: 768px){
+    .hero-section{
+      padding: 140px 20px 40px;
+    }
+
+    .hero-flex{
+      flex-direction: column;
+    }
+
+    .hero-content, .hero-image{
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding-right: 0;
+    }
+
+    .hero-content{
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .btn-group{
+      justify-content: center;        
+    }
+
+    .hero-image-container{
+      max-height: 300px;
+    }
    }
 
    /* ¿Cómo funciona? */
@@ -366,7 +398,7 @@
 
    .btn-group {
      display: flex;
-     gap: 0.5rem;
+     gap: 1rem;
      flex-wrap: wrap;
    }
 
