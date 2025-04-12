@@ -73,11 +73,11 @@
    }
 
    /* Textos centrados */
-   .text-center{
-    text-align: center;
-    margin-top: 20px;
+   .text-center {
+     text-align: center;
+     margin-top: 20px;
    }
-   
+
    /*Estilos del header*/
    header {
      display: flex;
@@ -452,6 +452,92 @@
      background-color: var(--warning-color);
    }
 
+   /* Sección servicios destacados */
+   .destacado-servicios {
+     padding: 60px;
+     background-color: #00B2A91A;
+   }
+
+   /* Grid de servicios */
+   .servicios-grid {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     gap: 30px;
+     margin-bottom: 40px;
+   }
+
+   .servicios-card {
+     background-color: var(--light-color);
+     border-radius: 8px;
+     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+     transition: all 0.3s ease;
+     padding: 30px;
+     text-align: center;
+     cursor: pointer;
+
+   }
+
+
+   .servicios-card:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+     ;
+   }
+
+   .servicios-card-body {
+     text-align: center;
+   }
+
+   .servicios-icon {
+     width: 80px;
+     height: 80px;
+     background-color: var(--secondary-color);
+     border-radius: 50%;
+     display: flex;
+     justify-items: center;
+     justify-content: center;
+     align-items: center;
+     margin: 0 auto 20px;
+   }
+
+   .servicios-icon i {
+     font-size: 30px;
+     color: var(--light-color);
+   }
+
+   .servicios-card-body {
+     text-align: center;
+   }
+
+   .servicios-precio{
+    font-weight: bold;
+    padding-top: 10px;    
+   }
+
+   /* Responsive sección servicios */
+   @media (max-width: 1200px) {
+     .servicios-grid {
+       grid-template-columns: repeat(3, 1fr);
+     }
+   }
+
+   @media (max-width: 992px) {
+     .servicios-grid {
+       grid-template-columns: repeat(2, 1fr);
+     }
+   }
+
+   @media (max-width: 576px) {
+     .servicios-grid {
+       grid-template-columns: 1fr;
+     }
+
+     .servicios-card {
+       margin-bottom: 20px;
+     }
+   }
+
+
    /* Estilos para botones */
    .btn {
      display: inline-flex;
@@ -480,13 +566,13 @@
    .btn-primary {
      background-color: var(--primary-color);
      border-color: var(--primary-color);
-     color: white;
+     color: var(--light-color);
    }
 
    .btn-primary:hover {
      border-color: var(--primary-color);
      color: var(--primary-color);
-     background-color: transparent;
+     background-color: var(--light-color);
    }
 
    .btn-outline-primary {
@@ -497,7 +583,7 @@
 
    .btn-outline-primary:hover {
      background-color: var(--primary-color);
-     color: white;
+     color: var(--light-color);
    }
 
 
