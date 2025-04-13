@@ -89,6 +89,7 @@ header {
   background: var(--background-clr);
   font-family: var(--fuente-primaria);
   font-size: var(--fs-desktop);
+  z-index: 1000;
 }
 
 header>* {
@@ -283,7 +284,7 @@ ul>li>a:active {
   margin-bottom: 50px;
 }
 
-/* Flex de pasos */
+/* Flex de pasos / sección misión y visión de Nosotros / Seccion Valores de Nosotros */
 .pasos-flex {
   display: flex;
   justify-content: space-between;
@@ -349,7 +350,7 @@ ul>li>a:active {
   }
 }
 
-/* Sección salones */
+/* Sección salones / sección mision/vision nosotros / Seccion Valores de Nosotros */
 .destacado-salones {
   padding: 60px;
 }
@@ -621,7 +622,7 @@ ul>li>a:active {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 40px 20px;
+  padding: 60px;
   gap: 50px;
   }
   
