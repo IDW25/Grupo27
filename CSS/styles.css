@@ -164,7 +164,7 @@ header {
   }
 
 main.main-contacto {
-    padding-top: 120px;
+  padding-top: 80px;
 }
 
 .fab {
@@ -181,7 +181,248 @@ main.main-contacto {
   opacity: 0.7;
   }
   
+  /* Sección principal */
+  .title-section {
+    color: white;
+    text-align: center;
+  }
+
+  /* Fondo degradado */
+  .title-background {
+    background: linear-gradient(to right, #0072CE, #1FBAB4);
+    padding: 50px 20px;
+  }
+
+  /* Contenedor para limitar ancho */
+  .title-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  /* Título */
+  .title-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+
+  /* Subtítulo / párrafo */
+  .title-container p {
+    font-size: 1.2rem;
+    line-height: 1;
+    margin-bottom: 0px;
+  }
+
+  /* Grilla de pagina de contacto*/
+  .contacto-grid {
+    max-width: 1200px;
+    margin: 0 auto; /* Centra horizontalmente */
+    padding: 40px 20px; 
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+  }
+
+  /* Contenedor formulario*/
+  .formulario-container {
+    max-width: 800px;
+    padding: 2rem;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Titulo formulario*/
+  .formulario-container h2 {
+      margin-bottom: 2rem;
+      color: #333;
+  }
+
+  /* Grilla de formulario*/
+  .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+  }
+
+  /* Da forma a los grupos del formulario por grilla*/
+  .form-group {
+      display: flex;
+      flex-direction: column;
+  }
+
+  /* Da forma a los grupos que ocupan dos grillas*/
+  .form-group.full-width {
+      grid-column: span 2; 
+  }
+
+  /* Etiquetas de cada campo*/
+  label {
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #555;
+  }
+
+  /* Campos de entrada*/
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+  }
+
+  textarea {
+      resize: vertical;
+      min-height: 120px;
+  }
+
+  /* Estilo para cuando se da click en un campo*/
+  input:focus,
+  textarea:focus {
+      outline: none;
+      border-color: #007BFF;
+  }
+
+  /* Boton de enviar*/
+  button[type="submit"] {
+      padding: 0.8rem;
+      font-size: 1rem;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  }
+
+  button[type="submit"]:hover {
+      background-color: #0056b3;
+  }
+
+  /* Estilo de terminos y condiciones*/
+  .checkbox-group {
+    flex-direction: row; /* cambia de columna a fila */
+    align-items: center; /* alinea verticalmente */
+    gap: 0.5rem; /* espacio entre el checkbox y el texto */
+  }
+
+  /* Contenedor Contacto*/
+  .contacto-container {
+      grid-column: 2; /* Segunda columna */
+      grid-row: 1; /* Primera fila */
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 0px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .contacto-container h2 {
+    font-size: 24px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    color: #333; /* Color oscuro para el texto */
+    margin-bottom: 15px; /* Separación inferior */
+  }
+
+  .contacto-container h3 {
+    font-size: 18px; /* Tamaño más pequeño que el h2 */
+    font-weight: semi-bold; /* Semi-negrita */
+    color: #444; /* Color ligeramente más claro */
+    margin-top: 20px; /* Separación superior */
+    margin-bottom: 8px; /* Separación inferior */
+  }
+
+  .contacto-container p {
+    font-size: 16px; /* Tamaño de fuente cómodo para lectura */
+    line-height: 0.5; /* Interlineado para que el texto no se vea apretado */
+    color: #666; /* Color gris para los párrafos */
+    margin-bottom: 10px; /* Espacio debajo de cada párrafo */
+    padding : 2px;
+  }
+
+  /*Contenedor Redes*/
+  .redes-container {
+      grid-column: 2; /* Segunda columna */
+      grid-row: 2; /* Segunda fila */
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 0px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .redes-container h2 {
+    font-size: 24px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    color: #333; /* Color oscuro para el texto */
+    margin-bottom: 15px; /* Separación inferior */
+  }
+
+  .redes-container .social-icon {
+    width: 30px; /* Ajusta el tamaño de las imágenes */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin: 0 10px; /* Espacio entre las imágenes */
+    transition: transform 0.3s ease; /* Efecto suave para el hover */
+  }
+
+  .redes-container .social-icon :hover {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen cuando se pasa el mouse */
+  }
+
+  .redes-container a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+  }
+
+    /* Fondo de caja FAQ*/
+  .faq-background {
+    background-color: #E6F6F7; 
+    width: 100%;                
+    padding: 40px 0;           
+  }
   
+    /* Contenedor FAQ*/
+  .faq-container {
+    background-color:white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  }
+    
+  .faq-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+    
+  details {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+    
+  summary {
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: #e1efff;
+    list-style: none;
+  }
+    
+  details[open] summary {
+    background-color: #0072CE;
+  }
+    
+  details > div {
+    padding: 10px 15px;
+    background-color: #fff;
+    font-size: 0.80rem;
+  }
+
+      
   /* Boton de Whatsapp*/
   .fa-whatsapp {
   background: #45bbff;
@@ -208,93 +449,4 @@ main.main-contacto {
   .btn-whatsapp img.whatsapp-icon {
     width: 25px;
     height: 25px;
-  }
-
-  /* Fondo de caja FAQ*/
-  .faq-background {
-    background-color: #E6F6F7; 
-    width: 100%;                
-    padding: 40px 0;           
-  }
-
-  /* Contenedor FAQ*/
-  .faq-container {
-    background-color:white;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 800px;
-    margin: auto;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  }
-  
-  .faq-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-  
-  details {
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  summary {
-    padding: 10px 15px;
-    cursor: pointer;
-    background-color: #e1efff;
-    list-style: none;
-  }
-  
-  details[open] summary {
-    background-color: #0072CE;
-  }
-  
-  details > div {
-    padding: 10px 15px;
-    background-color: #fff;
-    font-size: 0.80rem;
-  }
-
-  /* Sección principal */
-  .title-section {
-    color: white;
-    text-align: center;
-  }
-
-  /* Fondo degradado */
-  .title-background {
-    background: linear-gradient(to right, #0072CE, #1FBAB4); /* azul a turquesa */
-    padding: 60px 20px;
-  }
-
-  /* Contenedor para limitar ancho */
-  .title-container {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  /* Título */
-  .title-container h1 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    font-weight: bold;
-  }
-
-  /* Subtítulo / párrafo */
-  .title-container p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 10px;
-  }
-
-  /* Línea divisoria */
-  .title-container hr {
-    width: 60px;
-    height: 3px;
-    background-color: white;
-    border: none;
-    margin: 0 auto;
-    margin-top: 10px;
   }

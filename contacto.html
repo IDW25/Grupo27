@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <section class="container">
+    <!--< section class="container"> -->
         <header>
             <h1>
                 <a href="index.html">
@@ -48,70 +48,75 @@
                 <div class="title-background">
                     <div class="title-container">
                         <h1>Contacto</h1>
-                        <p>¡Contacte con nosotros!</p>
-                        
+                        <p>¡Contacte con nosotros!</p>    
                     </div>
                 </div>
             </section>
 
-            <section class="formulario-container">
-                <form onsubmit="send(); return false;">
-                    <h2>¿Tenes dudas? Escribinos.</h2>
-                    <ul>
-                        <li>
-                            <label for="name">Nombre completo</label>
-                            <input type="text" id="name" name="user_name" required />
-                        </li>
-                        <li>
-                            <label for="mail">Correo electrónico</label>
-                            <input type="email" id="mail" name="user_mail" required />
-                        </li>
-                        <li>
-                            <label for="telefono">Teléfono</label>
-                            <input type="tel" id="telefono" name="user_telefono" pattern="[0-9]{10}" placeholder="Ej: 1123456789" required />
-                        </li>
-                        <li>
-                            <label for="asunto">Asunto</label>
-                            <input type="text" id="asunto" name="user_asunto" required/>
-                        </li>
-                        <li>
-                            <label for="msg">Mensaje</label>
-                            <textarea id="msg" name="user_message" required maxlength="250"></textarea>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="cbox1" value="primer_chechbox">
-                            <label for="cbox1">Acepto las politicas de privacidad y el tratamiento de mis datos personales</label>
-                        </li>
-                        <li class="button">
-                            <button type="submit" >Envíe su mensaje</button>
-                        </li>
-                    </ul>
-                </form>
-            </section>
+            <div class="contacto-grid">
+                <section class="formulario-container">
+                    <form onsubmit="send(); return false;">
+                        <h2>¿Tenés dudas? Escribinos.</h2>
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="name">Nombre completo</label>
+                                <input type="text" id="name" name="user_name" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="mail">Correo electrónico</label>
+                                <input type="email" id="mail" name="user_mail" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono">Teléfono</label>
+                                <input type="tel" id="telefono" name="user_telefono" placeholder="Ej: 1123456789" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="asunto">Asunto</label>
+                                <input type="text" id="asunto" name="user_asunto" required />
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="msg">Mensaje</label>
+                                <textarea id="msg" name="user_message" required maxlength="250"></textarea>
+                            </div>
+                            <div class="form-group full-width checkbox-group">
+                                <input type="checkbox" id="cbox1" required />
+                                <label for="cbox1">Acepto las políticas de privacidad y el tratamiento de mis datos personales</label>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit">Envíe su mensaje</button>
+                            </div>
+                        </div>
+                    </form>
+                </section>
 
-            <section class="contacto-container">
-                <h2>Información de contacto</h2>
-                <h3>Ubicación</h3>
-                <p>Calle Falsa 123, CABA, Buenos Aires</p>
-                <h3>Email</h3>
-                <p>idw@salones.com</p>
-                <h3>Horario de atención</h3>
-                <p>Lunes a viernes de 9 a 18 horas</p>
-                <p>Sábados de 10 a 14 horas</p>
-            </section>
+                <section class="contacto-container">
+                    <h2>Información de contacto</h2>
+                    <h3>Ubicación</h3>
+                    <p>Calle Falsa 123, CABA, Buenos Aires</p>
+                    <h3>Email</h3>
+                    <p>idw@salones.com</p>
+                    <h3>Horario de atención</h3>
+                    <p>Lunes a viernes de 9 a 18 horas</p>
+                    <p>Sábados de 10 a 14 horas</p>
+                </section>
 
-            <section class="redes-container">
-                    <h2>Seguinos!</h2>
-                        <a href="https://facebook.com" target="_blank">Facebook</a>
-                        <a href="https://instagram.com" target="_blank">Instagram</a>
-                        <a href="https://x.com/" target="_blank">Twitter</a>
-                        <a href="https://wa.me/5491132559660"
-                            target="_blank"
-                            class="btn-whatsapp"
-                            aria-label="Comunicate por WhatsApp">
-                            <img src="Assets/Logo-Whatsapp.svg" alt="WhatsApp" class="whatsapp-icon">
-                        </a>         
-            </section>
+                <section class="redes-container">
+                        <h2>Seguinos</h2>
+                            <a href="https://facebook.com" target="_blank">
+                                <img src="Assets/Logo-Facebook.svg" alt="Facebook" class="social-icon">
+                            </a>
+                            <a href="https://instagram.com" target="_blank">
+                                <img src="Assets/Logo-Instagram.svg" alt="Instagram" class="social-icon">
+                            </a>
+                            <a href="https://x.com/" target="_blank">
+                                <img src="Assets/Logo-Twitter.svg" alt="Twitter" class="social-icon">
+                            </a>
+                            <a href="https://wa.me/5491132559660" target="_blank" class="btn-whatsapp" aria-label="Comunicate por WhatsApp">
+                                <img src="Assets/Logo-Whatsapp.svg" alt="WhatsApp" class="whatsapp-icon">
+                            </a>         
+                </section>
+            </div>
 
             <section>
                 <div class="faq-background">
@@ -141,6 +146,6 @@
         <footer>
             <!--Footer-->
         </footer>
-    </section>
+    <!-- </section> -->
 </body>
 </html>
