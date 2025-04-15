@@ -50,19 +50,17 @@
             </div>
         </header>
     
-        <main class="main-contacto">
+        <main class="content">
             
-            <section class="title-section">
-                <div class="title-background">
-                    <div class="title-container">
-                        <h1>Contacto</h1>
-                        <p>¡Contacte con nosotros!</p>    
-                    </div>
-                </div>
+            <section> <!--TITULO-->
+                <div class="hero-content-nosotros">
+                    <h1>Contacto</h2>
+                    <p>¡Contacte con nosotros!</p>
+                  </div>
             </section>
 
-            <div class="contacto-grid">
-                <section class="formulario-container">
+            <div class="contacto-grid"> <!--GRILLA PARA EL CUERPO (FORMULARIO - CONTACTO - REDES)-->
+                <section class="formulario-container"> <!--FORMULARIO-->
                     <form onsubmit="send(); return false;">
                         <h2>¿Tenés dudas? Escribinos.</h2>
                         
@@ -91,14 +89,14 @@
                                 <input type="checkbox" id="cbox1" required />
                                 <label for="cbox1">Acepto las políticas de privacidad y el tratamiento de mis datos personales</label>
                             </div>
-                            <div class="btn-group">
+                            <div class="btn-group"> 
                                 <button type="submit">Envíe su mensaje</button>
                             </div>
                         </div>
                     </form>
                 </section>
 
-                <section class="contacto-container">
+                <section class="contacto-container"> <!--CONTACTO-->
                     <h2>Información de contacto</h2>
                     <h3>Ubicación</h3>
                     <p>Calle Falsa 123, CABA, Buenos Aires</p>
@@ -109,7 +107,7 @@
                     <p>Sábados de 10 a 14 horas</p>
                 </section>
 
-                <section class="redes-container">
+                <section class="redes-container"> <!--REDES-->
                         <h2>Seguinos</h2>
                             <a href="https://facebook.com" target="_blank">
                                 <img src="Assets/Logo-Facebook.svg" alt="Facebook" class="social-icon">
@@ -126,7 +124,7 @@
                 </section>
             </div>
 
-            <section>
+            <section> <!--FAQ-->
                 <div class="faq-background">
                     <div class="faq-container">
                         <div class="faq-title">Preguntas frecuentes</div>
@@ -148,6 +146,20 @@
                     </div>
                 </div>
             </section>
+
+            <section class="ubicacion-contacto"> <!--MAPA-->
+                <h2>Nuestra ubicación</h2>
+                <div class="mapa-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.1682715901115!2d-58.02527412498455!3d-31.381923394585048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95ade8161e0ef8c7%3A0x732306b63f61c0e2!2sFacultad%20de%20Ciencias%20de%20la%20Administraci%C3%B3n%20(UNER)!5e0!3m2!1ses-419!2sar!4v1744682739509!5m2!1ses-419!2sar" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+              </section>
             
         </main>
 
@@ -200,3 +212,4 @@
 
 </body>
 </html>
+

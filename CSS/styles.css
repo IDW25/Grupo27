@@ -842,57 +842,11 @@ footer {
 
 }
 
+  /* ESTILOS DE PAGINA CONTACTO*/
+
 main.main-contacto {
   padding-top: 80px;
 }
-
-.fab {
-  padding: 20px;
-  font-size: 30px;
-  width: 30px;
-  text-align: right;
-  text-decoration: none;
-  margin: 5px 2px;
-  border-radius: 50%;
-  }
-  
-  .fab:hover {
-  opacity: 0.7;
-  }
-  
-  /* Sección principal */
-  .title-section {
-    color: white;
-    text-align: center;
-  }
-
-  /* Fondo degradado */
-  .title-background {
-    background: var(--background-clr);
-    padding: 50px 20px;
-  }
-
-  /* Contenedor para limitar ancho */
-  .title-container {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  /* Título */
-  .title-container h1 {
-    font-family: 'Nunito', sans-serif;
-    color: var(--font-clr-principal);
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    font-weight: bold;
-  }
-
-  /* Subtítulo / párrafo */
-  .title-container p {
-    font-size: 1rem;
-    line-height: 1;
-    margin-bottom: 0px;
-  }
 
   /* Grilla de pagina de contacto*/
   .contacto-grid {
@@ -909,7 +863,7 @@ main.main-contacto {
     grid-row: span 2; /* Esto hace que el contenedor se estire en altura */
     max-width: 800px;
     padding: 2rem;
-    background: #f9f9f9;
+    background: var(--light-color);
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
@@ -917,7 +871,6 @@ main.main-contacto {
   /* Titulo formulario*/
   .formulario-container h2 {
       margin-bottom: 2rem;
-      color: #333;
   }
 
   /* Grilla de formulario*/
@@ -942,7 +895,6 @@ main.main-contacto {
   label {
       margin-bottom: 0.5rem;
       font-weight: 600;
-      color: #555;
   }
 
   /* Campos de entrada*/
@@ -966,15 +918,15 @@ main.main-contacto {
   input:focus,
   textarea:focus {
       outline: none;
-      border-color: #007BFF;
+      border-color: var(--info-color);
   }
 
   /* Boton de enviar*/
   button[type="submit"] {
       padding: 0.8rem;
       font-size: 1rem;
-      background-color: #007BFF;
-      color: white;
+      background-color: var(--primary-color);
+      color: var(--light-color);
       border: none;
       border-radius: 6px;
       cursor: pointer;
@@ -982,7 +934,7 @@ main.main-contacto {
   }
 
   button[type="submit"]:hover {
-      background-color: #0056b3;
+      background-color: var(--accent-color);
   }
 
   /* Estilo de terminos y condiciones*/
@@ -996,23 +948,22 @@ main.main-contacto {
   .contacto-container {
       grid-column: 2; /* Segunda columna */
       grid-row: 1; /* Primera fila */
-      background-color: #f9f9f9;
+      background-color: var(--light-color);
       padding: 20px;
       border-radius: 0px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
+  /* TITULOS Y PARRAFOS CONTENEDOR CONTACTO*/
   .contacto-container h2 {
     font-size: 24px; /* Tamaño de fuente */
     font-weight: bold; /* Negrita */
-    color: #333; /* Color oscuro para el texto */
     margin-bottom: 15px; /* Separación inferior */
   }
 
   .contacto-container h3 {
     font-size: 18px; /* Tamaño más pequeño que el h2 */
     font-weight: semi-bold; /* Semi-negrita */
-    color: #444; /* Color ligeramente más claro */
     margin-top: 20px; /* Separación superior */
     margin-bottom: 8px; /* Separación inferior */
   }
@@ -1020,7 +971,7 @@ main.main-contacto {
   .contacto-container p {
     font-size: 16px; /* Tamaño de fuente cómodo para lectura */
     line-height: 0.5; /* Interlineado para que el texto no se vea apretado */
-    color: #666; /* Color gris para los párrafos */
+    color: var(--medium-dark);
     margin-bottom: 10px; /* Espacio debajo de cada párrafo */
     padding : 2px;
   }
@@ -1029,7 +980,7 @@ main.main-contacto {
   .redes-container {
       grid-column: 2; /* Segunda columna */
       grid-row: 2; /* Segunda fila */
-      background-color: #f9f9f9;
+      background-color: var(--light-color);
       padding: 20px;
       border-radius: 0px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -1038,7 +989,6 @@ main.main-contacto {
   .redes-container h2 {
     font-size: 24px; /* Tamaño de fuente */
     font-weight: bold; /* Negrita */
-    color: #333; /* Color oscuro para el texto */
     margin-bottom: 15px; /* Separación inferior */
   }
 
@@ -1059,14 +1009,14 @@ main.main-contacto {
 
     /* Fondo de caja FAQ*/
   .faq-background {
-    background-color: #E6F6F7; 
+    background-color: #00B2A91A; 
     width: 100%;                
     padding: 40px 0;           
   }
   
     /* Contenedor FAQ*/
   .faq-container {
-    background-color:white;
+    background-color:var(--light-color);
     padding: 20px;
     border-radius: 10px;
     max-width: 800px;
@@ -1074,6 +1024,7 @@ main.main-contacto {
     box-shadow: 0 4px 8px rgba(0,0,0,0.05);
   }
     
+    /*TITULO CONTENEDOR FAQ*/
   .faq-title {
     font-size: 1.5rem;
     font-weight: bold;
@@ -1081,43 +1032,42 @@ main.main-contacto {
     text-align: center;
   }
     
+  /*BORDE CAJAS DE PREGUNTAS EXTERIOR*/
   details {
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--light-medium);
     border-radius: 5px;
   }
     
+  /*CAJA DE PREGUNTAS EXTERIOR*/
   summary {
     padding: 10px 15px;
     cursor: pointer;
-    background-color: #e1efff;
+    background-color: #00B2A91A;
     list-style: none;
   }
     
+  /*CAJA DE PREGUNTAS EXTERIOR ABIERTA*/
   details[open] summary {
-    background-color: #0072CE;
+    background-color: var(--info-color);
+    color: var(--light-color);
   }
     
+  /*CAJA DE PREGUNTAS INTERIOR*/
   details > div {
     padding: 10px 15px;
-    background-color: #fff;
-    font-size: 0.80rem;
-  }
-
-      
-  /* Boton de Whatsapp*/
-  .fa-whatsapp {
-  background: #45bbff;
-  color: white;
+    background-color: var(--light-color);
+    font-size: 0.9rem;
   }
   
+  /*BOTON FLOTANTE WHATSAPP*/
   .btn-whatsapp {
     position: fixed;
     bottom: 20px;
     right: 20px;
     z-index: 100;
     background-color: #25D366;
-    color: white;
+    color: var(--light-color);
     width: 45px;
     height: 45px;
     border-radius: 50%;
@@ -1128,8 +1078,32 @@ main.main-contacto {
     text-decoration: none;
   }
   
+  /*ESTILO IMAGEN WHATSAPP*/
   .btn-whatsapp img.whatsapp-icon {
     width: 25px;
     height: 25px;
-    } 
+  } 
   
+  /*MARGEN DE CONTENEDOR DE MAPA*/
+  .ubicacion-contacto {
+    margin: 20px 0;
+  }
+  
+  .mapa-container {
+    border-radius: 10px;
+    padding: 5px;
+    max-width: 1150px;
+    margin: 0 auto;
+  }
+
+  /*BORDE DE MAPA*/
+  .mapa-container iframe {
+    border-radius: 15px;
+  }
+    
+  section h2 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    }
+
