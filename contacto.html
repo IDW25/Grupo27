@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDW S.A. - Salones para Cumpleaños Infantiles</title>
+    <!-- Favicon -->
+    <link rel="icon" href="/Assets/favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Importación de tipografía Nunito -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Enlace a librería de íconos -->
+    <script src="https://kit.fontawesome.com/39373c75b8.js" crossorigin="anonymous"></script>
+    <!-- Enlace a la carpeta de estilos -->
+    <link rel="stylesheet" href="CSS/styles.css">
+    <script>
+        function send() {
+            alert('Mensaje enviado!');
+        }
+    </script>
+</head>
+
+<body>
+        <!--Header-->
+        <header>
+            <h1>
+                <a href="index.html">
+                    <img class="logo-imagen" src="Assets/Logo-White1.png" alt="logo">
+                </a>
+            </h1>
+            <nav>
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle"><i class="fa-solid fa-bars"></i></label>
+                <ul id="enlaces">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="salones.html">Salones</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="presupuesto.html">Presupuesto</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li class="admin-box"><a href="administration.html" class="admin">Administration</a></li>
+                </ul>
+            </nav>
+            <div class="btn-administracion">
+                <a href="administration.html">Administration<span class="flecha"><i
+                            class="fa-solid fa-caret-down"></i></span></a>
+            </div>
+        </header>
+    
+        <main class="content">
+            
+            <section> <!--TITULO-->
+                <div class="hero-content-nosotros">
+                    <h1>Contacto</h2>
+                    <p>¡Contacte con nosotros!</p>
+                  </div>
+            </section>
+
+            <div class="contacto-grid"> <!--GRILLA PARA EL CUERPO (FORMULARIO - CONTACTO - REDES)-->
+                <section class="formulario-container"> <!--FORMULARIO-->
+                    <form onsubmit="send(); return false;">
+                        <h2>¿Tenés dudas? Escribinos.</h2>
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="name">Nombre completo</label>
+                                <input type="text" id="name" name="user_name" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="mail">Correo electrónico</label>
+                                <input type="email" id="mail" name="user_mail" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono">Teléfono</label>
+                                <input type="tel" id="telefono" name="user_telefono" placeholder="Ej: 1123456789" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="asunto">Asunto</label>
+                                <input type="text" id="asunto" name="user_asunto" required />
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="msg">Mensaje</label>
+                                <textarea id="msg" name="user_message" required maxlength="250"></textarea>
+                            </div>
+                            <div class="form-group full-width checkbox-group">
+                                <input type="checkbox" id="cbox1" required />
+                                <label for="cbox1">Acepto las políticas de privacidad y el tratamiento de mis datos personales</label>
+                            </div>
+                            <div class="btn-group"> 
+                                <button type="submit">Envíe su mensaje</button>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+
+                <section class="contacto-container"> <!--CONTACTO-->
+                    <h2>Información de contacto</h2>
+                    <h3>Ubicación</h3>
+                    <p>Calle Falsa 123, CABA, Buenos Aires</p>
+                    <h3>Email</h3>
+                    <p>idw@salones.com</p>
+                    <h3>Horario de atención</h3>
+                    <p>Lunes a viernes de 9 a 18 horas</p>
+                    <p>Sábados de 10 a 14 horas</p>
+                </section>
+
+                <section class="redes-container"> <!--REDES-->
+                        <h2>Seguinos</h2>
+                            <a href="https://facebook.com" target="_blank">
+                                <img src="Assets/Logo-Facebook.svg" alt="Facebook" class="social-icon">
+                            </a>
+                            <a href="https://instagram.com" target="_blank">
+                                <img src="Assets/Logo-Instagram.svg" alt="Instagram" class="social-icon">
+                            </a>
+                            <a href="https://x.com/" target="_blank">
+                                <img src="Assets/Logo-Twitter.svg" alt="Twitter" class="social-icon">
+                            </a>
+                            <a href="https://wa.me/5491132559660" target="_blank" class="btn-whatsapp" aria-label="Comunicate por WhatsApp">
+                                <img src="Assets/Logo-Whatsapp.svg" alt="WhatsApp" class="whatsapp-icon">
+                            </a>         
+                </section>
+            </div>
+
+            <section> <!--FAQ-->
+                <div class="faq-background">
+                    <div class="faq-container">
+                        <div class="faq-title">Preguntas frecuentes</div>
+                    
+                        <details>
+                        <summary>¿Con cuánta anticipación debo reservar un salón?</summary>
+                        <div>Recomendamos reservar al menos con 1 mes de anticipación para asegurar disponibilidad.</div>
+                        </details>
+                    
+                        <details>
+                        <summary>¿Qué incluye el precio del salón?</summary>
+                        <div>El precio incluye el uso del espacio, mobiliario básico, y limpieza general.</div>
+                        </details>
+                    
+                        <details>
+                        <summary>Pregunta frecuente</summary>
+                        <div></div>
+                        </details>
+                    </div>
+                </div>
+            </section>
+
+            <section class="ubicacion-contacto"> <!--MAPA-->
+                <h2>Nuestra ubicación</h2>
+                <div class="mapa-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.1682715901115!2d-58.02527412498455!3d-31.381923394585048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95ade8161e0ef8c7%3A0x732306b63f61c0e2!2sFacultad%20de%20Ciencias%20de%20la%20Administraci%C3%B3n%20(UNER)!5e0!3m2!1ses-419!2sar!4v1744682739509!5m2!1ses-419!2sar" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+              </section>
+            
+        </main>
+
+        <footer>
+    
+            <section class="pie-pagina">
+                <div>
+                    <h2>IDW S.A</h2>
+                    <h3>Incredible Dream Wonderland</h3>
+                    <p>Encontrá todo lo que necesitas para tu cumpleaños infantil</p>
+                </div>
+            </section>
+
+            <!-- Menú footer-->
+            <section class="pie-pagina">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="sobrenosotros.html">Nosotros</a></li>
+                    <li><a href="salones.html">Salones</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </section>
+
+            <!-- Contactos footer y redes sociales-->
+            <section class="pie-pagina">
+                <h3>Contacto</h3>
+                <p><i class="fa-regular fa-map"></i> Calle Falsa 123</p>
+                <p><i class="fa-regular fa-flag"></i> Ciudad de Buenos Aires</p>
+                <p><i class="fa-solid fa-phone"></i> +54 11 123 456</p>
+                <p><i class="fa-regular fa-paper-plane"></i> idw@salones.com</p>
+
+                <div class="icon-social">
+                    <a href="https://facebook.com" target="_blank" class="icon-social"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://instagram.com" target="_blank" class="icon-social"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://twitter.com" target="_blank" class="icon-social"><i
+                            class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.tiktok.com/" target="_blank" class="icon-social"><i
+                            class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </section>
+
+            <!-- Copyrigth-->
+            <section class="bt-piepagina">
+                <p><i class="fa-regular fa-copyright"></i> IDW S.A. 2025 | Todos los derechos reservados</p>
+            </section>
+        </footer>
+
+</body>
+</html>
+
