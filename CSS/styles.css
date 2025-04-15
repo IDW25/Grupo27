@@ -670,27 +670,22 @@ footer {
 }
 
 .pie-pagina div h2 {
+  text-align: left;
   font-weight: 800;
-  font-size: 16px;
   margin-bottom: 0px;
 }
 
 .pie-pagina div h3 {
   font-weight: 800;
-  font-size: 16px;
   padding: 0;
   margin-top: 0px;
 }
 
 .pie-pagina h2,
 .pie-pagina h3 {
-  font-size: 14px;
   margin-bottom: 10px;
 }
 
-.pie-pagina p {
-  font-size: 14px;
-}
 
 .pie-pagina ul {
   list-style: none;
@@ -698,7 +693,6 @@ footer {
 
 .pie-pagina ul li {
   display: block;
-  /* Los <li> se apilan verticalmente */
 }
 
 .pie-pagina ul li a {
@@ -724,11 +718,15 @@ footer {
   margin-right: 20px;
 }
 
-.icon-social:hover,
-.pie-pagina ul li a:hover {
+.icon-social:hover {
   color: #F9BE3C;
   transition: color 0.3s, transform 0.3s;
   border: none;
+}
+
+.pie-pagina ul li a:hover{
+  border-bottom: 3px solid var(--hover-clr);
+  color: var(--hover-clr);
 }
 
 .bt-piepagina {
@@ -741,7 +739,6 @@ footer {
 
 .bt-piepagina p {
   margin-top: 10px;
-  font-size: 14px;
   font-weight: 400;
 }
 
@@ -893,7 +890,6 @@ main.main-contacto {
 
   /* Etiquetas de cada campo*/
   label {
-      margin-bottom: 0.5rem;
       font-weight: 600;
   }
 
@@ -919,22 +915,6 @@ main.main-contacto {
   textarea:focus {
       outline: none;
       border-color: var(--info-color);
-  }
-
-  /* Boton de enviar*/
-  button[type="submit"] {
-      padding: 0.8rem;
-      font-size: 1rem;
-      background-color: var(--primary-color);
-      color: var(--light-color);
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-  }
-
-  button[type="submit"]:hover {
-      background-color: var(--accent-color);
   }
 
   /* Estilo de terminos y condiciones*/
