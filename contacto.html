@@ -41,12 +41,12 @@
                     <li><a href="salones.html">Salones</a></li>
                     <li><a href="servicios.html">Servicios</a></li>
                     <li><a href="presupuesto.html">Presupuesto</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                    <li class="admin-box"><a href="administration.html" class="admin">Administration</a></li>
+                    <li><a href="contacto.html" class="active">Contacto</a></li>
+                    <li class="admin-box"><a href="administration.html" class="admin">Administración</a></li>
                 </ul>
             </nav>
             <div class="btn-administracion">
-                <a href="administration.html">Administration<span class="flecha"><i
+                <a href="administration.html">Administración<span class="flecha"><i
                             class="fa-solid fa-caret-down"></i></span></a>
             </div>
         </header>
@@ -67,12 +67,12 @@
                         
                         <div class="form-grid">
                             <div class="form-group">
-                                <label for="name">Nombre completo</label>
-                                <input type="text" id="name" name="user_name" required />
+                                <label for="name">Nombre y apellido</label>
+                                <input type="text" id="name" name="user_name" placeholder="Nombre y apellido" required />
                             </div>
                             <div class="form-group">
                                 <label for="mail">Correo electrónico</label>
-                                <input type="email" id="mail" name="user_mail" required />
+                                <input type="email" id="mail" name="user_mail" placeholder="tuemail@gmail.com" required />
                             </div>
                             <div class="form-group">
                                 <label for="telefono">Teléfono</label>
@@ -90,8 +90,8 @@
                                 <input type="checkbox" id="cbox1" required />
                                 <label for="cbox1">Acepto las políticas de privacidad y el tratamiento de mis datos personales</label>
                             </div>
-                            <div class="btn-group"> 
-                                <button class="btn btn-primary btn-lg" type="submit">Envíe su mensaje</button>
+                            <div class="form-group full-width"> 
+                                <button class="btn btn-primary btn-full" type="submit">Envíe su mensaje</button>
                             </div>
                         </div>
                     </form>
@@ -149,7 +149,7 @@
             </section>
 
             <section class="ubicacion-contacto"> <!--MAPA-->
-                <h2>Nuestra ubicación</h2>
+                <h2 class="titulo-seccion">Nuestra ubicación</h2>
                 <div class="mapa-container">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.1682715901115!2d-58.02527412498455!3d-31.381923394585048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95ade8161e0ef8c7%3A0x732306b63f61c0e2!2sFacultad%20de%20Ciencias%20de%20la%20Administraci%C3%B3n%20(UNER)!5e0!3m2!1ses-419!2sar!4v1744682739509!5m2!1ses-419!2sar" 
                     width="100%" 
