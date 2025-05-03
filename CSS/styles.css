@@ -653,6 +653,19 @@ nav a.active {
   text-align: justify;
   }
 
+/* Estilos de Pagina Servicios */  
+.grid-serviciosadc{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 1200px) {
+  .grid-serviciosadc{
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /* Estilos del footer */
 footer {
