@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <!-- Header-->
+    <!-- Nav bar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
             <a class="navbar-brand" href="index.html">
@@ -66,9 +66,279 @@
             </div>
         </div>
     </nav>
-    <!--Fin de Header-->
+    <!--Fin de Nav bar-->
     <main class="content">
 
+        
+    <!-- Comienzo Sección salones -->
+         <!-- Header de la página -->
+    <section class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="fw-bolder">Nuestros Salones</h1>
+            <p class="lead">Encontrá el lugar perfecto para celebrar el cumpleaños de tus hijos</p>
+        </div>
+    </section>
+
+    <!-- Filtros -->
+    <section class="py-4">
+        <div class="container">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <h5 class="card-title mb-3">Filtrar salones</h5>
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" placeholder="Buscar por nombre...">
+                            </div>
+                            <div class="col-md-3">
+                                <select class="form-select">
+                                    <option value="">Estado</option>
+                                    <option value="available">Disponible</option>
+                                    <option value="reserved">Reservado</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <select class="form-select">
+                                    <option value="">Ordenar por</option>
+                                    <option value="price_asc">Precio: Menor a Mayor</option>
+                                    <option value="price_desc">Precio: Mayor a Menor</option>
+                                    <option value="name_asc">Nombre: A-Z</option>
+                                    <option value="name_desc">Nombre: Z-A</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <button type="submit" class="btn btn-primary w-100">Filtrar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fin de filtros -->
+
+    <!-- Sección salones -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Salón 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm venue-card">
+                        <div class="venue-image-container">
+                            <img src="Assets/salonA.png" class="card-img-top" alt="Mundo Inflable">
+                            <span class="badge bg-success venue-status">Disponible</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Mundo Inflable</h5>
+                            <p class="card-text">Un salón lleno de inflables para todas las edad. Ideal para hermosas aventuras.</p>
+                            <p class="venue-address"><i class="fas fa-map-marker-alt me-2"></i>Av. Rivadavia 8423, Flores, CABA</p>
+                            <p class="venue-price"><i class="fas fa-tag me-2"></i>$150,000</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            <div class="d-grid">
+                                <a href="#" class="btn btn-outline-primary">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Salón 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm venue-card">
+                        <div class="venue-image-container">
+                            <img src="Assets/salonB.png" class="card-img-top" alt="Mundo Elástico">
+                            <span class="badge bg-success venue-status">No disponible</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Mundo Elástico</h5>
+                            <p class="card-text">Un salón con camas elásticas originales. Sin límite de edad.</p>
+                            <p class="venue-address"><i class="fas fa-map-marker-alt me-2"></i> Av. Córdoba 3150, Palermo, CABA</p>
+                            <p class="venue-price"><i class="fas fa-tag me-2"></i>$300,000</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            <div class="d-grid">
+                                <a href="#" class="btn btn-outline-primary">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Salón 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm venue-card">
+                        <div class="venue-image-container">
+                            <img src="Assets/salonC.png" class="card-img-top" alt="Mundo Acuático">
+                            <span class="badge bg-danger venue-status">Reservado</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Mundo Acuático</h5>
+                            <p class="card-text">Salón temático con piscina y juegos acuáticos, ideal para cumpleaños en verano.</p>
+                            <p class="venue-address"><i class="fas fa-map-marker-alt me-2"></i> Don Pedro 2100, La Boca, CABA</p>
+                            <p class="venue-price"><i class="fas fa-tag me-2"></i>$350,000</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            <div class="d-grid">
+                                <a href="#" class="btn btn-outline-primary">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Salón 4 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm venue-card">
+                        <div class="venue-image-container">
+                            <img src="Assets/salonD.jpg" class="card-img-top" alt="Fiesta Feliz">
+                            <span class="badge bg-success venue-status">Disponible</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Fiesta Feliz</h5>
+                            <p class="card-text">Salón amplio y luminoso con decoración versátil adaptable a cualquier temática.</p>
+                            <p class="venue-address"><i class="fas fa-map-marker-alt me-2"></i>Av. Salto Uruguayo 456, Belgrano.</p>
+                            <p class="venue-price"><i class="fas fa-tag me-2"></i>$220,000</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            <div class="d-grid">
+                                <a href="#" class="btn btn-outline-primary">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Salón 5 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm venue-card">
+                        <div class="venue-image-container">
+                            <img src="Assets/salonE.jpg" class="card-img-top" alt="Mundo playa">
+                            <span class="badge bg-success venue-status">Disponible</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Mundo Playa</h5>
+                            <p class="card-text">Salón con piscina y juegos acuáticos, ideal para fiestas en verano.</p>
+                            <p class="venue-address"><i class="fas fa-map-marker-alt me-2"></i>Av. Constitución 789, Nuñez.</p>
+                            <p class="venue-price"><i class="fas fa-tag me-2"></i>$350,000</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            <div class="d-grid">
+                                <a href="#" class="btn btn-outline-primary">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Salón 6 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm venue-card">
+                        <div class="venue-image-container">
+                            <img src="Assets/salonF.jpg" class="card-img-top" alt="Bosque Encantado">
+                            <span class="badge bg-success venue-status">Disponible</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Bosque Encantado</h5>
+                            <p class="card-text">Salón con ambientación de bosque y hadas, perfecto para fiestas de fantasía.</p>
+                            <p class="venue-address"><i class="fas fa-map-marker-alt me-2"></i>Calle Mitre 234, Concordia</p>
+                            <p class="venue-price"><i class="fas fa-tag me-2"></i>$270,000</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            <div class="d-grid">
+                                <a href="#" class="btn btn-outline-primary">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Salón 7 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm venue-card">
+                        <div class="venue-image-container">
+                            <img src="Assets/salonG.jpg" class="card-img-top" alt="Espacio Deportivo">
+                            <span class="badge bg-danger venue-status">Reservado</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Espacio Deportivo</h5>
+                            <p class="card-text">Salón con canchas deportivas y juegos de competencia para niños activos.</p>
+                            <p class="venue-address"><i class="fas fa-map-marker-alt me-2"></i>Av. Maipú 567, CABA.</p>
+                            <p class="venue-price"><i class="fas fa-tag me-2"></i>$260,000</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            <div class="d-grid">
+                                <a href="#" class="btn btn-outline-primary">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Salón 8 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm venue-card">
+                        <div class="venue-image-container">
+                            <img src="Assets/salonH.jpg" class="card-img-top" alt="Mundo Científico">
+                            <span class="badge bg-success venue-status">Disponible</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Mundo Científico</h5>
+                            <p class="card-text">Salón con temática de ciencia y experimentos, ideal para niños curiosos.</p>
+                            <p class="venue-address"><i class="fas fa-map-marker-alt me-2"></i>Calle Sarmiento 890, Tigre.</p>
+                            <p class="venue-price"><i class="fas fa-tag me-2"></i>$290,000</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            <div class="d-grid">
+                                <a href="#" class="btn btn-outline-primary">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Salón 9 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm venue-card">
+                        <div class="venue-image-container">
+                            <img src="Assets/salonI.jpg" class="card-img-top" alt="Granja Feliz">
+                            <span class="badge bg-success venue-status">Disponible</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Granja Feliz</h5>
+                            <p class="card-text">Salón con temática de granja y animales, con espacios al aire libre.</p>
+                            <p class="venue-address"><i class="fas fa-map-marker-alt me-2"></i>Ruta 14 Km 5, Tigre</p>
+                            <p class="venue-price"><i class="fas fa-tag me-2"></i>$320,000</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            <div class="d-grid">
+                                <a href="#" class="btn btn-outline-primary">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pagination -->
+           <!-- <nav aria-label="Page navigation" class="mt-5">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Siguiente</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>-->
+        <!-- Fin pagination-->
+    </section>
+    <!-- Fin sección salones-->
+
+    <!-- Call to Action -->
+    <section class="py-5 bg-primary text-white text-center">
+        <div class="container">
+            <h3 class="mb-4">¿Encontraste el salón perfecto?</h3>
+            <p class="lead mb-4">Creá tu presupuesto ahora y reservá la fecha para el cumpleaños de tus sueños.</p>
+            <a href="#" class="btn btn-primary btn-lg">Crear Presupuesto</a>
+        </div>
+    </section>
+    <!-- Fin Call to Action -->
 
 
 

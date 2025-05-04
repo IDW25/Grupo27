@@ -51,6 +51,7 @@
   --bs-primary-rgb: 0, 114, 206;  
   --bs-secondary-rgb: 0, 178, 169; 
   
+  
 }
 
 /* Estilos generales */
@@ -80,9 +81,14 @@ body {
 }
 
 /* Textos centrados */
-.text-center {
+/*.text-center {
   text-align: center;
   margin-top: 20px;
+}*/
+
+/* Personalización de fondo primario */
+.bg-primary{
+  background: var(--background-clr) !important;
 }
 
 /*Estilos del header*/
@@ -145,6 +151,8 @@ body {
     border-radius: 5px;
   }
 }
+
+/* Estilos para página salones - sección salones */
 
 
 
@@ -556,7 +564,6 @@ body {
   background-color: var(--primary-color);
   color: var(--light-color);
 }
-
 
 .btn-full {
   display: block;
