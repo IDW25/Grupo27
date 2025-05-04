@@ -14,42 +14,60 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Enlace a librería de íconos -->
     <script src="https://kit.fontawesome.com/39373c75b8.js" crossorigin="anonymous"></script>
-    <!-- Enlace a la carpeta de estilos -->
-    <link rel="stylesheet" href="CSS/styles.css">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <!-- Enlace a la carpeta de estilos -->
+    <link rel="stylesheet" href="CSS/styles.css">
 </head>
 
 <body>
-    <!--Header-->
-    <header>
-        <h1>
-            <a href="index.html">
-                <img class="logo-imagen" src="Assets/Logo-White1.png" alt="logo">
+    <!-- Header-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="Assets/Logo-White1.png" alt="IDW S.A. Logo" height="40" class="d-inline-block align-text-top">
             </a>
-        </h1>
-        <nav>
-            <input type="checkbox" id="menu-toggle" class="menu-toggle">
-            <label for="menu-toggle"><i class="fa-solid fa-bars"></i></label>
-            <ul id="enlaces">
-                <li><a href="index.html" class="active">Inicio</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="salones.html">Salones</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="presupuesto.html">Presupuesto</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li class="admin-box"><a href="administration.html" class="admin">Administración</a></li>
-            </ul>
-        </nav>
-        <div class="btn-administracion">
-            <a href="administration.html">Administración<span class="flecha"><i
-                        class="fa-solid fa-caret-down"></i></span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="salones.html">Salones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="servicios.html">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="presupuesto.html">Crear Presupuesto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user-cog me-1"></i>Administración
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="admin/salones.html">Gestionar Salones</a></li>
+                            <li><a class="dropdown-item" href="admin/servicios.html">Gestionar Servicios</a></li>
+                            <li><a class="dropdown-item" href="admin/presupuesto.html">Ver Presupuestos</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </header>
+    </nav>
     <!--Fin de Header-->
     <main class="content">
-
-
 
 
 
