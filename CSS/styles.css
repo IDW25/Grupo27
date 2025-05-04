@@ -632,18 +632,19 @@ body {
   }
 
 /* Estilos de Pagina Servicios */  
-.grid-serviciosadc{
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 1rem;
+
+.card-serviciosadc {
+  background-color: var(--light-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-color: transparent;
 }
 
-@media (max-width: 1200px) {
-  .grid-serviciosadc{
-    grid-template-columns: 1fr;
-  }
+.serviciosadc {
+  background: var(--background-clr);
 }
-
 
 /* Estilos del footer */
 footer {
