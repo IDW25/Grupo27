@@ -35,10 +35,10 @@
   /* Blanco al 100% */
 
   /* Estados */
-  --success-color: #00965E;
+  /*--success-color: #00965E;
   --danger-color: #D62828;
   --warning-color: #FFC107;
-  --info-color: #0072CE;
+  --info-color: #0072CE;*/
 
   /*Tamaños*/
   --fs-desktop: 0.9em;
@@ -109,6 +109,17 @@ body {
   border-bottom: 3px solid var(--hover-clr);
   color: var(--hover-clr) !important;
 }
+
+.footer-nav .nav-link {
+  display: inline-block;
+}
+
+.footer-nav .nav-link:hover {
+  border-bottom: 3px solid var(--hover-clr);
+  color: var(--hover-clr) !important;
+}
+
+
 
 .navbar-nav .nav-link.active{
   color: var(--hover-clr) !important; 
