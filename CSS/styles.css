@@ -653,6 +653,20 @@ nav a.active {
   text-align: justify;
   }
 
+/* Estilos de Pagina Servicios */  
+
+.card-serviciosadc {
+  background-color: var(--light-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-color: transparent;
+}
+
+.serviciosadc {
+  background: var(--background-clr);
+}
 
 /* Estilos del footer */
 footer {
