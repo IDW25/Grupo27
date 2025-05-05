@@ -659,95 +659,8 @@ body {
 
 /* Estilos del footer */
 footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   background: var(--background-clr);
-  color: white;
-  padding: 40px;
-  font-family: var(--fuente-primaria);
-  width: 100%;
 }
-
-.pie-pagina {
-  flex: 1;
-  min-width: 250px;
-  margin-right: 20px;
-}
-
-.pie-pagina div h2 {
-  text-align: left;
-  font-weight: 800;
-  margin-bottom: 0px;
-}
-
-.pie-pagina div h3 {
-  font-weight: 800;
-  padding: 0;
-  margin-top: 0px;
-}
-
-.pie-pagina h2,
-.pie-pagina h3 {
-  margin-bottom: 10px;
-}
-
-
-.pie-pagina ul {
-  list-style: none;
-}
-
-.pie-pagina ul li {
-  display: block;
-}
-
-.pie-pagina ul li a {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 14px;
-  transition: color 0.3s, transform 0.3s;
-  display: inline-block;
-  padding: 7px;
-  margin-left: 20px;
-}
-
-.icon-social {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.icon-social {
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-  margin-right: 20px;
-}
-
-.icon-social:hover {
-  color: #F9BE3C;
-  transition: color 0.3s, transform 0.3s;
-  border: none;
-}
-
-.pie-pagina ul li a:hover{
-  border-bottom: 3px solid var(--hover-clr);
-  color: var(--hover-clr);
-}
-
-.bt-piepagina {
-  width: 100%;
-  text-align: center;
-  margin-top: 20px;
-  padding-top: 10px;
-  border-top: 1px solid #ffffff;
-}
-
-.bt-piepagina p {
-  margin-top: 10px;
-  font-weight: 400;
-}
-
 
 /*Estilos para hacer la pagina responsive*/
 @media (max-width: 768px) {
@@ -829,20 +742,6 @@ footer {
   .btn-administracion {
     display: none;
   }
-}
-
-@media screen and (max-width: 768px) {
-  footer {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-
-  .pie-pagina {
-    margin-bottom: 20px;
-    min-width: 100%;
-  }
-
 }
 
   /* ESTILOS DE PAGINA CONTACTO*/
