@@ -1104,7 +1104,18 @@ main.main-contacto {
     margin-bottom: 20px;
     }
 
-
-   
+    /*ESTILOS PRESUPUESTO*/
+    .container-form { /*CONTENEDOR FORMULARIO Y RESUMEN*/
+      margin-left: 5rem;
+      margin-right: 5rem;
+      margin-top: 2rem;
+      margin-bottom: 5rem;
+    }
     
-
+    
+    .form-section { /*ESTILOS DE CONTENEDOR DE FORMULARIO Y RESUMEN*/
+      padding: 1.5rem;
+      background: var(--light-color);
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
