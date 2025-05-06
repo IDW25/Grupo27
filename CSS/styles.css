@@ -992,7 +992,23 @@ main.main-contacto {
     margin-bottom: 20px;
     }
 
+/* DETALLES DE SALON */
 
+.bg-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Column layout for feature list */
+.columnas {
+  columns: 2;
+}
+
+/* Optional: hover style for primary button */
+.btn:hover {
+  background-color: #005fa3 !important;
+}
    
     
 
