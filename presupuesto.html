@@ -1,142 +1,454 @@
 <!DOCTYPE html>
 <html lang=" es">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>IDW S.A. - Salones para Cumpleaños Infantiles</title>
-        <!-- Favicon -->
-        <link rel="icon" href="/Assets/favicon.png" type="image/png">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <!-- Importación de tipografía Nunito -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-        <!-- Enlace a librería de íconos -->
-        <script src="https://kit.fontawesome.com/39373c75b8.js" crossorigin="anonymous"></script>
-        <!-- Enlace a la carpeta de estilos -->
-        <link rel="stylesheet" href="CSS/styles.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDW S.A. - Salones para Cumpleaños Infantiles</title>
+    <!-- Favicon -->
+    <link rel="icon" href="/Assets/favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Importación de tipografía Nunito -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Enlace a librería de íconos -->
+    <script src="https://kit.fontawesome.com/39373c75b8.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <!-- Enlace a la carpeta de estilos -->
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
 
-    <body>
-        
-        <header>
-            <h1>
-                <a href="index.html">
-                    <img class="logo-imagen" src="Assets/Logo-White1.png" alt="logo">
-                </a>
-            </h1>
-            <nav>
-                <input type="checkbox" id="menu-toggle" class="menu-toggle">
-                <label for="menu-toggle"><i class="fa-solid fa-bars"></i></label>
-                <ul id="enlaces">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="nosotros.html" class="active">Nosotros</a></li>
-                    <li><a href="salones.html">Salones</a></li>
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="presupuesto.html">Presupuesto</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                    <li class="admin-box"><a href="administration.html" class="admin">Administración</a></li>
+<body>
+    <!-- Nav bar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="Assets/Logo-White1.png" alt="IDW S.A. Logo" height="40" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="salones.html">Salones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="servicios.html">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="presupuesto.html">Crear Presupuesto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
                 </ul>
-            </nav>
-            <div class="btn-administracion">
-                <a href="administration.html">Administración<span class="flecha"><i
-                            class="fa-solid fa-caret-down"></i></span></a>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user-cog me-1"></i>Administración
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="admin/salones.html">Gestionar Salones</a></li>
+                            <li><a class="dropdown-item" href="admin/servicios.html">Gestionar Servicios</a></li>
+                            <li><a class="dropdown-item" href="admin/presupuesto.html">Ver Presupuestos</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
-        </header>
+        </div>
+    </nav>
+    <!--Fin de Nav bar-->
 
-        <main class="content">
+    <main class="content">
             
-            <section> <!--TITULO-->
-                <div class="hero-content-nosotros">
-                    <h1>Arma tu pressupuesto</h2>
-                    <p>Contamos con diferentes servicios para hacer realidad tus sueños!</p>
-                  </div>
-            </section>
+        <section class="bg-primary text-white text-center py-5">
+            <div class="container">
+                <h1 class="fw-bolder">Arma tu pressupuesto</h1>
+                <p class="lead">Contamos con diferentes servicios para hacer realidad tus sueños!</p>
+            </div>
+        </section>
+        
+        <section class="container-form">
+            <section class="row g-5">
 
-            <div class="contacto-grid">
-                <section class="formulario-container">
-                    <form onsubmit="send(); return false;">
-                        <h2>Información personal</h2>
-                           
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="name">Nombre completo</label>
-                                <input type="text" id="name" name="user_name" placeholder="Nombre y apellido" required />
-                            </div>
-                            <div class="form-group">
-                                <label for="date">Fecha del evento</label>
-                                <input type="date" id="date" name="user_name" placeholder="dd/mm/aaaa" required/>
-                            </div>
-                            <div class="form-group">
-                                <label for="mail">Correo electrónico</label>
-                                <input type="email" id="mail" name="user_mail" placeholder="tuemail@gmail.com" required/>
-                            </div>
-                            <div class="form-group">
-                                <label for="telefono">Teléfono</label>
-                                <input type="tel" id="telefono" name="user_telefono" placeholder="Ej: 1123456789" required />
-                            </div>
-                            <div class="form-group full-width"> <!--ACA VA LA SELECCION TEMATICA-->
-                                <label for="msg">Mensaje</label>
-                                <textarea id="msg" name="user_message" required maxlength="250"></textarea>
-                            </div>
-                            
+                <!-- Sección: Información personal -->
+                <article class="col-md-8"> <!--COLUMNA FORMULARIO-->
+                <section class="form-section"> 
+                    <h4 class="mb-4">Información personal</h4>
+                    <form>
+                    <div class="row mb-3">
+                        <div class="col">
+                        <label for="nombre" class="form-label">Nombre completo</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Nombre y apellido">
                         </div>
+                        <div class="col">
+                        <label for="fecha" class="form-label">Fecha del evento</label>
+                        <input type="date" class="form-control" id="fecha">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col">
+                        <label for="correo" class="form-label">Correo electrónico</label>
+                        <input type="email" class="form-control" id="correo" placeholder="tu@email.com">
+                        </div>
+                        <div class="col">
+                        <label for="telefono" class="form-label">Teléfono</label>
+                        <input type="tel" class="form-control" id="telefono" placeholder="11-2545-7845">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="tematica" class="form-label">Temática</label>
+                        <select class="form-select" id="tematica">
+                        <option selected>Seleccioná una temática</option>
+                        <option value="infantil">Fiesta infantil</option>
+                        <option value="adulto">Cumpleaños de adulto</option>
+                        <option value="casamiento">Casamiento</option>
+                        </select>
+                    </div>
                     </form>
                 </section>
-
-
-            </div>
-
+                </article>
             
-            
-        </main>
+                <!-- Sección: Resumen del presupuesto -->
+                <aside class="col-md-4"><!--COLUMNA RESUMEN-->
+                <section class="form-section">
+                    <h4 class="mb-3">Resumen del presupuesto</h4>
+                    <div class="alert alert-info d-flex align-items-center" role="alert">
+                    <i class="bi bi-info-circle info-icon"></i>
+                    <div>
+                        Seleccioná un salón y los servicios para ver el presupuesto.
+                    </div>
+                    </div>
+                </section>
+                </aside>
 
-        <footer>
-            <section class="pie-pagina">
-                <div>
-                    <h2>IDW S.A</h2>
-                    <h3>Incredible Dream Wonderland</h3>
+                <!--Seleccion: Salones-->
+                <article class="col-md-8"> 
+                    <section class="form-section">
+                        <h4 class="mb-4">Seleccionar salón</h4>
+
+                        <section class="row"> <!-- NUEVA FILA PARA 2 TARJETAS -->
+
+                            <!-- TARJETA IZQUIERDA -->
+                            <div class="col-md-6 mb-4"> <!-- Columna que contiene la tarjeta -->
+                                <div class="card h-100"> <!-- Tarjeta con altura completa -->
+                                  <div class="row g-0 h-100"> <!-- Fila sin espacios y con altura completa -->
+                                    <div class="col-md-5 h-100"> <!-- Columna izquierda con altura completa -->
+                                      <img src="Assets/salonA.png" class="img-fluid h-100 object-fit-cover" alt="Salón A"> <!-- Imagen ajustada -->
+                                    </div>
+                                    
+                                    <div class="col-md-7">
+                                      <div class="card-body d-flex flex-column justify-content-between h-100">
+                                        <div>
+                                          <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="salon" id="salonA" value="salonA">
+                                            <label class="form-check-label fw-bold" for="salonA">Mundo inflable</label>
+                                          </div>
+                                          
+                                          <p class="card-text small text-muted mb-1"><i class="fas fa-map-marker-alt bi bi-geo-alt-fill"></i> Av. Rivadavia 8423, Flores, CABA</p>
+                                          <p class="card-text small text-muted fw-semibold">$150.000</p>
+                                          <span class="badge bg-success mb-2">Disponible</span>
+                                        </div>
+                                        <a href="#" class="btn btn-outline-primary btn-sm w-100">Detalles</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                                
+
+                            <!-- TARJETA DERECHA -->
+                            <div class="col-md-6 mb-4"> <!-- Columna que contiene la tarjeta -->
+                                <div class="card h-100"> <!-- Tarjeta con altura completa -->
+                                  <div class="row g-0 h-100"> <!-- Fila sin espacios y con altura completa -->
+                                    <div class="col-md-5 h-100"> <!-- Columna izquierda con altura completa -->
+                                      <img src="Assets/salonB.png" class="img-fluid h-100 object-fit-cover" alt="Salón B"> <!-- Imagen ajustada -->
+                                    </div>
+                                    <div class="col-md-7">
+                                      <div class="card-body d-flex flex-column justify-content-between h-100">
+                                        <div>
+                                          <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="salon" id="salonB" value="salonB">
+                                            <label class="form-check-label fw-bold" for="salonA">Mundo Elástico</label>
+                                          </div>
+                                          
+                                          <p class="card-text small text-muted mb-1"><i class="fas fa-map-marker-alt bi bi-geo-alt-fill"></i> Av. Córdoba 3150, Palermo, CABA</p>
+                                          <p class="card-text small text-muted fw-semibold">$300.000</p>
+                                          <span class="badge bg-success mb-2">Disponible</span>
+                                        </div>
+                                        <a href="#" class="btn btn-outline-primary btn-sm w-100">Detalles</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                            <!--TARJETA IZQUIERDA ABAJO-->
+                            <div class="col-md-6 mb-4"> <!-- Columna que contiene la tarjeta -->
+                                <div class="card h-100"> <!-- Tarjeta con altura completa -->
+                                  <div class="row g-0 h-100"> <!-- Fila sin espacios y con altura completa -->
+                                    <div class="col-md-5 h-100"> <!-- Columna izquierda con altura completa -->
+                                      <img src="Assets/salonD.png" class="img-fluid h-100 object-fit-cover" alt="Salón D"> <!-- Imagen ajustada -->
+                                    </div>
+                                    <div class="col-md-7">
+                                      <div class="card-body d-flex flex-column justify-content-between h-100">
+                                        <div>
+                                          <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="salon" id="salonD" value="salonD">
+                                            <label class="form-check-label fw-bold" for="salonA">PROXIMAMENTE</label>
+                                          </div>
+                                          <p class="card-text small text-muted">Tenemos una sorpresa para vos.</p>
+                                         
+                                          <p class="card-text small text-muted fw-semibold">$123.456</p>
+                                          <span class="badge bg-success mb-2">No disponible</span>
+                                        </div>
+                                        <a href="#" class="btn btn-outline-primary btn-sm w-100">Detalles</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                            <!-- TARJETA DERECHA ABAJO -->
+                            <div class="col-md-6 mb-4"> <!-- Columna que contiene la tarjeta -->
+                                <div class="card h-100"> <!-- Tarjeta con altura completa -->
+                                  <div class="row g-0 h-100"> <!-- Fila sin espacios y con altura completa -->
+                                    <div class="col-md-5 h-100"> <!-- Columna izquierda con altura completa -->
+                                      <img src="Assets/salonC.png" class="img-fluid h-100 object-fit-cover" alt="Salón C"> <!-- Imagen ajustada -->
+                                    </div>
+                                    <div class="col-md-7">
+                                      <div class="card-body d-flex flex-column justify-content-between h-100">
+                                        <div>
+                                          <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="salon" id="salonC" value="salonC">
+                                            <label class="form-check-label fw-bold" for="salonA">Mundo Acuático</label>
+                                          </div>
+                                          
+                                          <p class="card-text small text-muted mb-1"><i class="fas fa-map-marker-alt bi bi-geo-alt-fill"></i> Don Pedro 2100, La Boca, CABA</p>
+                                          <p class="card-text small text-muted fw-semibold">$350.000</p>
+                                          <span class="badge bg-success mb-2">Disponible</span>
+                                        </div>
+                                        <a href="#" class="btn btn-outline-primary btn-sm w-100">Detalles</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                        </section> 
+                          
+                    </section>
+                </article>
+
+                <!--Seleccion: Servicios-->
+                <article class="col-md-8"> 
+                    <section class="form-section">
+                        <h4 class="mb-4">Seleccionar servicios</h4>
+
+                        <!--Tarjetas de servicios-->
+                        <section class="row">
+                            
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="card h-100 text-center card-serviciosadc">
+                                  <div class="card-body">
+                                    <div class="pasos-icon">
+                                      <i class="fa-solid fa-cake-candles text-white"></i>
+                                    </div>
+                                    <h5 class="card-title">Torta Temática</h5>
+                                    
+                                    <p class="card-text text-center mb-4">$30.000</p>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                        
+                              <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="card h-100 text-center card-serviciosadc">
+                                  <div class="card-body">
+                                    <div class="pasos-icon">
+                                      <i class="fa-solid fa-wand-magic text-white"></i>
+                                    </div>
+                                    <h5 class="card-title">Show de Magia</h5>
+                                    
+                                    <p class="card-text text-center mb-4">$25.000</p>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+              
+                              <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="card h-100 text-center card-serviciosadc">
+                                  <div class="card-body">
+                                    <div class="pasos-icon">
+                                      <i class="fa-solid fa-palette text-white"></i>
+                                    </div>
+                                    <h5 class="card-title">Pinta Caritas</h5>
+                                    
+                                    <p class="card-text text-center mb-4">$20.000</p>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+              
+              
+                              <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="card h-100 text-center card-serviciosadc">
+                                  <div class="card-body">
+                                    <div class="pasos-icon">
+                                      <i class="fa-solid fa-camera-retro text-white"></i>
+                                    </div>
+                                    <h5 class="card-title">Fotografía</h5>
+                                    
+                                    <p class="card-text text-center mb-4">$50.000</p>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+              
+                              <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="card h-100 text-center card-serviciosadc">
+                                  <div class="card-body">
+                                    <div class="pasos-icon">
+                                      <i class="fa-solid fa-bowl-food text-white"></i>
+                                    </div>
+                                    <h5 class="card-title">Comida Premium</h5>
+                                    
+                                    <p class="card-text text-center mb-4">$100.000</p>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                                    
+                              <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="card h-100 text-center card-serviciosadc">
+                                  <div class="card-body">
+                                    <div class="pasos-icon">
+                                      <i class="fa-solid fa-candy-cane text-white"></i>
+                                    </div>
+                                    <h5 class="card-title">Candy Bar</h5>
+                                    
+                                    <p class="card-text text-center mb-4">$90.000</p>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+
+                        </section>
+                    </section>
+                </article>
+
+                <!--Seleccion: Comentarios adicionales-->
+                <article class="col-md-8">
+                    <section class="form-section">
+                        <h4 class="mb-4">Comentarios adicionales</h4>
+
+                        <section class="row">
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Escribí aca cualquier detalle o requerimiento especial para tu evento."></textarea>
+                              </div>
+                        </section>
+
+                    </section>
+                </article>
+
+                <!--Boton cCalcular Presupuesto-->
+                <article class="col-md-8">
+                    <button class="button">Calcular presupuesto</button>
+                </article>
+
+
+            </section>
+        </section>
+        
+
+
+    </main>
+
+        <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row text-center text-md-start">
+
+                <div class="col-md-4 mb-4">
+                    <h2 class="h2">IDW S.A</h2>
+                    <h3 class="h3">Incredible Dream Wonderland</h3>
                     <p>Encontrá todo lo que necesitas para tu cumpleaños infantil</p>
                 </div>
-            </section>
-    
-            <!-- Menú footer-->
-            <section class="pie-pagina">
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                    <li><a href="salones.html">Salones</a></li>
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </section>
-    
-            <!-- Contactos footer y redes sociales-->
-            <section class="pie-pagina">
-                <h3>Contacto</h3>
-                <p><i class="fa-regular fa-map"></i> Calle Falsa 123</p>
-                <p><i class="fa-regular fa-flag"></i> Ciudad de Buenos Aires</p>
-                <p><i class="fa-solid fa-phone"></i> +54 11 123 456</p>
-                <p><i class="fa-regular fa-paper-plane"></i> idw@salones.com</p>
-    
-                <div class="icon-social">
-                    <a href="https://facebook.com" target="_blank" class="icon-social"><i
-                            class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://instagram.com" target="_blank" class="icon-social"><i
-                            class="fa-brands fa-instagram"></i></a>
-                    <a href="https://twitter.com" target="_blank" class="icon-social"><i
-                            class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://www.tiktok.com/" target="_blank" class="icon-social"><i
-                            class="fa-brands fa-tiktok"></i></a>
-                </div>
-            </section>
-    
-            <!-- Copyrigth-->
-            <section class="bt-piepagina">
-                <p><i class="fa-regular fa-copyright"></i> IDW S.A. 2025 | Todos los derechos reservados</p>
-            </section>
-        </footer>
 
-    </body>
+                <!-- Menú -->
+                <div class="col-md-4 mb-4">
+                    <ul class="footer-nav nav flex-column">
+                        <li class="nav-item"><a href="index.html" class="nav-link text-white">Inicio</a></li>
+                        <li class="nav-item"><a href="nosotros.html" class="nav-link text-white">Nosotros</a></li>
+                        <li class="nav-item"><a href="salones.html" class="nav-link text-white">Salones</a></li>
+                        <li class="nav-item"><a href="servicios.html" class="nav-link text-white">Servicios</a></li>
+                        <li class="nav-item"><a href="contacto.html" class="nav-link text-white">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contacto y redes -->
+                <div class="col-md-4 mb-4">
+                    <h5>Contacto</h5>
+                    <p><i class="fa-regular fa-map me-2"></i>Calle Falsa 123</p>
+                    <p><i class="fa-regular fa-flag me-2"></i>Ciudad de Buenos Aires</p>
+                    <p><i class="fa-solid fa-phone me-2"></i>+54 11 123 456</p>
+                    <p><i class="fa-regular fa-paper-plane me-2"></i>idw@salones.com</p>
+
+                    <div class="d-flex gap-3 mt-3 justify-content-center justify-content-md-start">
+                        <a href="https://facebook.com" target="_blank" class="text-white fs-5"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://instagram.com" target="_blank" class="text-white fs-5"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://twitter.com" target="_blank" class="text-white fs-5"><i
+                                class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.tiktok.com/" target="_blank" class="text-white fs-5"><i
+                                class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-center pt-4 border-top mt-4">
+                <p class="mb-0"><i class="fa-regular fa-copyright"></i> IDW S.A. 2025 | Todos los derechos reservados
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fin de Footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+
+</body>
+
 </html>
