@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <!--Header-->
+    <!-- Nav bar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
             <a class="navbar-brand" href="index.html">
@@ -72,63 +72,85 @@
     <main class="content">
 
         <!-- Sección Hero de Página Nosotros-->
-        <section>
-            <div class="hero-content-nosotros">
-              <h1>Nosotros</h1>
-              <p>En IDW S.A. organizamos cumpleaños inolvidables con un 
-                equipo apasionado por la alegría de cada niño.</p>
-            </div>
-            <div class="content-nosotros">
-                <div class="content-nosotros-left">
-                    <img src="Assets/hero-image-nosotros.jpg" alt="Equipo de IDW SA">
-                </div>
-                <div class="content-nosotros-right">
-                    <h2>Nosotros</h2>
-                    <p> En IDW S.A. (Incredible Dream Wonderland) hacemos realidad los sueños de los más chicos, 
-                        creando experiencias mágicas en cada celebración. Somos una empresa de Buenos Aires especializada 
-                        en salones de eventos infantiles, pensados para que cada cumpleaños sea único.
-                    </p>
-                    <p> Cuidamos cada detalle para que las familias disfruten sin preocupaciones, desde la ambientación hasta el entretenimiento, 
-                        todo en un solo lugar.Nos apasiona crear momentos inolvidables con creatividad, compromiso y mucho corazón, 
-                        porque cada sonrisa vale la pena y cada festejo merece ser increíble.
-                    </p>
-                </div>
+        <section class="bg-primary text-white text-center py-5">
+            <div class="container">
+                <h1 class="fw-bolder">Nosotros</h1>
+                <p class="lead">En IDW S.A. organizamos cumpleaños inolvidables con un 
+                    equipo apasionado por la alegría de cada niño.</p>
             </div>
         </section>
-        <!-- Fin Hero de Página Nosotros-->
-        <!-- Seccion Mision y Visión --> 
-        <section class="destacado-salones">
-            <div class="container">
-                <div class="pasos-flex">
-                    <div class="pasos-card">
-                        <div class="pasos-card-body">
-                            <div class="pasos-icon">
-                                <i class="fa-solid fa-lightbulb"></i>
-                            </div>
-                            <a href="#" class="card-titulo">Nuestra misión</a>
-                            <p class="card-texto">En IDW S.A., nos dedicamos a crear momentos inolvidables para niños y
-                                 sus familias, ofreciendo salones especialmente diseñados para celebrar cumpleaños en un
-                                  ambiente seguro, divertido y totalmente personalizado. Nuestro compromiso es brindar un 
-                                  servicio de excelencia en Buenos Aires, adaptándonos a las necesidades de cada cliente para
-                                   que cada fiesta sea única y especial.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="pasos-card">
-                        <div class="pasos-card-body">
-                            <div class="pasos-icon">
-                                <i class="fa-solid fa-eye"></i>
-                            </div>
-                            <a href="#" class="card-titulo">Nuestra visión</a>
-                            <p class="card-text">Ser la empresa líder en Buenos Aires en la organización y
-                                 alquiler de salones para cumpleaños infantiles, reconocida por transformar
-                                  cada celebración en una experiencia mágica, innovadora y segura. 
-                                  Aspiramos a crecer junto a las familias, acompañando cada etapa con propuestas 
-                                  creativas y un servicio que supere expectativas.
-                            </p>
-                        </div>
-                    </div>    
+
+        <!-- Sección Sobre Nosotros-->
+        <section class="container my-5">
+            <div class="row">
+    
+                <!-- Imagen Nosotros (izquierda)-->
+                <div class="col-lg-6 mb-4">
+                  <img src="Assets/hero-image-nosotros.jpg" alt="Equipo de IDW SA" class="img-fluid rounded h-100">
                 </div>
+                
+                <!-- Texto de Nosotros (derecha) -->
+                <div class="col-lg-6">
+                  <h2 class="pb-3">Nosotros</h2>
+                  <p class="lh-lg">
+                    En IDW S.A. (Incredible Dream Wonderland) hacemos realidad los sueños de los más chicos, 
+                    creando experiencias mágicas en cada celebración. Somos una empresa de Buenos Aires especializada 
+                    en salones de eventos infantiles, pensados para que cada cumpleaños sea único.
+                  </p>
+                  <p class="lh-lg pt-3">
+                    Cuidamos cada detalle para que las familias disfruten sin preocupaciones, desde la ambientación hasta el entretenimiento, 
+                    todo en un solo lugar. Nos apasiona crear momentos inolvidables con creatividad, compromiso y mucho corazón, 
+                    porque cada sonrisa vale la pena y cada festejo merece ser increíble.
+                  </p>
+                </div>   
+
+            </div>            
+        </section>
+        <!-- Fin Sección de Página Nosotros-->
+
+        <!-- Seccion Mision y Visión --> 
+
+        <section class="py-5">
+            <div class="container">
+              <div class="row g-4">
+                
+                <!-- Tarjeta Misión -->
+                <div class="col-md-6">
+                  <div class="card h-100 text-center card-serviciosadc">
+                    <div class="card-body">
+                      <div class="pasos-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                      </div>
+                      <h5 class="card-title pb-3 fw-bold">Nuestra misión</h5>
+                      <p class="card-text">
+                        En IDW S.A., nos dedicamos a crear momentos inolvidables para niños y sus familias,
+                        ofreciendo salones especialmente diseñados para celebrar cumpleaños en un ambiente seguro,
+                        divertido y totalmente personalizado. Nuestro compromiso es brindar un servicio de excelencia en
+                        Buenos Aires, adaptándonos a las necesidades de cada cliente para que cada fiesta sea única y especial.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+          
+                <!-- Tarjeta Visión -->
+                <div class="col-md-6">
+                  <div class="card h-100 text-center card-serviciosadc">
+                    <div class="card-body">
+                      <div class="pasos-icon">
+                        <i class="fa-solid fa-eye"></i>
+                      </div>
+                      <h5 class="card-title pb-3 fw-bold">Nuestra visión</h5>
+                      <p class="card-text">
+                        Ser la empresa líder en Buenos Aires en la organización y alquiler de salones para cumpleaños infantiles,
+                        reconocida por transformar cada celebración en una experiencia mágica, innovadora y segura.
+                        Aspiramos a crecer junto a las familias, acompañando cada etapa con propuestas creativas y un servicio
+                        que supere expectativas.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+          
+              </div>
             </div>
         </section>
          <!--Fin Seccion Mision y Visión --> 

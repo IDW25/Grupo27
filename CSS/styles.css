@@ -277,7 +277,7 @@ body {
   margin-bottom: 50px;
 }
 
-/* Flex de pasos / sección misión y visión de Nosotros / Seccion Valores de Nosotros */
+/* Flex de pasos / Seccion Valores de Nosotros */
 .pasos-flex {
   display: flex;
   justify-content: space-between;
@@ -343,7 +343,7 @@ body {
   }
 }
 
-/* Sección salones / sección mision/vision nosotros / Seccion Valores de Nosotros */
+/* Sección salones / Seccion Valores de Nosotros */
 .destacado-salones {
   padding: 60px;
 }
@@ -587,67 +587,12 @@ body {
   flex-wrap: wrap;
 }
 
-/* Sección Hero Nosotros */
-
-.hero-content-nosotros {
-  text-align: center;
-  padding-top: 100px;
-  padding-bottom: 50px;
-  background: var(--background-clr);
-  color: var(--font-clr-principal);
-  }
-  
-  .hero-content-nosotros h1, 
-  .content-nosotros-right h2{
-  font-weight: 800;
-  margin-bottom: 1.5%;
-  }
-  
-  .hero-content-nosotros p,
-  .content-nosotros-right p{
-  font-weight: 300;
-  max-width: 60ch;
-  margin: 0 auto;
-  }
-  
-  .content-nosotros{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 60px;
-  gap: 50px;
-  }
-  
-  .content-nosotros-left,
-  .content-nosotros-right {
-  flex: 1 1 45%;
-  }
-  
-  .content-nosotros-left img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 10px;
-  }
-  
-  .content-nosotros-right {
-  text-align:left;
-  display: block;
-  }
-  
-  .content-nosotros-right p {
-  margin: 0 0 1em 0; 
-  line-height: 1.6;
-  width: 80%;
-  text-align: justify;
-  }
-
-/* Estilos de Pagina Servicios */  
+/* Estilos de Pagina Servicios y Nosotros */  
 
 .card-serviciosadc {
   background-color: var(--light-color);
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
   cursor: pointer;
   border-color: transparent;
@@ -655,6 +600,11 @@ body {
 
 .serviciosadc {
   background: var(--background-clr);
+}
+
+.card-serviciosadc:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilos del footer */
@@ -701,9 +651,6 @@ footer {
 
   .btn-administracion {
     display: none;
-  }
-  .content-nosotros-right p {
-    width: 100%;
   }
 }
 
