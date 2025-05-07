@@ -1000,12 +1000,10 @@ main.main-contacto {
   background-repeat: no-repeat;
 }
 
-/* Column layout for feature list */
 .columnas {
   columns: 2;
 }
 
-/* Optional: hover style for primary button */
 .btn:hover {
   background-color: #005fa3 !important;
 }
