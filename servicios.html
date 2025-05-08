@@ -22,154 +22,195 @@
 </head>
 
 <body>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <!-- Nav bar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+          <a class="navbar-brand" href="index.html">
+              <img src="Assets/Logo-White1.png" alt="IDW S.A. Logo" height="40" class="d-inline-block align-text-top">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
+              <ul class="navbar-nav mx-auto">
+                  <li class="nav-item">
+                      <a class="nav-link active" href="index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="nosotros.html">Nosotros</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="salones.html">Salones</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="servicios.html">Servicios</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="presupuesto.html">Crear Presupuesto</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="contacto.html">Contacto</a>
+                  </li>
+              </ul>
+              <ul class="navbar-nav">
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                          <i class="fas fa-user-cog me-1"></i>Administración
+                      </a>
+                      <ul class="dropdown-menu dropdown-menu-end">
+                          <li><a class="dropdown-item" href="admin/salones.html">Gestionar Salones</a></li>
+                          <li><a class="dropdown-item" href="admin/servicios.html">Gestionar Servicios</a></li>
+                          <li><a class="dropdown-item" href="admin/presupuesto.html">Ver Presupuestos</a></li>
+                      </ul>
+                  </li>
+              </ul>
+          </div>
+      </div>
+    </nav>
+  <!--Fin de Nav bar-->
+
+    <main class="content">
+
+      <!--Sección Hero de Servicios Adicionales -->
+      <section class="bg-primary text-white text-center py-5">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="Assets/Logo-White1.png" alt="IDW S.A. Logo" height="40" class="d-inline-block align-text-top">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="nosotros.html">Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="salones.html">Salones</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="servicios.html">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="presupuesto.html">Crear Presupuesto</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            <i class="fas fa-user-cog me-1"></i>Administración
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="admin/salones.html">Gestionar Salones</a></li>
-                            <li><a class="dropdown-item" href="admin/servicios.html">Gestionar Servicios</a></li>
-                            <li><a class="dropdown-item" href="admin/presupuesto.html">Ver Presupuestos</a></li>
-                        </ul>
-                    </li>
-                </ul>
+            <h1 class="fw-bolder">Servicios</h1>
+            <p class="lead">Servicios como shows, decoración y comida temática para hacer la fiesta única y divertida.</p>
+        </div>
+      </section>
+      <!--Fin sección Hero -->
+
+      <!-- Filtros -->
+      <section class="py-4">
+        <div class="container">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <h5 class="card-title mb-3">Filtrar salones</h5>
+                    <form>
+                        <div class="row g-3 align-items-center">
+                            <div class="col-md-7">
+                                <input type="text" class="form-control" placeholder="Buscar por nombre...">
+                            </div>
+                            
+                            <div class="col-md-3">
+                                <select class="form-select">
+                                    <option value="">Ordenar por</option>
+                                    <option value="price_asc">Precio: Menor a Mayor</option>
+                                    <option value="price_desc">Precio: Mayor a Menor</option>
+                                    <option value="name_asc">Nombre: A-Z</option>
+                                    <option value="name_desc">Nombre: Z-A</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <button type="submit" class="btn btn-primary w-100">Filtrar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-    </nav>
-    <!--Fin de Nav bar-->
+      </section>
+      <!-- Fin de filtros -->
 
+      <!--Sección de card de Servicios Adicionales-->
+      <section class="py-5">
+        <div class="container">
+          <h2 class="mt-3 mb-5 text-center">Todos los servicios</h2>
+          <div class="row g-4"> 
 
-    <!--Fin de Header-->
-    <main class="content pt-5">
-        <!--Sección Hero de Servicios Adicionales -->
-          <section class="text-center serviciosadc p-5">
-            <h1 class="mb-4 text-white fw-bolder">Servicios</h1>
-            <p class="text-white">Servicios como shows, decoración y comida temática para hacer la fiesta única y divertida.</p>
-          </section>
-        <!--Sección de card de Servicios Adicionales-->
-          <section class="py-5">
-            <div class="container">
-              <h2 class="mt-3 mb-5 text-center">Todos los servicios</h2>
-              <div class="row g-4"> 
-
-                <div class="col-12 col-sm-6 col-lg-4">
-                  <div class="card h-100 text-center card-serviciosadc">
-                    <div class="card-body">
-                      <div class="pasos-icon">
-                        <i class="fa-solid fa-cake-candles text-white"></i>
-                      </div>
-                      <h5 class="card-title">Torta Temática</h5>
-                      <p class="card-text mt-3">Pastel decorado según un tema específico, como personajes o celebraciones especiales.</p>
-                      <p class="card-text text-center mb-4">$30.000</p>
-                      <button class="btn btn-primary w-100">Incluir en el presupuesto</button>
-                    </div>
+            <!--1era Card -->
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="card h-100 text-center card-serviciosadc">
+                <div class="card-body">
+                  <div class="pasos-icon">
+                    <i class="fa-solid fa-cake-candles text-white"></i>
                   </div>
+                  <h5 class="card-title">Torta Temática</h5>
+                  <p class="card-text mt-3">Pastel decorado según un tema específico, como personajes o celebraciones especiales.</p>
+                  <p class="card-text text-center mb-4">$30.000</p>
+                  <button class="btn btn-primary w-100">Incluir en el presupuesto</button>
                 </div>
-          
-                <div class="col-12 col-sm-6 col-lg-4">
-                  <div class="card h-100 text-center card-serviciosadc">
-                    <div class="card-body">
-                      <div class="pasos-icon">
-                        <i class="fa-solid fa-wand-magic text-white"></i>
-                      </div>
-                      <h5 class="card-title">Show de Magia</h5>
-                      <p class="card-text mt-3">Actuación divertida con trucos sorprendentes para entretener a los niños</p>
-                      <p class="card-text text-center mb-4">$25.000</p>
-                      <button class="btn btn-primary w-100">Incluir en el presupuesto</button>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-lg-4">
-                  <div class="card h-100 text-center card-serviciosadc">
-                    <div class="card-body">
-                      <div class="pasos-icon">
-                        <i class="fa-solid fa-palette text-white"></i>
-                      </div>
-                      <h5 class="card-title">Pinta Caritas</h5>
-                      <p class="card-text mt-3">Diseños divertidos pintados en las caras de los niños durante el evento</p>
-                      <p class="card-text text-center mb-4">$20.000</p>
-                      <button class="btn btn-primary w-100">Incluir en el presupuesto</button>
-                    </div>
-                  </div>
-                </div>
-
-
-                <div class="col-12 col-sm-6 col-lg-4">
-                  <div class="card h-100 text-center card-serviciosadc">
-                    <div class="card-body">
-                      <div class="pasos-icon">
-                        <i class="fa-solid fa-camera-retro text-white"></i>
-                      </div>
-                      <h5 class="card-title">Fotografía</h5>
-                      <p class="card-text mt-3">Captura momentos especiales y crea recuerdos duraderos del evento</p>
-                      <p class="card-text text-center mb-4">$50.000</p>
-                      <button class="btn btn-primary w-100">Incluir en el presupuesto</button>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-lg-4">
-                  <div class="card h-100 text-center card-serviciosadc">
-                    <div class="card-body">
-                      <div class="pasos-icon">
-                        <i class="fa-solid fa-bowl-food text-white"></i>
-                      </div>
-                      <h5 class="card-title">Comida Premium</h5>
-                      <p class="card-text mt-3">Platos de alta calidad con presentación especial, ideales para eventos elegantes.</p>
-                      <p class="card-text text-center mb-4">$100.000</p>
-                      <button class="btn btn-primary w-100">Incluir en el presupuesto</button>
-                    </div>
-                  </div>
-                </div>
-                      
-                <div class="col-12 col-sm-6 col-lg-4">
-                  <div class="card h-100 text-center card-serviciosadc">
-                    <div class="card-body">
-                      <div class="pasos-icon">
-                        <i class="fa-solid fa-candy-cane text-white"></i>
-                      </div>
-                      <h5 class="card-title">Candy Bar</h5>
-                      <p class="card-text mt-3">Mesa decorada con variedad de dulces, chocolates y golosinas para los invitados</p>
-                      <p class="card-text text-center mb-4">$90.000</p>
-                      <button class="btn btn-primary w-100">Incluir en el presupuesto</button>
-                    </div>
-                  </div>
-                </div>
-                    
               </div>
             </div>
-        </section>
+            
+            <!--2da Card -->
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="card h-100 text-center card-serviciosadc">
+                <div class="card-body">
+                  <div class="pasos-icon">
+                    <i class="fa-solid fa-wand-magic text-white"></i>
+                  </div>
+                  <h5 class="card-title">Show de Magia</h5>
+                  <p class="card-text mt-3">Actuación divertida con trucos sorprendentes para entretener a los niños</p>
+                  <p class="card-text text-center mb-4">$25.000</p>
+                  <button class="btn btn-primary w-100">Incluir en el presupuesto</button>
+                </div>
+              </div>
+            </div>
+
+            <!--3ra Card -->
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="card h-100 text-center card-serviciosadc">
+                <div class="card-body">
+                  <div class="pasos-icon">
+                    <i class="fa-solid fa-palette text-white"></i>
+                  </div>
+                  <h5 class="card-title">Pinta Caritas</h5>
+                  <p class="card-text mt-3">Diseños divertidos pintados en las caras de los niños durante el evento</p>
+                  <p class="card-text text-center mb-4">$20.000</p>
+                  <button class="btn btn-primary w-100">Incluir en el presupuesto</button>
+                </div>
+              </div>
+            </div>
+
+            <!--4ta Card -->
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="card h-100 text-center card-serviciosadc">
+                <div class="card-body">
+                  <div class="pasos-icon">
+                    <i class="fa-solid fa-camera-retro text-white"></i>
+                  </div>
+                  <h5 class="card-title">Fotografía</h5>
+                  <p class="card-text mt-3">Captura momentos especiales y crea recuerdos duraderos del evento</p>
+                  <p class="card-text text-center mb-4">$50.000</p>
+                  <button class="btn btn-primary w-100">Incluir en el presupuesto</button>
+                </div>
+              </div>
+            </div>
+
+            <!--5ta Card -->
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="card h-100 text-center card-serviciosadc">
+                <div class="card-body">
+                  <div class="pasos-icon">
+                    <i class="fa-solid fa-bowl-food text-white"></i>
+                  </div>
+                  <h5 class="card-title">Comida Premium</h5>
+                  <p class="card-text mt-3">Platos de alta calidad con presentación especial, ideales para eventos elegantes.</p>
+                  <p class="card-text text-center mb-4">$100.000</p>
+                  <button class="btn btn-primary w-100">Incluir en el presupuesto</button>
+                </div>
+              </div>
+            </div>
+            
+            <!--6ta Card -->
+            <div class="col-12 col-sm-6 col-lg-4">
+              <div class="card h-100 text-center card-serviciosadc">
+                <div class="card-body">
+                  <div class="pasos-icon">
+                    <i class="fa-solid fa-candy-cane text-white"></i>
+                  </div>
+                  <h5 class="card-title">Candy Bar</h5>
+                  <p class="card-text mt-3">Mesa decorada con variedad de dulces, chocolates y golosinas para los invitados</p>
+                  <p class="card-text text-center mb-4">$90.000</p>
+                  <button class="btn btn-primary w-100">Incluir en el presupuesto</button>
+                </div>
+              </div>
+            </div>
+                
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
@@ -222,6 +263,7 @@
           </div>
       </div>
     </footer>
+    <!-- Fin Footer -->
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
