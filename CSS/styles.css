@@ -42,7 +42,8 @@
 
   /*Tamaños*/
   --fs-desktop: 0.9em;
-  --fs-link-desktop: 1.2em;
+  /* --fs-link-desktop: 1.2em; */
+  --fs-link-desktop: clamp(1em, 1.2vw, 1.2em);
   --icon-size: 1.8em;
 
   /* Personalización de Bootstrap */
@@ -119,7 +120,9 @@ body {
   color: var(--hover-clr) !important;
 }
 
-
+#navbarNav > ul > li > a {
+  padding: 0;
+}
 
 .navbar-nav .nav-link.active{
   color: var(--hover-clr) !important; 
@@ -1114,7 +1117,7 @@ main > .filtros {
   min-width: 900px;
 }
 
-.agregarSalon {
+.agregarSalon, .agregarServicio {
   background: rgb(0, 114, 206, .95);
 }
 
@@ -1123,7 +1126,7 @@ main > .filtros {
   margin-top: 7%;
 }
 
-#agregarSalon {
+#agregarSalon, #agregarServicio {
   display: none;
 }
 
