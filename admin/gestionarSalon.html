@@ -17,6 +17,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <!-- Enlace a la carpeta de estilos -->
     <link rel="stylesheet" href="../CSS/styles.css">
+    <!--Enlace al archivo JS-->
+    <script src="../JS/admin.js" defer></script>
 </head>
 <body>
     <header>
@@ -36,13 +38,13 @@
                             <a class="nav-link active" href="gestionarSalon.html"><i class="fa-solid fa-folder-open pe-2"></i>Gestionar salones</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="nosotros.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar servicios</a>
+                            <a class="nav-link" href="gestionarServicios.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar servicios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="salones.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar presupuestos</a>
+                            <a class="nav-link" href="gestionarPresupuesto.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar presupuestos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="servicios.html"><i class="fa-solid fa-right-from-bracket pe-2"></i>Salir</a>
+                            <a class="nav-link" href="../index.html"><i class="fa-solid fa-right-from-bracket pe-2"></i>Salir</a>
                         </li>
                     </ul>
                 </div>
@@ -62,13 +64,13 @@
                             <a class="nav-link active" href="gestionarSalon.html"><i class="fa-solid fa-folder-open pe-2"></i>Gestionar salones</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="nosotros.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar servicios</a>
+                            <a class="nav-link" href="gestionarServicios.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar servicios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="salones.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar presupuestos</a>
+                            <a class="nav-link" href="gestionarPresupuesto.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar presupuestos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="servicios.html"><i class="fa-solid fa-right-from-bracket pe-2"></i>Salir</a>
+                            <a class="nav-link" href="../index.html"><i class="fa-solid fa-right-from-bracket pe-2"></i>Salir</a>
                         </li>
                     </ul>
                 </div>
@@ -80,7 +82,7 @@
             <!-- Titulo y boton de agregar -->
             <div class="container d-flex justify-content-between align-items-center mb-3">
                 <h4 class="fw-bold m-0">Gestionar salones</h4>
-                <button class="btn btn-primary"><i class="fa-solid fa-plus"></i><span class="ps-2 tituloBtn">Nuevo salón</span></button>
+                <button id="btnNvoSalon" class="btn btn-primary"><i class="fa-solid fa-plus"></i><span class="ps-2 tituloBtn">Nuevo salón</span></button>
             </div>
             
             <!-- Filtros -->
@@ -216,6 +218,8 @@
             </div>
 
         </section>
+
+        <!--Formulario para agregar salón-->
         <section id="agregarSalon" class="agregarSalon position-absolute top-0 start-0 w-100 h-100">
             <div id="formAgregarSalon" class="form bg-white mx-auto p-5 d-flex position-relative flex-column gap-3 rounded">
               <h4 class="text-center">Agregar nuevo salón</h4>
