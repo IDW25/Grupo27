@@ -1091,3 +1091,59 @@ input:checked + .slider:before {
 .btn:hover {
   background-color: #005fa3 !important;
 }
+
+/* ADMINISTRACION */
+
+aside {
+  width: 300px;
+  top: 0;
+}
+
+aside > .navbar {
+  height: calc(100vh - 100px);
+  background: var(--dark-color) !important;
+}
+
+main > .filtros {
+  width: calc(100vw - 348px);
+  margin: 0 24px;
+  box-sizing: border-box;
+}
+
+.table {
+  min-width: 900px;
+}
+
+.agregarSalon {
+  background: rgb(0, 114, 206, .95);
+}
+
+.form {
+  width: 50%;
+  margin-top: 7%;
+}
+
+#agregarSalon {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .container > button, .container > div > ul {
+    display: block !important;
+  }
+  .container > div > ul, #navbarNav {
+    background: transparent !important;
+  }
+  aside {
+    display: none !important;
+  }
+  main > .filtros {
+    width: calc(100vw - 48px);
+  }
+  .tituloBtn {
+    display: none;
+  }
+  .form {
+    width: 90vw;
+  }
+}
