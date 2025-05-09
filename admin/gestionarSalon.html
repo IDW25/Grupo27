@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDW S.A. - Salones para Cumpleaños Infantiles</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../Assets/favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Importación de tipografía Nunito -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Enlace a librería de íconos -->
+    <script src="https://kit.fontawesome.com/39373c75b8.js" crossorigin="anonymous"></script>
+    <!--Enlace a bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <!-- Enlace a la carpeta de estilos -->
+    <link rel="stylesheet" href="../CSS/styles.css">
+</head>
+<body>
+    <header>
+    <!--Navegacion y logo-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../Assets/Logo-White1.png" alt="IDW S.A. Logo" height="40" class="d-inline-block align-text-top">
+                </a>
+                <!--Navegacion solo para mobile-->
+                <button class="navbar-toggler d-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
+                    <ul class="navbar-nav text-center d-none">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="gestionarSalon.html"><i class="fa-solid fa-folder-open pe-2"></i>Gestionar salones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="salones.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar presupuestos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="servicios.html"><i class="fa-solid fa-right-from-bracket pe-2"></i>Salir</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="d-flex p-0 m-0">
+
+        <!--Navegacion para pantallas grandes-->
+        <aside class="position-sticky bg-dark text-white" style="width: 300px; top: 0;">
+            <nav class="navbar w-100 p-0 align-items-start">
+                <div class="container py-5 mx-auto w-100">
+                    <h5 class="mx-auto py-2 fw-bold">Panel de administración</h5>
+                    <ul class="navbar-nav mx-auto d-block">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="gestionarSalon.html"><i class="fa-solid fa-folder-open pe-2"></i>Gestionar salones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="salones.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar presupuestos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="servicios.html"><i class="fa-solid fa-right-from-bracket pe-2"></i>Salir</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+
+        <section class="py-5 mx-4 filtros">
+
+            <!-- Titulo y boton de agregar -->
+            <div class="container d-flex justify-content-between align-items-center mb-3">
+                <h4 class="fw-bold m-0">Gestionar salones</h4>
+                <button class="btn btn-primary"><i class="fa-solid fa-plus"></i><span class="ps-2 tituloBtn">Nuevo salón</span></button>
+            </div>
+            
+            <!-- Filtros -->
+            <div class="container mb-3">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h5 class="card-title mb-3">Filtrar salones</h5>
+                        <form>
+                            <div class="row g-3 align-items-center">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Buscar por nombre...">
+                                </div>
+                                
+                                <div class="col-md-2">
+                                    <select class="form-select">
+                                        <option value="">Estado</option>
+                                        <option value="disponible">Disponible</option>
+                                        <option value="reservado">Reservado</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <select class="form-select">
+                                        <option value="">Ordenar por</option>
+                                        <option value="price_asc">Precio: Menor a Mayor</option>
+                                        <option value="price_desc">Precio: Mayor a Menor</option>
+                                        <option value="name_asc">Nombre: A-Z</option>
+                                        <option value="name_desc">Nombre: Z-A</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <button type="submit" class="btn btn-primary w-100">Filtrar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabla -->
+            <div class="container">
+                <div class="table-responsive">
+                    <table class="table text-center">
+                      <thead>
+                        <tr>
+                          <th>ID</th>
+                          <th>Imagen</th>
+                          <th>Titulo</th>
+                          <th>Direccion</th>
+                          <th>Valor</th>
+                          <th>Estado</th>
+                          <th>Acciones</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td><img src="../Assets/hero-image-nosotros.jpg" alt="" width="50px"></td>
+                          <td>Salon A</td>
+                          <td>Calle 123, CABA</td>
+                          <td>$30000</td>
+                          <td><span class="badge bg-success">Disponible</span></td>
+                          <td>
+                            <button class="btn btn-primary btn-sm me-2">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                            <button class="btn btn-danger btn-sm">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td><img src="../Assets/hero-image-nosotros.jpg" alt="" width="50px"></td>
+                          <td>Salon B</td>
+                          <td>Calle 123, CABA</td>
+                          <td>$30000</td>
+                          <td><span class="badge bg-success">Disponible</span></td>
+                          <td>
+                            <button class="btn btn-primary btn-sm me-2">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                            <button class="btn btn-danger btn-sm">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td><img src="../Assets/hero-image-nosotros.jpg" alt="" width="50px"></td>
+                          <td>Salon C</td>
+                          <td>Calle 123, CABA</td>
+                          <td>$30000</td>
+                          <td><span class="badge bg-danger">Reservado</span></td>
+                          <td>
+                            <button class="btn btn-primary btn-sm me-2">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                            <button class="btn btn-danger btn-sm">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td><img src="../Assets/hero-image-nosotros.jpg" alt="" width="50px"></td>
+                          <td>Salon D</td>
+                          <td>Calle 123, CABA</td>
+                          <td>$30000</td>
+                          <td><span class="badge bg-danger">Reservado</span></td>
+                          <td>
+                            <button class="btn btn-primary btn-sm me-2">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                            <button class="btn btn-danger btn-sm">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!--Botones de la tabla-->
+            <div class="d-flex justify-content-center align-items-center gap-2 p-3">
+                <button class="btn btn-primary">Anterior</button>
+                    <span class="ms-2">1</span>
+                    <span class="m-2">2</span>
+                    <span class="me-2">3</span>
+                <button class="btn btn-primary">Siguiente</button>
+            </div>
+
+        </section>
+        <section id="agregarSalon" class="agregarSalon position-absolute top-0 start-0 w-100 h-100">
+            <div id="formAgregarSalon" class="form bg-white mx-auto p-5 d-flex position-relative flex-column gap-3 rounded">
+              <h4 class="text-center">Agregar nuevo salón</h4>
+              <i id="cancelBtn" class="fa-solid fa-xmark position-absolute top-0 end-0 p-4 fs-3"></i>
+              <div class="titulo">
+                <label for="titulo">Titulo</label><br>
+                <input class="w-100" id="titulo" type="text" required>
+              </div>
+              <div class="direccion">
+                <label for="direccion">Direccion</label><br>
+                <input class="w-100" id="direccion" type="text" required>
+              </div>
+              <div class="valor">
+                <label for="valor">Valor</label><br>
+                <input class="w-100" id="valor" type="text" required>
+              </div>
+              <div class="d-flex gap-3">
+                <div class="estado w-50">
+                    <label>Estado</label><br>
+                    <div>
+                      <input type="radio" id="disponible" name="estado" value="disponible" required>
+                      <label for="disponible">Disponible</label>
+                    </div>
+                    <div>
+                      <input type="radio" id="noDisponible" name="estado" value="noDisponible" required>
+                      <label for="noDisponible">Reservado</label>
+                    </div>
+                  </div>
+                  <div class="imagen w-50">
+                    <label for="imagen">Agrega imagen</label><br>
+                    <input id="imagen" type="file" accept="image/*">
+                  </div>
+              </div>
+              <button id="agregarSalonBtn" class="btn btn-primary">Agregar salón</button>
+            </div>
+          </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</body>
+</html>
