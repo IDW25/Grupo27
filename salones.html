@@ -120,187 +120,222 @@
 
 
 
-        <!-- Seccion salones  con GRID -->
-        <section class="destacado-salones">
+        <!-- Sección salones con Bootstrap -->
+        <section class="py-5">
             <div class="container">
-                <h2 class="titulo-seccion">Todos los salones</h2>
-                <div class="salones-grid">
-                    <!-- Salón A -->
-                    <div class="salones-card">
-                        <div class="salon-imagen-container">
-                            <img src="Assets/salonA.png" alt="Mundo inflable">
-                            <span class="badge bg-success">Disponible</span>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-titulo">Mundo Inflable</h5>
-                            <p class="card-texto">Un salón lleno de inflables para todas las edad. Ideal para hermosas
-                                aventuras.</p>
-                            <p class="salon-direccion"><i class="fas fa-map-marker-alt"></i> Av. Rivadavia 8423, Flores,
-                                CABA</p>
-                            <p class="salon-precio"><i class="fas fa-tag"></i> $150,000</p>
-                        </div>
-                        <div class="card-boton">
-                            <a href="#" class="btn btn-primary btn-full">Ver detalles</a>
-                        </div>
-                    </div>
-
-                    <!-- Salón B -->
-                    <div class="salones-card">
-                        <div class="salon-imagen-container">
-                            <img src="Assets/salonB.png" alt="Mundo elástico">
-                            <span class="badge bg-danger">Reservado</span>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-titulo">Mundo Elástico</h5>
-                            <p class="card-texto">Un salón con camas elásticas originales. Sin límite de edad.</p>
-                            <p class="salon-direccion"><i class="fas fa-map-marker-alt"></i> Av. Córdoba 3150, Palermo,
-                                CABA</p>
-                            <p class="salon-precio"><i class="fas fa-tag"></i> $300,000</p>
-                        </div>
-                        <div class="card-boton">
-                            <a href="#" class="btn btn-primary btn-full">Ver detalles</a>
+                <div class="row g-4">
+                    <h2 class="titulo-seccion">Salones destacados</h2>
+                    <!-- Salón 1 -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="card shadow-sm">
+                            <div class="ratio ratio-4x3 position-relative">
+                                <img src="Assets/salonA.png" class="img-fluid w-100" alt="Mundo Inflable">
+                                <div class="position-absolute top-0 start-0 p-2">
+                                    <span class="badge bg-success">Disponible</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Mundo Inflable</h5>
+                                <p class="card-text">Un salón lleno de inflables para todas las edad. Ideal para
+                                    hermosas aventuras.</p>
+                                <p class="salon-direccion"><i class="fas fa-map-marker-alt me-2"></i>Av. Rivadavia 8423,
+                                    Flores, CABA</p>
+                                <p class="salon-precio"><i class="fas fa-tag me-2"></i>$150,000</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-top-0">
+                                <a href="detalleSalon.html" class="btn btn-primary w-100">Ver Detalles</a>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Salón C -->
-                    <div class="salones-card">
-                        <div class="salon-imagen-container">
-                            <img src="Assets/salonC.png" alt="Mundo Acuático">
-                            <span class="badge bg-success">Disponible</span>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-titulo">Mundo Acuático</h5>
-                            <p class="card-texto">Salón temático con piscina y juegos acuáticos, ideal para cumpleaños
-                                en verano.</p>
-                            <p class="salon-direccion"><i class="fas fa-map-marker-alt"></i> Don Pedro 2100, La Boca,
-                                CABA</p>
-                            <p class="salon-precio"><i class="fas fa-tag"></i> $350,000</p>
-                        </div>
-                        <div class="card-boton">
-                            <a href="#" class="btn btn-primary btn-full">Ver detalles</a>
-                        </div>
-                    </div>
-
-                    <!-- Salón D -->
-                    <div class="salones-card">
-                        <div class="salon-imagen-container">
-                            <img src="Assets/salonD.png" alt="Fiesta Feliz">
-                            <span class="badge bg-success">Disponible</span>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-titulo">Fiesta Feliz</h5>
-                            <p class="card-texto">Salón amplio y luminoso con decoración versátil adaptable a cualquier
-                                temática.</p>
-                            <p class="salon-direccion"><i class="fas fa-map-marker-alt"></i>Av. Salto Uruguayo 456,
-                                Belgrano.</p>
-                            <p class="salon-precio"><i class="fas fa-tag"></i> $220,000</p>
-                        </div>
-                        <div class="card-boton">
-                            <a href="#" class="btn btn-primary btn-full">Ver detalles</a>
+                    <!-- Salón 2 -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="card shadow-sm">
+                            <div class="ratio ratio-4x3 position-relative">
+                                <img src="Assets/salonB.png" class="img-fluid w-100" alt="Mundo Elástico">
+                                <div class="position-absolute top-0 start-0 p-2">
+                                    <span class="badge bg-danger">Reservado</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Mundo Elástico</h5>
+                                <p class="card-text">Un salón con camas elásticas originales. Sin límite de edad.</p>
+                                <p class="salon-direccion"><i class="fas fa-map-marker-alt me-2"></i> Av. Córdoba 3150,
+                                    Palermo, CABA</p>
+                                <p class="salon-precio"><i class="fas fa-tag me-2"></i>$300,000</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-top-0">
+                                <div class="d-grid">
+                                    <a href="detalleSalon.html" class="btn btn-primary w-100">Ver Detalles</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Salón E -->
-                    <div class="salones-card">
-                        <div class="salon-imagen-container">
-                            <img src="Assets/salonE.png" alt="Mundo Playa">
-                            <span class="badge bg-success">Disponible</span>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-titulo">Mundo Playa</h5>
-                            <p class="card-texto">Salón con piscina y juegos acuáticos, ideal para fiestas en verano.
-                            </p>
-                            <p class="salon-direccion"><i class="fas fa-map-marker-alt"></i>Av. Constitución 789, Nuñez.
-                            </p>
-                            <p class="salon-precio"><i class="fas fa-tag"></i> $350,000</p>
-                        </div>
-                        <div class="card-boton">
-                            <a href="#" class="btn btn-primary btn-full">Ver detalles</a>
-                        </div>
-                    </div>
-
-                    <!-- Salón F -->
-                    <div class="salones-card">
-                        <div class="salon-imagen-container">
-                            <img src="Assets/salonF.png" alt="Bosque Encantado">
-                            <span class="badge bg-success">Disponible</span>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-titulo">Bosque Encantado</h5>
-                            <p class="card-texto">Salón con ambientación de bosque y hadas, perfecto para fiestas de
-                                fantasía.</p>
-                            <p class="salon-direccion"><i class="fas fa-map-marker-alt"></i> Calle Mitre 234, Concordia
-                            </p>
-                            <p class="salon-precio"><i class="fas fa-tag"></i> $270,000</p>
-                        </div>
-                        <div class="card-boton">
-                            <a href="#" class="btn btn-primary btn-full">Ver detalles</a>
+                    <!-- Salón 3 -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="card shadow-sm">
+                            <div class="ratio ratio-4x3 position-relative">
+                                <img src="Assets/salonC.png" class="img-fluid w-100" alt="Mundo Acuático">
+                                <div class="position-absolute top-0 start-0 p-2">
+                                    <span class="badge bg-success">Reservado</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Mundo Acuático</h5>
+                                <p class="card-text">Salón temático con piscina y juegos acuáticos, ideal para
+                                    cumpleaños en verano.</p>
+                                <p class="salon-direccion"><i class="fas fa-map-marker-alt me-2"></i> Don Pedro 2100, La
+                                    Boca, CABA</p>
+                                <p class="salon-precio"><i class="fas fa-tag me-2"></i>$350,000</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-top-0">
+                                <a href="detalleSalon.html" class="btn btn-primary w-100">Ver Detalles</a>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Salón G -->
-                    <div class="salones-card">
-                        <div class="salon-imagen-container">
-                            <img src="Assets/salonG.png" alt="Espacio Deportivo">
-                            <span class="badge bg-danger">Reservado</span>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-titulo">Espacio Deportivo</h5>
-                            <p class="card-texto">Salón con canchas deportivas y juegos de competencia para niños
-                                activos.</p>
-                            <p class="salon-direccion"><i class="fas fa-map-marker-alt"></i>Av. Maipú 567, CABA.
-                            </p>
-                            <p class="salon-precio"><i class="fas fa-tag"></i> $260,000</p>
-                        </div>
-                        <div class="card-boton">
-                            <a href="#" class="btn btn-primary btn-full">Ver detalles</a>
-                        </div>
-                    </div>
-
-                    <!-- Salón H -->
-                    <div class="salones-card">
-                        <div class="salon-imagen-container">
-                            <img src="Assets/salonH.png" alt="Mundo Científico">
-                            <span class="badge bg-success">Disponible</span>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-titulo">Mundo Científico</h5>
-                            <p class="card-texto">Salón con temática de ciencia y experimentos, ideal para niños
-                                curiosos.</p>
-                            <p class="salon-direccion"><i class="fas fa-map-marker-alt"></i> Calle Sarmiento 890, Tigre.
-                            </p>
-                            <p class="salon-precio"><i class="fas fa-tag"></i> $290,000</p>
-                        </div>
-                        <div class="card-boton">
-                            <a href="#" class="btn btn-primary btn-full">Ver detalles</a>
+                    <!-- Salón 4 -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="card shadow-sm">
+                            <div class="ratio ratio-4x3 position-relative">
+                                <img src="Assets/salonD.png" class="img-fluid w-100" alt="Fiesta Feliz">
+                                <div class="position-absolute top-0 start-0 p-2">
+                                    <span class="badge bg-success">Disponible</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Fiesta Feliz</h5>
+                                <p class="card-text">Salón amplio y luminoso con decoración versátil adaptable a
+                                    cualquier temática.</p>
+                                <p class="salon-direccion"><i class="fas fa-map-marker-alt me-2"></i>Av. Salto Uruguayo
+                                    456, Belgrano.</p>
+                                <p class="salon-precio"><i class="fas fa-tag me-2"></i>$220,000</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-top-0">
+                                <a href="detalleSalon.html" class="btn btn-primary w-100">Ver Detalles</a>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Salón I -->
-                    <div class="salones-card">
-                        <div class="salon-imagen-container">
-                            <img src="Assets/salonI.png" alt="Granja Feliz">
-                            <span class="badge bg-success">Disponible</span>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-titulo">Granja Feliz</h5>
-                            <p class="card-texto">Salón con temática de granja y animales, con espacios al aire libre.
-                            </p>
-                            <p class="salon-direccion"><i class="fas fa-map-marker-alt"></i> Ruta 14 Km 5, Tigre
-                            </p>
-                            <p class="salon-precio"><i class="fas fa-tag"></i> $320,000</p>
-                        </div>
-                        <div class="card-boton">
-                            <a href="#" class="btn btn-primary btn-full">Ver detalles</a>
+                    <!-- Salón 5 -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="card shadow-sm">
+                            <div class="ratio ratio-4x3 position-relative">
+                                <img src="Assets/salonE.png" class="img-fluid w-100" alt="Mundo playa">
+                                <div class="position-absolute top-0 start-0 p-2">
+                                    <span class="badge bg-success">Disponible</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Mundo Playa</h5>
+                                <p class="card-text">Salón con piscina y juegos acuáticos, ideal para fiestas en verano.
+                                </p>
+                                <p class="salon-direccion"><i class="fas fa-map-marker-alt me-2"></i>Av. Constitución
+                                    789, Nuñez.</p>
+                                <p class="salon-precio"><i class="fas fa-tag me-2"></i>$350,000</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-top-0">
+                                <a href="detalleSalon.html" class="btn btn-primary w-100">Ver Detalles</a>
+                            </div>
                         </div>
                     </div>
 
+                    <!-- Salón 6 -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="card shadow-sm">
+                            <div class="ratio ratio-4x3 position-relative">
+                                <img src="Assets/salonF.png" class="img-fluid w-100" alt="Bosque Encantado">
+                                <div class="position-absolute top-0 start-0 p-2">
+                                    <span class="badge bg-success">Disponible</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Bosque Encantado</h5>
+                                <p class="card-text">Salón con ambientación de bosque y hadas, perfecto para fiestas de
+                                    fantasía.</p>
+                                <p class="salon-direccion"><i class="fas fa-map-marker-alt me-2"></i>Calle Mitre 234,
+                                    Concordia</p>
+                                <p class="salon-precio"><i class="fas fa-tag me-2"></i>$270,000</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-top-0">
+                                <a href="detalleSalon.html" class="btn btn-primary w-100">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
 
+                    <!-- Salón 7 -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="card shadow-sm">
+                            <div class="ratio ratio-4x3 position-relative">
+                                <img src="Assets/salonG.png" class="img-fluid w-100" alt="Espacio Deportivo">
+                                <div class="position-absolute top-0 start-0 p-2">
+                                    <span class="badge bg-danger">Reservado</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Espacio Deportivo</h5>
+                                <p class="card-text">Salón con canchas deportivas y juegos de competencia para niños
+                                    activos.</p>
+                                <p class="salon-direccion"><i class="fas fa-map-marker-alt me-2"></i>Av. Maipú 567,
+                                    CABA.</p>
+                                <p class="salon-precio"><i class="fas fa-tag me-2"></i>$260,000</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-top-0">
+                                <a href="detalleSalon.html" class="btn btn-primary w-100">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
 
+                    <!-- Salón 8 -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="card shadow-sm">
+                            <div class="ratio ratio-4x3 position-relative">
+                                <img src="Assets/salonH.png" class="img-fluid w-100" alt="Mundo Científico">
+                                <div class="position-absolute top-0 start-0 p-2">
+                                    <span class="badge bg-success">Disponible</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Mundo Científico</h5>
+                                <p class="card-text">Salón con temática de ciencia y experimentos, ideal para niños
+                                    curiosos.</p>
+                                <p class="salon-direccion"><i class="fas fa-map-marker-alt me-2"></i>Calle Sarmiento
+                                    890, Tigre.</p>
+                                <p class="salon-precio"><i class="fas fa-tag me-2"></i>$290,000</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-top-0">
+                                <a href="detalleSalon.html" class="btn btn-primary w-100">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Salón 9 -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="card shadow-sm ">
+                            <div class="ratio ratio-4x3 position-relative">
+                                <img src="Assets/salonI.png" class="img-fluid w-100" alt="Granja Feliz">
+                                <div class="position-absolute top-0 start-0 p-2">
+                                    <span class="badge bg-success">Disponible</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Granja Feliz</h5>
+                                <p class="card-text">Salón con temática de granja y animales, con espacios al aire
+                                    libre.</p>
+                                <p class="salon-direccion"><i class="fas fa-map-marker-alt me-2"></i>Ruta 14 Km 5, Tigre
+                                </p>
+                                <p class="salon-precio"><i class="fas fa-tag me-2"></i>$320,000</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-top-0">
+                                <a href="detalleSalon.html" class="btn btn-primary w-100">Ver Detalles</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <!-- Fin de sección salones con GRID -->
+        <!-- Fin sección salones con Bootstrap -->
 
 
 
