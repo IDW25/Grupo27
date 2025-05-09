@@ -1091,9 +1091,9 @@ input:checked + .slider:before {
   columns: 2;
 }
 
-.btn:hover {
+/*.btn:hover {
   background-color: #005fa3 !important;
-}
+}*/
 
 /* ADMINISTRACION */
 
