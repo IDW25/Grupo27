@@ -73,8 +73,8 @@
             
         <section class="bg-primary text-white text-center py-5">
             <div class="container">
-                <h1 class="fw-bolder">Arma tu pressupuesto</h1>
-                <p class="lead">Contamos con diferentes servicios para hacer realidad tus sueños!</p>
+                <h1 class="fw-bolder">Arma tu presupuesto</h1>
+                <p class="lead">Contamos con diferentes servicios para hacer realidad tu sueño!</p>
             </div>
         </section>
         
@@ -110,9 +110,9 @@
                         <label for="tematica" class="form-label">Temática</label>
                         <select class="form-select" id="tematica">
                         <option selected>Seleccioná una temática</option>
-                        <option value="infantil">Fiesta infantil</option>
-                        <option value="adulto">Cumpleaños de adulto</option>
-                        <option value="casamiento">Casamiento</option>
+                        <option value="infantil">Interior</option>
+                        <option value="adulto">Exterior</option>
+                        <option value="casamiento">Actividades</option>
                         </select>
                     </div>
                     </form>
@@ -133,121 +133,117 @@
                 </aside>
 
                 <!--Seleccion: Salones-->
-                <article class="col-md-8"> 
-                    <section class="form-section">
-                        <h4 class="mb-4">Seleccionar salón</h4>
-
-                        <section class="row"> <!-- NUEVA FILA PARA 2 TARJETAS -->
-
-                            <!-- TARJETA IZQUIERDA -->
-                            <div class="col-md-6 mb-4"> <!-- Columna que contiene la tarjeta -->
-                                <div class="card h-100"> <!-- Tarjeta con altura completa -->
-                                  <div class="row g-0 h-100"> <!-- Fila sin espacios y con altura completa -->
-                                    <div class="col-md-5 h-100"> <!-- Columna izquierda con altura completa -->
-                                      <img src="Assets/salonA.png" class="img-fluid h-100 object-fit-cover" alt="Salón A"> <!-- Imagen ajustada -->
-                                    </div>
-                                    
-                                    <div class="col-md-7">
-                                      <div class="card-body d-flex flex-column justify-content-between h-100">
-                                        <div>
-                                          <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="salon" id="salonA" value="salonA">
-                                            <label class="form-check-label fw-bold" for="salonA">Mundo inflable</label>
-                                          </div>
-                                          
-                                          <p class="card-text small text-muted mb-1"><i class="fas fa-map-marker-alt bi bi-geo-alt-fill"></i> Av. Rivadavia 8423, Flores, CABA</p>
-                                          <p class="card-text small text-muted fw-semibold">$150.000</p>
-                                          <span class="badge bg-success mb-2">Disponible</span>
-                                        </div>
-                                        <a href="#" class="btn btn-outline-primary btn-sm w-100">Detalles</a>
-                                      </div>
-                                    </div>
+               
+                <article class="col-12 col-md-8"> 
+                  <section class="form-section">
+                    <h4 class="mb-4">Seleccionar salón</h4>
+                
+                    <section class="row"> <!--TARJETAS DE SALONES-->
+                      
+                      <!-- TARJETA IZQUIERDA -->
+                      <div class="col-12 col-md-6 mb-4">
+                        <div class="card h-100">
+                          <div class="row g-0">
+                            <div class="col-12 col-md-5">
+                              <img src="Assets/salonA.png" class="img-fluid w-100 h-100 object-fit-cover" alt="Salón A" style="object-fit: cover;">
+                            </div>
+                            <div class="col-12 col-md-7">
+                              <div class="card-body d-flex flex-column justify-content-between h-100">
+                                <div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="salon" id="salonA" value="salonA">
+                                    <label class="form-check-label fw-bold" for="salonA">Mundo inflable</label>
                                   </div>
+                                  <p class="card-text small text-muted mb-1"><i class="fas fa-map-marker-alt bi bi-geo-alt-fill"></i> Av. Rivadavia 8423, Flores, CABA</p>
+                                  <p class="card-text small text-muted fw-semibold">$150.000</p>
+                                  <span class="badge bg-success mb-2">Disponible</span>
                                 </div>
+                                <a href="#" class="btn btn-outline-primary btn-sm w-100">Detalles</a>
                               </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                                 
 
-                            <!-- TARJETA DERECHA -->
-                            <div class="col-md-6 mb-4"> <!-- Columna que contiene la tarjeta -->
-                                <div class="card h-100"> <!-- Tarjeta con altura completa -->
-                                  <div class="row g-0 h-100"> <!-- Fila sin espacios y con altura completa -->
-                                    <div class="col-md-5 h-100"> <!-- Columna izquierda con altura completa -->
-                                      <img src="Assets/salonB.png" class="img-fluid h-100 object-fit-cover" alt="Salón B"> <!-- Imagen ajustada -->
-                                    </div>
-                                    <div class="col-md-7">
-                                      <div class="card-body d-flex flex-column justify-content-between h-100">
-                                        <div>
-                                          <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="salon" id="salonB" value="salonB">
-                                            <label class="form-check-label fw-bold" for="salonA">Mundo Elástico</label>
-                                          </div>
-                                          
-                                          <p class="card-text small text-muted mb-1"><i class="fas fa-map-marker-alt bi bi-geo-alt-fill"></i> Av. Córdoba 3150, Palermo, CABA</p>
-                                          <p class="card-text small text-muted fw-semibold">$300.000</p>
-                                          <span class="badge bg-success mb-2">Disponible</span>
-                                        </div>
-                                        <a href="#" class="btn btn-outline-primary btn-sm w-100">Detalles</a>
-                                      </div>
-                                    </div>
+                      <!-- TARJETA DERECHA -->
+                      <div class="col-12 col-md-6 mb-4">
+                        <div class="card h-100">
+                          <div class="row g-0">
+                            <div class="col-12 col-md-5">
+                              <img src="Assets/salonB.png" class="img-fluid w-100 h-100 object-fit-cover" alt="Salón B" style="object-fit: cover;">
+                            </div>
+                            <div class="col-12 col-md-7">
+                              <div class="card-body d-flex flex-column justify-content-between h-100">
+                                <div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="salon" id="salonB" value="salonB">
+                                    <label class="form-check-label fw-bold" for="salonA">Mundo Elástico</label>
                                   </div>
+                                  <p class="card-text small text-muted mb-1"><i class="fas fa-map-marker-alt bi bi-geo-alt-fill"></i> Av. Córdoba 3150, Palermo, CABA</p>
+                                  <p class="card-text small text-muted fw-semibold">$300,000</p>
+                                  <span class="badge bg-success mb-2">Disponible</span>
                                 </div>
+                                <a href="#" class="btn btn-outline-primary btn-sm w-100">Detalles</a>
                               </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
 
-                            <!--TARJETA IZQUIERDA ABAJO-->
-                            <div class="col-md-6 mb-4"> <!-- Columna que contiene la tarjeta -->
-                                <div class="card h-100"> <!-- Tarjeta con altura completa -->
-                                  <div class="row g-0 h-100"> <!-- Fila sin espacios y con altura completa -->
-                                    <div class="col-md-5 h-100"> <!-- Columna izquierda con altura completa -->
-                                      <img src="Assets/salonD.png" class="img-fluid h-100 object-fit-cover" alt="Salón D"> <!-- Imagen ajustada -->
-                                    </div>
-                                    <div class="col-md-7">
-                                      <div class="card-body d-flex flex-column justify-content-between h-100">
-                                        <div>
-                                          <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="salon" id="salonD" value="salonD">
-                                            <label class="form-check-label fw-bold" for="salonA">PROXIMAMENTE</label>
-                                          </div>
-                                          <p class="card-text small text-muted">Tenemos una sorpresa para vos.</p>
-                                         
-                                          <p class="card-text small text-muted fw-semibold">$123.456</p>
-                                          <span class="badge bg-success mb-2">No disponible</span>
-                                        </div>
-                                        <a href="#" class="btn btn-outline-primary btn-sm w-100">Detalles</a>
-                                      </div>
-                                    </div>
+                      <!--TARJETA IZQUIERDA ABAJO-->
+                      <div class="col-12 col-md-6 mb-4">
+                        <div class="card h-100">
+                          <div class="row g-0">
+                            <div class="col-12 col-md-5">
+                              <img src="Assets/salonC.png" class="img-fluid w-100 h-100 object-fit-cover" alt="Salón C" style="object-fit: cover;">
+                            </div>
+                            <div class="col-12 col-md-7">
+                              <div class="card-body d-flex flex-column justify-content-between h-100">
+                                <div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="salon" id="salonC" value="salonC">
+                                    <label class="form-check-label fw-bold" for="salonA">Mundo Acuático</label>
                                   </div>
+                                  <p class="card-text small text-muted mb-1"><i class="fas fa-map-marker-alt bi bi-geo-alt-fill"></i> Don Pedro 2100, La Boca, CABA</p>
+                                  <p class="card-text small text-muted fw-semibold">$350,000</p>
+                                  <span class="badge bg-success mb-2">Disponible</span>
                                 </div>
+                                <a href="#" class="btn btn-outline-primary btn-sm w-100">Detalles</a>
                               </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
 
-                            <!-- TARJETA DERECHA ABAJO -->
-                            <div class="col-md-6 mb-4"> <!-- Columna que contiene la tarjeta -->
-                                <div class="card h-100"> <!-- Tarjeta con altura completa -->
-                                  <div class="row g-0 h-100"> <!-- Fila sin espacios y con altura completa -->
-                                    <div class="col-md-5 h-100"> <!-- Columna izquierda con altura completa -->
-                                      <img src="Assets/salonC.png" class="img-fluid h-100 object-fit-cover" alt="Salón C"> <!-- Imagen ajustada -->
-                                    </div>
-                                    <div class="col-md-7">
-                                      <div class="card-body d-flex flex-column justify-content-between h-100">
-                                        <div>
-                                          <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="salon" id="salonC" value="salonC">
-                                            <label class="form-check-label fw-bold" for="salonA">Mundo Acuático</label>
-                                          </div>
-                                          
-                                          <p class="card-text small text-muted mb-1"><i class="fas fa-map-marker-alt bi bi-geo-alt-fill"></i> Don Pedro 2100, La Boca, CABA</p>
-                                          <p class="card-text small text-muted fw-semibold">$350.000</p>
-                                          <span class="badge bg-success mb-2">Disponible</span>
-                                        </div>
-                                        <a href="#" class="btn btn-outline-primary btn-sm w-100">Detalles</a>
-                                      </div>
-                                    </div>
+                      <!-- TARJETA DERECHA ABAJO -->
+                      <div class="col-12 col-md-6 mb-4">
+                        <div class="card h-100">
+                          <div class="row g-0">
+                            <div class="col-12 col-md-5">
+                              <img src="Assets/salonD.png" class="img-fluid w-100 h-100 object-fit-cover" alt="Salón D" style="object-fit: cover;">
+                            </div>
+                            <div class="col-12 col-md-7">
+                              <div class="card-body d-flex flex-column justify-content-between h-100">
+                                <div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="salon" id="salonD" value="salonD">
+                                    <label class="form-check-label fw-bold" for="salonA">Fiesta Feliz</label>
                                   </div>
+                                  <p class="card-text small text-muted mb-1"><i class="fas fa-map-marker-alt bi bi-geo-alt-fill"></i>Av. Salto Uruguayo 456, Belgrano.</p>
+                                  <p class="card-text small text-muted fw-semibold">$220,000</p>
+                                  <span class="badge bg-success mb-2">Disponible</span>
                                 </div>
+                                <a href="#" class="btn btn-outline-primary btn-sm w-100">Detalles</a>
                               </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
 
-                        </section> 
+                    </section> 
                           
-                    </section>
+                  </section>
                 </article>
 
                 <!--Seleccion: Servicios-->
@@ -381,8 +377,8 @@
                 </article>
 
                 <!--Boton cCalcular Presupuesto-->
-                <article class="col-md-8">
-                    <button class="button">Calcular presupuesto</button>
+                <article class="col-md-8 d-grid gap-2">
+                    <button class="btn btn-outline-primary btn-lg" >Calcular presupuesto</button>
                 </article>
 
 
