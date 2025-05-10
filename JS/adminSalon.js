@@ -2,10 +2,9 @@ const agregarSalonBtn = document.getElementById('agregarSalonBtn');
 const agregarSalon = document.querySelector('.agregarSalon');
 const cancelBtn = document.getElementById('cancelBtn');
 const formAgregarSalon = document.getElementById('formAgregarSalon');
-const btnNvoSalon = document.getElementById('btnNvoSalon');
+const btnNvo = document.getElementById('btnNvo');
 
-
-btnNvoSalon.addEventListener('click', () => {
+btnNvo.addEventListener('click', () => {
   agregarSalon.style.display = 'block';
 });
 
@@ -13,7 +12,7 @@ cancelBtn.addEventListener('click', () => {
   agregarSalon.style.display = 'none';
 });
 
-function checkearFormulario() {
+function checkearFormularioSalon() {
   const titulo = document.getElementById('titulo').value;
   const direccion = document.getElementById('direccion').value;
   const valor = document.getElementById('valor').value;
@@ -24,11 +23,12 @@ function checkearFormulario() {
                             direccion !== "" && 
                             valor !== "" && 
                             (disponible || noDisponible);
-
-  agregarSalonBtn.disabled = !llenadoRequerido;
+  if (llenadoRequerido) {
+    document.getElementById('agregarSalonBtn').disabled = false;
+  }
 }
 
-formAgregarSalon.addEventListener('input', checkearFormulario);
+formAgregarSalon.addEventListener('input', checkearFormularioSalon);
 
 agregarSalonBtn.addEventListener('click', (e) => {
   e.preventDefault();
