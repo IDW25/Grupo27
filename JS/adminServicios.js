@@ -53,3 +53,14 @@ agregarServicioBtn.addEventListener('click', (e) => {
 
   console.log(descripcionServicio, valor);
 });
+
+/* Eliminar el presupuesto */
+
+document.querySelectorAll('.eliminar').forEach(boton => {
+ boton.addEventListener('click', function () {
+  const fila = this.closest('tr');
+  const celda = fila.querySelectorAll('td');
+  const confirmar = confirm(`¿Estas seguro que deseas eliminar este servicio?`);
+  if (confirmar) fila.remove();
+ });
+});

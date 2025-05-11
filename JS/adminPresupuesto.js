@@ -4,6 +4,11 @@ let fila = null;
 const editarPres = document.getElementById('editarPres');
 const guardarCambios = document.getElementById('guardarCambios');
 const formEditarPres = document.getElementById('formEditarPres');
+const cancelBtn = document.getElementById('cancelBtn');
+
+cancelBtn.addEventListener('click', () => {
+  editarPres.style.display = 'none';
+});
 
 //Me aseguro que los cambios se guardan correctamente
 function checkearEdicionForm () {
@@ -86,4 +91,50 @@ document.querySelectorAll('.eliminar').forEach(boton => {
   const confirmar = confirm(`¿Estas seguro que deseas eliminar a ${celda[1].textContent} del presupuesto?`);
   if (confirmar) fila.remove();
  });
+});
+
+/* Exportar tabla: descargar archivo excel */
+
+document.getElementById('btnExportar').addEventListener("click", function () {
+   
+   const tabla = document.querySelector('table').outerHTML;
+
+   const blob = new Blob(
+        [`<html><head><meta charset="UTF-8"></head><body>${tabla}</body></html>`],
+        {type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"}
+    );
+
+   const url = URL.createObjectURL(blob);
+   const a = document.createElement("a");
+   a.href = url;
+   a.download = "presupuestos.xls";
+   document.body.appendChild(a);
+   a.click();
+   document.body.removeChild(a);
+   URL.revokeObjectURL(url);
+});
+
+/* Imprimir tabla */
+
+document.getElementById("btnImprimir").addEventListener("click", function () {
+    const tabla = document.querySelector("table").outerHTML;
+    const ventana = window.open("", "_blank");
+    ventana.document.write(`
+        <html>
+        <head>
+            <title>Imprimir Presupuestos</title>
+            <style>
+                table { width: 100%; border-collapse: collapse; }
+                th, td { border: 1px solid #000; padding: 8px; text-align: center; }
+                th { background-color: #f2f2f2; }
+            </style>
+        </head>
+        <body>
+            <h2>Presupuestos</h2>
+            ${tabla}
+        </body>
+        </html>
+    `);
+    ventana.document.close();
+    ventana.print();
 });
