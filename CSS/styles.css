@@ -835,7 +835,7 @@ main > .filtros {
   min-width: 900px;
 }
 
-.agregarSalon, .agregarServicio {
+.agregarSalon, .agregarServicio, .editarPres {
   background: rgb(0, 114, 206, .95);
 }
 
@@ -844,7 +844,7 @@ main > .filtros {
   margin-top: 7%;
 }
 
-#agregarSalon, #agregarServicio {
+#agregarSalon, #agregarServicio, #editarPres {
   display: none;
 }
 
