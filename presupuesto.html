@@ -23,9 +23,9 @@
 
 <body>
     <!-- Nav bar-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary p-0">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
-            <a class="navbar-brand me-0" href="index.html">
+            <a class="navbar-brand" href="index.html">
                 <img src="Assets/Logo-White1.png" alt="IDW S.A. Logo" height="40" class="d-inline-block align-text-top">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -34,7 +34,7 @@
             <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Inicio</a>
+                        <a class="nav-link active" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="nosotros.html">Nosotros</a>
@@ -46,7 +46,7 @@
                         <a class="nav-link" href="servicios.html">Servicios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="presupuesto.html">Presupuesto</a>
+                        <a class="nav-link" href="presupuesto.html">Crear Presupuesto</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contacto.html">Contacto</a>
@@ -69,324 +69,320 @@
     </nav>
     <!--Fin de Nav bar-->
 
-    <main class="content">
-            
-        <section class="bg-primary text-white text-center py-5">
-            <div class="container">
-                <h1 class="fw-bolder">Arma tu presupuesto</h1>
-                <p class="lead">Contamos con diferentes servicios para hacer realidad tu sueño!</p>
-            </div>
-        </section>
+    <main class="content">      
+      <section class="bg-primary text-white text-center py-5">
+          <div class="container">
+              <h1 class="fw-bolder">Arma tu presupuesto</h1>
+              <p class="lead">Contamos con diferentes servicios para hacer realidad tu sueño!</p>
+          </div>
+      </section>
         
-        <section class="container-form">
-            <section class="row g-5">
+      <section class="container-form">
+          <section class="row g-5">
 
-                <!-- Sección: Información personal -->
-                <article class="col-md-8"> <!--COLUMNA FORMULARIO-->
+              <!-- Sección: Información personal -->
+              <article class="col-md-8"> <!--COLUMNA FORMULARIO-->
                 <section class="form-section"> 
                     <h4 class="mb-4">Información personal</h4>
                     <form>
-                    <div class="row mb-3">
-                        <div class="col">
-                        <label for="nombre" class="form-label">Nombre completo</label>
-                        <input type="text" class="form-control" id="nombre" placeholder="Nombre y apellido">
-                        </div>
-                        <div class="col">
-                        <label for="fecha" class="form-label">Fecha del evento</label>
-                        <input type="date" class="form-control" id="fecha">
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col">
-                        <label for="correo" class="form-label">Correo electrónico</label>
-                        <input type="email" class="form-control" id="correo" placeholder="tu@email.com">
-                        </div>
-                        <div class="col">
-                        <label for="telefono" class="form-label">Teléfono</label>
-                        <input type="tel" class="form-control" id="telefono" placeholder="11-2545-7845">
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="tematica" class="form-label">Temática</label>
-                        <select class="form-select" id="tematica">
-                        <option selected>Seleccioná una temática</option>
-                        <option value="infantil">Interior</option>
-                        <option value="adulto">Exterior</option>
-                        <option value="casamiento">Actividades</option>
-                        </select>
-                    </div>
+                      <div class="row mb-3">
+                          <div class="col">
+                            <label for="nombre" class="form-label">Nombre completo</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Nombre y apellido">
+                          </div>
+                          <div class="col">
+                            <label for="fecha" class="form-label">Fecha del evento</label>
+                            <input type="date" class="form-control" id="fecha">
+                          </div>
+                      </div>
+                      <div class="row mb-3">
+                          <div class="col">
+                            <label for="correo" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="correo" placeholder="tu@email.com">
+                          </div>
+                          <div class="col">
+                            <label for="telefono" class="form-label">Teléfono</label>
+                            <input type="tel" class="form-control" id="telefono" placeholder="11-2545-7845">
+                          </div>
+                      </div>
+                      <div class="mb-3">
+                          <label for="tematica" class="form-label">Temática</label>
+                          <select class="form-select" id="tematica">
+                            <option selected>Seleccioná una temática</option>
+                            <option value="infantil">Interior</option>
+                            <option value="adulto">Exterior</option>
+                            <option value="casamiento">Actividades</option>
+                          </select>
+                      </div>
                     </form>
                 </section>
-                </article>
-            
-                <!-- Sección: Resumen del presupuesto -->
-                <aside class="col-md-4"><!--COLUMNA RESUMEN-->
+              </article>
+          
+              <!-- Sección: Resumen del presupuesto -->
+              <aside class="col-md-4 d-block"><!--COLUMNA RESUMEN-->
                 <section class="form-section">
                     <h4 class="mb-3">Resumen del presupuesto</h4>
                     <div class="alert alert-info d-flex align-items-center" role="alert">
-                    <i class="bi bi-info-circle info-icon"></i>
-                    <div>
-                        Seleccioná un salón y los servicios para ver el presupuesto.
-                    </div>
+                      <i class="bi bi-info-circle info-icon"></i>
+                      <div>
+                          Seleccioná un salón y los servicios para ver el presupuesto.
+                      </div>
                     </div>
                 </section>
-                </aside>
+              </aside>
 
-                <!--Seleccion: Salones-->
-               
-                <article class="col-12 col-md-8"> 
-                  <section class="form-section">
-                    <h4 class="mb-4">Seleccionar salón</h4>
-                
-                    <section class="row"> <!--TARJETAS DE SALONES-->
-                      
-                      <!-- TARJETA IZQUIERDA -->
-                      <div class="col-12 col-md-6 mb-4">
-                        <div class="card h-100">
-                          <div class="row g-0">
-                            <div class="col-12 col-md-5">
-                              <img src="Assets/salonA.png" class="img-fluid w-100 h-100 object-fit-cover" alt="Salón A" style="object-fit: cover;">
-                            </div>
-                            <div class="col-12 col-md-7">
-                              <div class="card-body d-flex flex-column justify-content-between h-100">
-                                <div>
-                                  <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="salon" id="salonA" value="salonA">
-                                    <label class="form-check-label fw-bold" for="salonA">Mundo inflable</label>
-                                  </div>
-                                  <p class="card-text small text-muted mb-1"><i class="fas fa-map-marker-alt bi bi-geo-alt-fill"></i> Av. Rivadavia 8423, Flores, CABA</p>
-                                  <p class="card-text small text-muted fw-semibold">$150.000</p>
-                                  <span class="badge bg-success mb-2">Disponible</span>
+              <!--Seleccion: Salones-->
+              
+              <article class="col-12 col-md-8"> 
+                <section class="form-section">
+                  <h4 class="mb-4">Seleccionar salón</h4>
+              
+                  <section class="row"> <!--TARJETAS DE SALONES-->
+                    
+                    <!-- TARJETA IZQUIERDA -->
+                    <div class="col-12 col-md-6 mb-4">
+                      <div class="card h-100">
+                        <div class="row g-0">
+                          <div class="col-12 col-md-5">
+                            <img src="Assets/salonA.png" class="img-fluid w-100 h-100 object-fit-cover" alt="Salón A" style="object-fit: cover;">
+                          </div>
+                          <div class="col-12 col-md-7">
+                            <div class="card-body d-flex flex-column justify-content-between h-100">
+                              <div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="salon" id="salonA" value="salonA">
+                                  <label class="form-check-label fw-bold" for="salonA">Mundo inflable</label>
                                 </div>
-                                <a href="#" class="btn btn-outline-primary btn-sm w-100">Detalles</a>
+                                <p class="card-text small text-muted mb-1"><i class="fas fa-map-marker-alt bi bi-geo-alt-fill"></i> Av. Rivadavia 8423, Flores, CABA</p>
+                                <p class="card-text small text-muted fw-semibold">$150.000</p>
+                                <span class="badge bg-success mb-2">Disponible</span>
                               </div>
+                              <a href="#" class="btn btn-outline-primary btn-sm w-100">Detalles</a>
                             </div>
                           </div>
                         </div>
                       </div>
-                                
+                    </div>
+                              
 
-                      <!-- TARJETA DERECHA -->
-                      <div class="col-12 col-md-6 mb-4">
-                        <div class="card h-100">
-                          <div class="row g-0">
-                            <div class="col-12 col-md-5">
-                              <img src="Assets/salonB.png" class="img-fluid w-100 h-100 object-fit-cover" alt="Salón B" style="object-fit: cover;">
-                            </div>
-                            <div class="col-12 col-md-7">
-                              <div class="card-body d-flex flex-column justify-content-between h-100">
-                                <div>
-                                  <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="salon" id="salonB" value="salonB">
-                                    <label class="form-check-label fw-bold" for="salonA">Mundo Elástico</label>
-                                  </div>
-                                  <p class="card-text small text-muted mb-1"><i class="fas fa-map-marker-alt bi bi-geo-alt-fill"></i> Av. Córdoba 3150, Palermo, CABA</p>
-                                  <p class="card-text small text-muted fw-semibold">$300,000</p>
-                                  <span class="badge bg-success mb-2">Disponible</span>
+                    <!-- TARJETA DERECHA -->
+                    <div class="col-12 col-md-6 mb-4">
+                      <div class="card h-100">
+                        <div class="row g-0">
+                          <div class="col-12 col-md-5">
+                            <img src="Assets/salonB.png" class="img-fluid w-100 h-100 object-fit-cover" alt="Salón B" style="object-fit: cover;">
+                          </div>
+                          <div class="col-12 col-md-7">
+                            <div class="card-body d-flex flex-column justify-content-between h-100">
+                              <div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="salon" id="salonB" value="salonB">
+                                  <label class="form-check-label fw-bold" for="salonA">Mundo Elástico</label>
                                 </div>
-                                <a href="#" class="btn btn-outline-primary btn-sm w-100">Detalles</a>
+                                <p class="card-text small text-muted mb-1"><i class="fas fa-map-marker-alt bi bi-geo-alt-fill"></i> Av. Córdoba 3150, Palermo, CABA</p>
+                                <p class="card-text small text-muted fw-semibold">$300,000</p>
+                                <span class="badge bg-success mb-2">Disponible</span>
                               </div>
+                              <a href="#" class="btn btn-outline-primary btn-sm w-100">Detalles</a>
                             </div>
                           </div>
                         </div>
                       </div>
+                    </div>
 
-                      <!--TARJETA IZQUIERDA ABAJO-->
-                      <div class="col-12 col-md-6 mb-4">
-                        <div class="card h-100">
-                          <div class="row g-0">
-                            <div class="col-12 col-md-5">
-                              <img src="Assets/salonC.png" class="img-fluid w-100 h-100 object-fit-cover" alt="Salón C" style="object-fit: cover;">
-                            </div>
-                            <div class="col-12 col-md-7">
-                              <div class="card-body d-flex flex-column justify-content-between h-100">
-                                <div>
-                                  <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="salon" id="salonC" value="salonC">
-                                    <label class="form-check-label fw-bold" for="salonA">Mundo Acuático</label>
-                                  </div>
-                                  <p class="card-text small text-muted mb-1"><i class="fas fa-map-marker-alt bi bi-geo-alt-fill"></i> Don Pedro 2100, La Boca, CABA</p>
-                                  <p class="card-text small text-muted fw-semibold">$350,000</p>
-                                  <span class="badge bg-success mb-2">Disponible</span>
+                    <!--TARJETA IZQUIERDA ABAJO-->
+                    <div class="col-12 col-md-6 mb-4">
+                      <div class="card h-100">
+                        <div class="row g-0">
+                          <div class="col-12 col-md-5">
+                            <img src="Assets/salonC.png" class="img-fluid w-100 h-100 object-fit-cover" alt="Salón C" style="object-fit: cover;">
+                          </div>
+                          <div class="col-12 col-md-7">
+                            <div class="card-body d-flex flex-column justify-content-between h-100">
+                              <div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="salon" id="salonC" value="salonC">
+                                  <label class="form-check-label fw-bold" for="salonA">Mundo Acuático</label>
                                 </div>
-                                <a href="#" class="btn btn-outline-primary btn-sm w-100">Detalles</a>
+                                <p class="card-text small text-muted mb-1"><i class="fas fa-map-marker-alt bi bi-geo-alt-fill"></i> Don Pedro 2100, La Boca, CABA</p>
+                                <p class="card-text small text-muted fw-semibold">$350,000</p>
+                                <span class="badge bg-success mb-2">Disponible</span>
                               </div>
+                              <a href="#" class="btn btn-outline-primary btn-sm w-100">Detalles</a>
                             </div>
                           </div>
                         </div>
                       </div>
+                    </div>
 
-                      <!-- TARJETA DERECHA ABAJO -->
-                      <div class="col-12 col-md-6 mb-4">
-                        <div class="card h-100">
-                          <div class="row g-0">
-                            <div class="col-12 col-md-5">
-                              <img src="Assets/salonD.png" class="img-fluid w-100 h-100 object-fit-cover" alt="Salón D" style="object-fit: cover;">
-                            </div>
-                            <div class="col-12 col-md-7">
-                              <div class="card-body d-flex flex-column justify-content-between h-100">
-                                <div>
-                                  <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="salon" id="salonD" value="salonD">
-                                    <label class="form-check-label fw-bold" for="salonA">Fiesta Feliz</label>
-                                  </div>
-                                  <p class="card-text small text-muted mb-1"><i class="fas fa-map-marker-alt bi bi-geo-alt-fill"></i>Av. Salto Uruguayo 456, Belgrano.</p>
-                                  <p class="card-text small text-muted fw-semibold">$220,000</p>
-                                  <span class="badge bg-success mb-2">Disponible</span>
+                    <!-- TARJETA DERECHA ABAJO -->
+                    <div class="col-12 col-md-6 mb-4">
+                      <div class="card h-100">
+                        <div class="row g-0">
+                          <div class="col-12 col-md-5">
+                            <img src="Assets/salonD.png" class="img-fluid w-100 h-100 object-fit-cover" alt="Salón D" style="object-fit: cover;">
+                          </div>
+                          <div class="col-12 col-md-7">
+                            <div class="card-body d-flex flex-column justify-content-between h-100">
+                              <div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="salon" id="salonD" value="salonD">
+                                  <label class="form-check-label fw-bold" for="salonA">Fiesta Feliz</label>
                                 </div>
-                                <a href="#" class="btn btn-outline-primary btn-sm w-100">Detalles</a>
+                                <p class="card-text small text-muted mb-1"><i class="fas fa-map-marker-alt bi bi-geo-alt-fill"></i>Av. Salto Uruguayo 456, Belgrano.</p>
+                                <p class="card-text small text-muted fw-semibold">$220,000</p>
+                                <span class="badge bg-success mb-2">Disponible</span>
                               </div>
+                              <a href="#" class="btn btn-outline-primary btn-sm w-100">Detalles</a>
                             </div>
                           </div>
                         </div>
                       </div>
+                    </div>
 
-                    </section> 
-                          
-                  </section>
-                </article>
-
-                <!--Seleccion: Servicios-->
-                <article class="col-md-8"> 
-                    <section class="form-section">
-                        <h4 class="mb-4">Seleccionar servicios</h4>
-
-                        <!--Tarjetas de servicios-->
-                        <section class="row">
-                            
-                            <div class="col-12 col-sm-6 col-lg-4">
-                                <div class="card h-100 text-center card-serviciosadc">
-                                  <div class="card-body">
-                                    <div class="pasos-icon">
-                                      <i class="fa-solid fa-cake-candles text-white"></i>
-                                    </div>
-                                    <h5 class="card-title">Torta Temática</h5>
-                                    
-                                    <p class="card-text text-center mb-4">$30.000</p>
-                                    <label class="switch">
-                                        <input type="checkbox">
-                                        <span class="slider"></span>
-                                    </label>
-                                  </div>
-                                </div>
-                              </div>
+                  </section> 
                         
-                              <div class="col-12 col-sm-6 col-lg-4">
-                                <div class="card h-100 text-center card-serviciosadc">
-                                  <div class="card-body">
-                                    <div class="pasos-icon">
-                                      <i class="fa-solid fa-wand-magic text-white"></i>
-                                    </div>
-                                    <h5 class="card-title">Show de Magia</h5>
-                                    
-                                    <p class="card-text text-center mb-4">$25.000</p>
-                                    <label class="switch">
-                                        <input type="checkbox">
-                                        <span class="slider"></span>
-                                    </label>
+                </section>
+              </article>
+
+              <!--Seleccion: Servicios-->
+              <article class="col-md-8"> 
+                  <section class="form-section">
+                      <h4 class="mb-4">Seleccionar servicios</h4>
+
+                      <!--Tarjetas de servicios-->
+                      <section class="row">
+                          
+                          <div class="col-12 col-sm-6 col-lg-4">
+                              <div class="card h-100 text-center card-serviciosadc">
+                                <div class="card-body">
+                                  <div class="pasos-icon">
+                                    <i class="fa-solid fa-cake-candles text-white"></i>
                                   </div>
+                                  <h5 class="card-title">Torta Temática</h5>
+                                  
+                                  <p class="card-text text-center mb-4">$30.000</p>
+                                  <label class="switch">
+                                      <input type="checkbox">
+                                      <span class="slider"></span>
+                                  </label>
                                 </div>
                               </div>
-              
-                              <div class="col-12 col-sm-6 col-lg-4">
-                                <div class="card h-100 text-center card-serviciosadc">
-                                  <div class="card-body">
-                                    <div class="pasos-icon">
-                                      <i class="fa-solid fa-palette text-white"></i>
-                                    </div>
-                                    <h5 class="card-title">Pinta Caritas</h5>
-                                    
-                                    <p class="card-text text-center mb-4">$20.000</p>
-                                    <label class="switch">
-                                        <input type="checkbox">
-                                        <span class="slider"></span>
-                                    </label>
+                            </div>
+                      
+                            <div class="col-12 col-sm-6 col-lg-4">
+                              <div class="card h-100 text-center card-serviciosadc">
+                                <div class="card-body">
+                                  <div class="pasos-icon">
+                                    <i class="fa-solid fa-wand-magic text-white"></i>
                                   </div>
+                                  <h5 class="card-title">Show de Magia</h5>
+                                  
+                                  <p class="card-text text-center mb-4">$25.000</p>
+                                  <label class="switch">
+                                      <input type="checkbox">
+                                      <span class="slider"></span>
+                                  </label>
                                 </div>
                               </div>
-              
-              
-                              <div class="col-12 col-sm-6 col-lg-4">
-                                <div class="card h-100 text-center card-serviciosadc">
-                                  <div class="card-body">
-                                    <div class="pasos-icon">
-                                      <i class="fa-solid fa-camera-retro text-white"></i>
-                                    </div>
-                                    <h5 class="card-title">Fotografía</h5>
-                                    
-                                    <p class="card-text text-center mb-4">$50.000</p>
-                                    <label class="switch">
-                                        <input type="checkbox">
-                                        <span class="slider"></span>
-                                    </label>
+                            </div>
+            
+                            <div class="col-12 col-sm-6 col-lg-4">
+                              <div class="card h-100 text-center card-serviciosadc">
+                                <div class="card-body">
+                                  <div class="pasos-icon">
+                                    <i class="fa-solid fa-palette text-white"></i>
                                   </div>
+                                  <h5 class="card-title">Pinta Caritas</h5>
+                                  
+                                  <p class="card-text text-center mb-4">$20.000</p>
+                                  <label class="switch">
+                                      <input type="checkbox">
+                                      <span class="slider"></span>
+                                  </label>
                                 </div>
                               </div>
-              
-                              <div class="col-12 col-sm-6 col-lg-4">
-                                <div class="card h-100 text-center card-serviciosadc">
-                                  <div class="card-body">
-                                    <div class="pasos-icon">
-                                      <i class="fa-solid fa-bowl-food text-white"></i>
-                                    </div>
-                                    <h5 class="card-title">Comida Premium</h5>
-                                    
-                                    <p class="card-text text-center mb-4">$100.000</p>
-                                    <label class="switch">
-                                        <input type="checkbox">
-                                        <span class="slider"></span>
-                                    </label>
+                            </div>
+            
+            
+                            <div class="col-12 col-sm-6 col-lg-4">
+                              <div class="card h-100 text-center card-serviciosadc">
+                                <div class="card-body">
+                                  <div class="pasos-icon">
+                                    <i class="fa-solid fa-camera-retro text-white"></i>
                                   </div>
+                                  <h5 class="card-title">Fotografía</h5>
+                                  
+                                  <p class="card-text text-center mb-4">$50.000</p>
+                                  <label class="switch">
+                                      <input type="checkbox">
+                                      <span class="slider"></span>
+                                  </label>
                                 </div>
                               </div>
-                                    
-                              <div class="col-12 col-sm-6 col-lg-4">
-                                <div class="card h-100 text-center card-serviciosadc">
-                                  <div class="card-body">
-                                    <div class="pasos-icon">
-                                      <i class="fa-solid fa-candy-cane text-white"></i>
-                                    </div>
-                                    <h5 class="card-title">Candy Bar</h5>
-                                    
-                                    <p class="card-text text-center mb-4">$90.000</p>
-                                    <label class="switch">
-                                        <input type="checkbox">
-                                        <span class="slider"></span>
-                                    </label>
+                            </div>
+            
+                            <div class="col-12 col-sm-6 col-lg-4">
+                              <div class="card h-100 text-center card-serviciosadc">
+                                <div class="card-body">
+                                  <div class="pasos-icon">
+                                    <i class="fa-solid fa-bowl-food text-white"></i>
                                   </div>
+                                  <h5 class="card-title">Comida Premium</h5>
+                                  
+                                  <p class="card-text text-center mb-4">$100.000</p>
+                                  <label class="switch">
+                                      <input type="checkbox">
+                                      <span class="slider"></span>
+                                  </label>
                                 </div>
                               </div>
-
-                        </section>
-                    </section>
-                </article>
-
-                <!--Seleccion: Comentarios adicionales-->
-                <article class="col-md-8">
-                    <section class="form-section">
-                        <h4 class="mb-4">Comentarios adicionales</h4>
-
-                        <section class="row">
-                            <div class="mb-3">
-                                <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Escribí aca cualquier detalle o requerimiento especial para tu evento."></textarea>
+                            </div>
+                                  
+                            <div class="col-12 col-sm-6 col-lg-4">
+                              <div class="card h-100 text-center card-serviciosadc">
+                                <div class="card-body">
+                                  <div class="pasos-icon">
+                                    <i class="fa-solid fa-candy-cane text-white"></i>
+                                  </div>
+                                  <h5 class="card-title">Candy Bar</h5>
+                                  
+                                  <p class="card-text text-center mb-4">$90.000</p>
+                                  <label class="switch">
+                                      <input type="checkbox">
+                                      <span class="slider"></span>
+                                  </label>
+                                </div>
                               </div>
-                        </section>
+                            </div>
 
-                    </section>
-                </article>
+                      </section>
+                  </section>
+              </article>
 
-                <!--Boton cCalcular Presupuesto-->
-                <article class="col-md-8 d-grid gap-2">
-                    <button class="btn btn-outline-primary btn-lg" >Calcular presupuesto</button>
-                </article>
+              <!--Seleccion: Comentarios adicionales-->
+              <article class="col-md-8">
+                  <section class="form-section">
+                      <h4 class="mb-4">Comentarios adicionales</h4>
+
+                      <section class="row">
+                          <div class="mb-3">
+                              <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+                              <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Escribí aca cualquier detalle o requerimiento especial para tu evento."></textarea>
+                            </div>
+                      </section>
+
+                  </section>
+              </article>
+
+              <!--Boton cCalcular Presupuesto-->
+              <article class="col-md-8 d-grid gap-2">
+                  <button class="btn btn-outline-primary btn-lg" >Calcular presupuesto</button>
+              </article>
 
 
-            </section>
-        </section>
-        
-
-
+          </section>
+      </section>
     </main>
 
         <!-- Footer -->
