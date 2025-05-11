@@ -76,3 +76,14 @@ agregarSalonBtn.addEventListener('click', (e) => {
 
   agregarSalonBtn.disabled = true;
 });
+
+/* Eliminar el presupuesto */
+
+document.querySelectorAll('.eliminar').forEach(boton => {
+ boton.addEventListener('click', function () {
+  const fila = this.closest('tr');
+  const celda = fila.querySelectorAll('td');
+  const confirmar = confirm(`¿Estas seguro que deseas eliminar a ${celda[2].textContent} del presupuesto?`);
+  if (confirmar) fila.remove();
+ });
+});
