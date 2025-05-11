@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDW S.A. - Administración</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../Assets/favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Importación de tipografía Nunito -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Enlace a librería de íconos -->
+    <script src="https://kit.fontawesome.com/39373c75b8.js" crossorigin="anonymous"></script>
+    <!--Enlace a bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <!-- Enlace a la carpeta de estilos -->
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <!--Enlace al archivo JS-->
+    <script src="../JS/adminPresupuesto.js" defer></script>
+</head>
+<body>
+    <header>
+    <!--Navegacion y logo-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary p-0">
+            <div class="container">
+                <a class="navbar-brand me-0" href="../index.html">
+                    <img src="../Assets/Logo-White1.png" alt="IDW S.A. Logo" height="40" class="d-inline-block align-text-top">
+                </a>
+                <!--Navegacion solo para mobile-->
+                <button class="navbar-toggler d-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
+                    <ul class="navbar-nav text-center d-none">
+                        <li class="nav-item">
+                            <a class="nav-link" href="gestionarSalon.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar salones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gestionarServicios.html"><i class="fa-solid fa-folder-open pe-2"></i>Gestionar servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="gestionarPresupuesto.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar presupuestos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html"><i class="fa-solid fa-right-from-bracket pe-2"></i>Salir</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="d-flex p-0 m-0">
+
+        <!--Navegacion para pantallas grandes-->
+        <aside class="position-sticky bg-dark text-white" style="width: 300px; top: 0;">
+            <nav class="navbar w-100 p-0 align-items-start">
+                <div class="container py-5 mx-auto w-100">
+                    <h5 class="mx-auto py-2 fw-bold">Panel de administración</h5>
+                    <ul class="navbar-nav mx-auto d-block">
+                        <li class="nav-item">
+                            <a class="nav-link" href="gestionarSalon.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar salones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gestionarServicios.html"><i class="fa-solid fa-folder-open pe-2"></i>Gestionar servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="gestionarPresupuesto.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar presupuestos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html"><i class="fa-solid fa-right-from-bracket pe-2"></i>Salir</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+
+        <section class="py-5 mx-4 filtros">
+
+            <!-- Titulo y botones exportar e imprimir -->
+            <div class="container d-flex justify-content-between align-items-center mb-3">
+                <h4 class="fw-bold m-0">Gestionar presupuestos</h4>
+                <div>
+                 <button id="btnNvo" class="btn btn-primary"><i class="fa-solid fa-file-export"></i><span class="ps-2 tituloBtn">Exportar</span></button>
+                 <button id="btnNvo" class="btn btn-primary"><i class="fa-solid fa-print"></i><span class="ps-2 tituloBtn">Imprimir</span></button>
+                </div>
+            </div>
+            
+            <!-- Filtros -->
+            <div class="container mb-3">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h5 class="card-title mb-3">Filtrar salones</h5>
+                        <form>
+                            <div class="row g-3 align-items-center">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Buscar por nombre...">
+                                </div>
+                                
+                                <div class="col-md-2">
+                                     <input type="date" id="date" class="w-100">
+                                </div>
+
+                                <div class="col-md-2">
+                                    <select class="form-select">
+                                        <option value="">Ordenar por</option>
+                                        <option value="price_asc">Precio: Menor a Mayor</option>
+                                        <option value="price_desc">Precio: Mayor a Menor</option>
+                                        <option value="name_asc">Nombre: A-Z</option>
+                                        <option value="name_desc">Nombre: Z-A</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <button type="submit" class="btn btn-primary w-100">Filtrar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabla -->
+            <div class="container">
+                <div class="table-responsive">
+                    <table class="table text-center">
+                      <thead>
+                        <tr>
+                          <th>ID</th>
+                          <th>Nombre</th>
+                          <th>Fecha</th>
+                          <th>Temática</th>
+                          <th>Salón</th>
+                          <th>Valor total</th>
+                          <th>Acciones</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>Mario Lopez</td>
+                          <td>01/12/2025</td>
+                          <td></td>
+                          <td>Salón A</td>
+                          <td>$30000</td>
+                          <td>
+                            <button class="btn btn-primary btn-sm me-2 editar">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                            <button class="btn btn-danger btn-sm eliminar">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>Roberto Martinez</td>
+                          <td>12/12/2025</td>
+                          <td></td>
+                          <td>Salón B</td>
+                          <td>$55000</td>
+                          <td>
+                            <button class="btn btn-primary btn-sm me-2 editar">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                            <button class="btn btn-danger btn-sm eliminar">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>Ana Garcia</td>
+                          <td>27/12/2025</td>
+                          <td></td>
+                          <td>Salón C</td>
+                          <td>$30000</td>
+                          <td>
+                            <button class="btn btn-primary btn-sm me-2 editar">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                            <button class="btn btn-danger btn-sm eliminar">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>Luis Lombardo</td>
+                          <td>09/10/2025</td>
+                          <td></td>
+                          <td>Salón C</td>
+                          <td>$80000</td>
+                          <td>
+                            <button class="btn btn-primary btn-sm me-2 editar">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </button>
+                            <button class="btn btn-danger btn-sm eliminar">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!--Botones de la tabla-->
+            <div class="d-flex justify-content-center align-items-center gap-2 p-3">
+                <button class="btn btn-primary">Anterior</button>
+                    <span class="ms-2">1</span>
+                    <span class="m-2">2</span>
+                    <span class="me-2">3</span>
+                <button class="btn btn-primary">Siguiente</button>
+            </div>
+
+        </section>
+
+        <!--Formulario para editar presupuesto-->
+        <section id="editarPres" class="editarPres position-absolute top-0 start-0 w-100 h-100">
+            <div id="formEditarPres" class="form bg-white mx-auto p-5 d-flex position-relative flex-column gap-3 rounded">
+              <h4 class="text-center">Editar presupuesto</h4>
+              <i id="cancelBtn" class="fa-solid fa-xmark position-absolute top-0 end-0 p-4 fs-3" style="cursor: pointer"></i>
+              <div class="nombrePresupuesto">
+                <label for="nombrePresupuesto">Nombre y apellido</label><br>
+                <input id="nombrePresupuesto" name="nombrePresupuesto" type="text" class="w-100" required>
+              </div>
+              <div class="fechaPresupuesto">
+                <label for="fechaPresupuesto">Elegir fecha</label><br>
+                <input id="fechaPresupuesto" name="fechaPresupuesto" type="date" class="w-100" required>
+              </div>
+              <div class="tematicaPresupuesto">
+                <label for="tematicaPresupuesto">Temática</label><br>
+                <input id="tematicaPresupuesto" name="tematicaPresupuesto" type="text" class="w-100">
+              </div>
+              <div class="salonPresupuesto">
+                <label for="salonPresupuesto">Salón</label><br>
+                <input id="salonPresupuesto" name="salonPresupuesto" type="text" class="w-100">
+              </div>
+              <div class="valor">
+                <label for="valor">Valor</label><br>
+                <input class="w-100" id="valor" type="text" required>
+              </div>
+              <button id="guardarCambios" class="btn btn-primary" disabled>Guardar cambios</button>
+            </div>
+          </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</body>
+</html>
