@@ -815,9 +815,17 @@ input:checked + .slider:before {
 
 /* ADMINISTRACION */
 
-aside {
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+aside.admin {
+  position: fixed;
   width: 300px;
-  top: 0;
+  padding-top: 100px;
+  z-index: 999;
 }
 
 aside > .navbar {
@@ -831,12 +839,18 @@ main > .filtros {
   box-sizing: border-box;
 }
 
+.filtros {
+  margin-top: 100px !important;
+  margin-left: 300px !important;
+}
+
 .table {
   min-width: 900px;
 }
 
-.agregarSalon, .agregarServicio, .editarPres {
+.agregarSalon, .agregarServicio, .editarPres, .editarSalones {
   background: rgb(0, 114, 206, .95);
+  z-index: 2000;
 }
 
 .form {
@@ -844,7 +858,7 @@ main > .filtros {
   margin-top: 7%;
 }
 
-#agregarSalon, #agregarServicio, #editarPres {
+#agregarSalon, #agregarServicio, #editarPres, #editarSalones {
   display: none;
 }
 
@@ -866,5 +880,8 @@ main > .filtros {
   }
   .form {
     width: 90vw;
+  }
+  .filtros {
+  margin: 50px auto !important;
   }
 }

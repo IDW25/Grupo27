@@ -18,7 +18,7 @@
     <!-- Enlace a la carpeta de estilos -->
     <link rel="stylesheet" href="../CSS/styles.css">
     <!--Enlace al archivo JS-->
-    <script src="../JS/adminSalon.js" defer></script>
+    <script type="module" src="../JS/adminSalon.js" defer></script>
 </head>
 <body>
     <header>
@@ -55,7 +55,7 @@
     <main class="d-flex p-0 m-0">
 
         <!--Navegacion para pantallas grandes-->
-        <aside class="position-sticky bg-dark text-white" style="width: 300px; top: 0;">
+        <aside class="position-fixed bg-dark text-white admin" style="width: 300px; top: 0;">
             <nav class="navbar w-100 p-0 align-items-start">
                 <div class="container py-5 mx-auto w-100">
                     <h5 class="mx-auto py-2 fw-bold">Panel de administración</h5>
@@ -138,71 +138,7 @@
                           <th>Acciones</th>
                         </tr>
                       </thead>
-                      <tbody>
-                        <tr>
-                          <td>1</td>
-                          <td><img src="../Assets/hero-image-nosotros.jpg" alt="" width="50px"></td>
-                          <td>Salon A</td>
-                          <td>Calle 123, CABA</td>
-                          <td>$30000</td>
-                          <td><span class="badge bg-success">Disponible</span></td>
-                          <td>
-                            <button class="btn btn-primary btn-sm me-2 editar">
-                                <i class="fa-solid fa-pen-to-square"></i>
-                            </button>
-                            <button class="btn btn-danger btn-sm eliminar">
-                                <i class="fa-solid fa-trash"></i>
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>2</td>
-                          <td><img src="../Assets/hero-image-nosotros.jpg" alt="" width="50px"></td>
-                          <td>Salon B</td>
-                          <td>Calle 123, CABA</td>
-                          <td>$30000</td>
-                          <td><span class="badge bg-success">Disponible</span></td>
-                          <td>
-                            <button class="btn btn-primary btn-sm me-2 editar">
-                                <i class="fa-solid fa-pen-to-square"></i>
-                            </button>
-                            <button class="btn btn-danger btn-sm eliminar">
-                                <i class="fa-solid fa-trash"></i>
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>3</td>
-                          <td><img src="../Assets/hero-image-nosotros.jpg" alt="" width="50px"></td>
-                          <td>Salon C</td>
-                          <td>Calle 123, CABA</td>
-                          <td>$30000</td>
-                          <td><span class="badge bg-danger">Reservado</span></td>
-                          <td>
-                            <button class="btn btn-primary btn-sm me-2 editar">
-                                <i class="fa-solid fa-pen-to-square"></i>
-                            </button>
-                            <button class="btn btn-danger btn-sm eliminar">
-                                <i class="fa-solid fa-trash"></i>
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>4</td>
-                          <td><img src="../Assets/hero-image-nosotros.jpg" alt="" width="50px"></td>
-                          <td>Salon D</td>
-                          <td>Calle 123, CABA</td>
-                          <td>$30000</td>
-                          <td><span class="badge bg-danger">Reservado</span></td>
-                          <td>
-                            <button class="btn btn-primary btn-sm me-2 editar">
-                                <i class="fa-solid fa-pen-to-square"></i>
-                            </button>
-                            <button class="btn btn-danger btn-sm eliminar">
-                                <i class="fa-solid fa-trash"></i>
-                            </button>
-                          </td>
-                        </tr>
+                      <tbody id="tbody">
                       </tbody>
                     </table>
                 </div>
@@ -232,9 +168,13 @@
                 <label for="direccion">Direccion</label><br>
                 <input class="w-100" id="direccion" type="text" required>
               </div>
+              <div class="descripcion">
+                <label for="descripcion">Descripción</label><br>
+                <textarea class="w-100" id="descripcion" rows="3" required></textarea>
+              </div>
               <div class="valor">
                 <label for="valor">Valor</label><br>
-                <input class="w-100" id="valor" type="text" required>
+                <input class="w-100" id="valor" type="number" required>
               </div>
               <div class="d-flex gap-3">
                 <div class="estado w-50">
@@ -254,6 +194,48 @@
                   </div>
               </div>
               <button id="agregarSalonBtn" class="btn btn-primary" disabled>Agregar salón</button>
+            </div>
+          </section>
+
+          <!-- Formulario para editar -->
+          <section id="editarSalones" class="editarSalones position-absolute top-0 start-0 w-100 h-100">
+            <div id="formEditarSalon" class="form bg-white mx-auto p-5 d-flex position-relative flex-column gap-3 rounded">
+              <h4 class="text-center">Editar salón</h4>
+              <i id="cancelBtnEditar" class="fa-solid fa-xmark position-absolute top-0 end-0 p-4 fs-3" style="cursor: pointer"></i>
+              <div class="titulo">
+                <label for="tituloEd">Titulo</label><br>
+                <input class="w-100" id="tituloEd" type="text" required>
+              </div>
+              <div class="direccion">
+                <label for="direccionEd">Direccion</label><br>
+                <input class="w-100" id="direccionEd" type="text" required>
+              </div>
+              <div class="descripcion">
+                <label for="descripcionEd">Descripción</label><br>
+                <textarea class="w-100" id="descripcionEd" rows="3" required></textarea>
+              </div>
+              <div class="valor">
+                <label for="valorEd">Valor</label><br>
+                <input class="w-100" id="valorEd" type="number" required>
+              </div>
+              <div class="d-flex gap-3">
+                <div class="estado w-50">
+                    <label>Estado</label><br>
+                    <div>
+                      <input type="radio" id="disponibleEd" name="estado" value="disponible" required>
+                      <label for="disponibleEd">Disponible</label>
+                    </div>
+                    <div>
+                      <input type="radio" id="noDisponibleEd" name="estado" value="noDisponible" required>
+                      <label for="noDisponibleEd">Reservado</label>
+                    </div>
+                  </div>
+                  <div class="imagen w-50">
+                    <label for="imagenEd">Agrega imagen</label><br>
+                    <input id="imagenEd" type="file" accept="image/*">
+                  </div>
+              </div>
+              <button id="guardarCambios" class="btn btn-primary" disabled>Guardar cambios</button>
             </div>
           </section>
     </main>
