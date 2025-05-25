@@ -121,6 +121,8 @@ agregarSalonBtn.addEventListener('click', (e) => {
   guardarSalones(salones);
   mostrarSalones(salones);
 
+  document.body.style.overflow = 'auto';
+
   agregarSalon.style.display = 'none';
   
   document.getElementById('titulo').value = '';
@@ -131,7 +133,6 @@ agregarSalonBtn.addEventListener('click', (e) => {
   document.getElementById('imagen').value = '';
 
   agregarSalonBtn.disabled = true;
-  document.body.style.overflow = 'auto';
 });
 
 //Funcion que elimina un elemento del arreglo (el event listener se encuentra en mostrarSalones())
@@ -209,6 +210,7 @@ function editarSalon(e) {
 };
 
 guardarCambios.addEventListener('click', (e) => {
+  document.body.style.overflow = 'auto';
   e.preventDefault();
 
   if (idSalonEditando === null) return;

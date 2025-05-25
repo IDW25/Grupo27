@@ -1,66 +1,101 @@
+import { guardarSalones, inicializarLocalStorage, obtenerSalones } from './salones.js';
+
+inicializarLocalStorage();
+
+const salones = obtenerSalones();
+
+mostrarServicios(salones);
+
+export function mostrarServicios(salones) {
+  
+  //Incorporo las nuevas variables para mostrar servicios
+  const tbody = document.getElementById('tbody');
+  tbody.innerHTML = '';
+
+  //Recorro el arreglo salones y selecciono las propiedad que es relevante
+
+  salones.forEach(salon => {
+    const nuevaFila = document.createElement('tr');
+
+    nuevaFila.innerHTML = `
+      <td>${salon.id}</td>
+      <td class="text-start">${salon.descripcion}</td>
+      <td>${'$' + salon.precio}</td>
+      <td>
+         <button class="btn btn-primary btn-sm me-2 editar" data-id="${salon.id}">
+           <i class="fa-solid fa-pen-to-square"></i>
+         </button>
+         <button class="btn btn-danger btn-sm eliminar" data-id="${salon.id}">
+           <i class="fa-solid fa-trash"></i>
+         </button>
+       </td>
+    `;
+    tbody.appendChild(nuevaFila);
+  });
+
+  //Incorporo la funcionalidad eliminar
+  document.querySelectorAll('.eliminar').forEach(boton => {
+  boton.addEventListener('click', eliminarServicio);
+  });
+  //Incorporo la funcionalidad editar
+  document.querySelectorAll('.editar').forEach(boton => {
+  boton.addEventListener('click', editarServicio);
+  });
+};
+
+
+//Agregar servicio
+
 const btnNvo = document.getElementById('btnNvo');
-const agregarServicioBtn = document.getElementById('agregarServBtn');
-const formAgregarServicio = document.getElementById('formAgregarServicio');
 const agregarServicio = document.querySelector('.agregarServicio');
+const cancelBtn = document.getElementById('cancelBtn');
+const formAgregarServicio = document.getElementById('formAgregarServicio');
+const agregarServBtn = document.getElementById('agregarServBtn');
+
 
 btnNvo.addEventListener('click', () => {
   agregarServicio.style.display = 'block';
 });
+
 cancelBtn.addEventListener('click', () => {
   agregarServicio.style.display = 'none';
 });
 
+//Me aseguro que el formulario se complete correctamente
 function checkearFormularioServicio() {
-  const descripcionServicio = document.getElementById('descripcionServicio').value;
+  const descripcion = document.getElementById('descripcionServicio').value;
   const valor = document.getElementById('valor').value;
 
-  const llenadoRequerido =  descripcionServicio !== "" &&  
+  const llenadoRequerido =  descripcion !== "" && 
                             valor !== "";
   if (llenadoRequerido) {
-    document.getElementById('agregarServBtn').disabled = false;
+    agregarServBtn.disabled = false;
   }
 }
 
 formAgregarServicio.addEventListener('input', checkearFormularioServicio);
 
-agregarServicioBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  const descripcionServicio = document.getElementById('descripcionServicio').value;
-  const valor = document.getElementById('valor').value;
+//Agregaremos un nuevo servicio al localstorage
+agregarServBtn.addEventListener('click', () => {
+  const descripcion = document.getElementById('descripcionServicio').value.trim();
+  const valor = document.getElementById('valor').value.trim();
+  console.log(descripcion, valor);
 
-  const tbody = document.querySelector('table tbody');
-  const nuevoID = tbody.rows.length + 1;
+  const tbody = document.getElementById('tbody');
+  const nuevoID = contenedorBody.rows.length + 1;
 
-  const nuevaFila = document.createElement('tr');
-  nuevaFila.innerHTML = `
-      <td>${nuevoID}</td>
-      <td class="text-start">${descripcionServicio}</td>
-      <td>${'$' + valor}</td>
-      <td>
-        <button class="btn btn-primary btn-sm me-2">
-          <i class="fa-solid fa-pen-to-square"></i>
-        </button>
-        <button class="btn btn-danger btn-sm">
-          <i class="fa-solid fa-trash"></i>
-        </button>
-      </td>
-  `;
-  tbody.appendChild(nuevaFila);
-  agregarServicio.style.display = 'none';
-  
-  document.getElementById('descripcionServicio').value = '';
-  document.getElementById('valor').value = '';
+  /*NO ESTOY SEGURO COMO IMPLEMENTAR ESTA PARTE. QUE SERVICIOS NOS REFERIMOS?*/
 
-  console.log(descripcionServicio, valor);
 });
 
-/* Eliminar el presupuesto */
+//Eliminar un servicio
 
-document.querySelectorAll('.eliminar').forEach(boton => {
- boton.addEventListener('click', function () {
-  const fila = this.closest('tr');
-  const celda = fila.querySelectorAll('td');
-  const confirmar = confirm(`¿Estas seguro que deseas eliminar este servicio?`);
-  if (confirmar) fila.remove();
- });
-});
+function eliminarServicio (e) {
+  console.log(e);
+};
+
+//Editar un servicio
+
+function editarServicio (e) {
+  console.log(e);
+};
