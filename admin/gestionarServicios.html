@@ -18,7 +18,7 @@
     <!-- Enlace a la carpeta de estilos -->
     <link rel="stylesheet" href="../CSS/styles.css">
     <!--Enlace al archivo JS-->
-    <script src="../JS/adminServicios.js" defer></script>
+    <script type="module" src="../JS/adminServicios.js" defer></script>
 </head>
 <body>
     <header>
@@ -135,59 +135,7 @@
                           <th>Acciones</th>
                         </tr>
                       </thead>
-                      <tbody>
-                        <tr>
-                          <td>1</td>
-                          <td class="text-start">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio laboriosam cumque hic ratione obcaecati vitae earum minus, rem ea quaerat!</td>
-                          <td>$30000</td>
-                          <td>
-                            <button class="btn btn-primary btn-sm me-2 editar">
-                                <i class="fa-solid fa-pen-to-square"></i>
-                            </button>
-                            <button class="btn btn-danger btn-sm eliminar">
-                                <i class="fa-solid fa-trash"></i>
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>2</td>
-                          <td class="text-start">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio laboriosam cumque hic ratione obcaecati vitae earum minus, rem ea quaerat!</td>
-                          <td>$30000</td>
-                          <td>
-                            <button class="btn btn-primary btn-sm me-2 editar">
-                                <i class="fa-solid fa-pen-to-square"></i>
-                            </button>
-                            <button class="btn btn-danger btn-sm eliminar">
-                                <i class="fa-solid fa-trash"></i>
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>3</td>
-                          <td class="text-start">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio laboriosam cumque hic ratione obcaecati vitae earum minus, rem ea quaerat!</td>
-                          <td>$30000</td>
-                          <td>
-                            <button class="btn btn-primary btn-sm me-2 editar">
-                                <i class="fa-solid fa-pen-to-square"></i>
-                            </button>
-                            <button class="btn btn-danger btn-sm eliminar">
-                                <i class="fa-solid fa-trash"></i>
-                            </button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>4</td>
-                          <td class="text-start">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio laboriosam cumque hic ratione obcaecati vitae earum minus, rem ea quaerat!</td>
-                          <td>$30000</td>
-                          <td>
-                            <button class="btn btn-primary btn-sm me-2 editar">
-                                <i class="fa-solid fa-pen-to-square"></i>
-                            </button>
-                            <button class="btn btn-danger btn-sm eliminar">
-                                <i class="fa-solid fa-trash"></i>
-                            </button>
-                          </td>
-                        </tr>
+                      <tbody id="tbody">
                       </tbody>
                     </table>
                 </div>
@@ -215,7 +163,7 @@
               </div>
               <div class="valor">
                 <label for="valor">Valor</label><br>
-                <input class="w-100" id="valor" type="text" required>
+                <input class="w-100" id="valor" type="number" required>
               </div>
               <button id="agregarServBtn" class="btn btn-primary" disabled>Agregar servicio</button>
             </div>

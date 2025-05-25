@@ -4,10 +4,10 @@ inicializarLocalStorage();
 
 const servicios = obtenerServicios();
 
-renderizarCards(servicios); 
+renderizarCardsServicios(servicios); 
 
 // Renderiza todos los salones consumiendo los datos desde LocalStorage
-export function renderizarCards(servicios) {
+export function renderizarCardsServicios(servicios) {
   const contenedor = document.getElementById("servicios-cards");
   contenedor.innerHTML = ""; // limpia el contenedor antes de renderizar
 

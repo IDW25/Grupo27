@@ -20,7 +20,7 @@
     <!-- Enlace a la carpeta de estilos -->
     <link rel="stylesheet" href="CSS/styles.css">
     <!--Enlace a JS-->
-    <script src="JS/servicios.js" defer></script>
+    <script type="module" src="JS/servicios.js"></script>
 </head>
 
 <body>
@@ -88,14 +88,15 @@
             <div class="card border-0 shadow-sm">
                 <div class="card-body p-4">
                     <h5 class="card-title mb-3">Filtrar servicios</h5>
-                    <form>
+                    <!-- Form -->
+                    <form id="form-filtros">
                         <div class="row g-3 align-items-center">
                             <div class="col-md-7">
-                                <input type="text" class="form-control" placeholder="Buscar por nombre...">
+                                <input type="text" id="filtro-nombre" class="form-control" placeholder="Buscar por nombre...">
                             </div>
                             
                             <div class="col-md-3">
-                                <select class="form-select">
+                                <select id="filtro-orden" class="form-select">
                                     <option value="">Ordenar por</option>
                                     <option value="price_asc">Precio: Menor a Mayor</option>
                                     <option value="price_desc">Precio: Mayor a Menor</option>
@@ -190,7 +191,7 @@
         crossorigin="anonymous"></script>
 
     <script type="module" src="JS/catalogoServicios.js"></script>
-    <script type="module" src="JS/filtros.js"></script>
+    <script type="module" src="JS/filtrosServicios.js"></script>
 </body>
 
 </html>
