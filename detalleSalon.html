@@ -19,6 +19,7 @@
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <!-- Enlace a la carpeta de estilos -->
     <link rel="stylesheet" href="CSS/styles.css">
+    <script type="module" src="./JS/detalleSalon.js" defer></script>
 </head>
 
 <body>
@@ -75,56 +76,11 @@
         <div class="container my-5">
           <div class="row">
             <!-- Izquierda: galeria con imagenes -->
-            <div class="col-lg-7">
-              <div class="rounded mb-3 bg-image" style="background-image: url('Assets/salonA.png'); aspect-ratio: 4 / 3;"></div>
-              <div class="row g-2">
-                <div class="col-3">
-                  <img src="Assets/salonA.png" class="img-fluid img-thumbnail" alt="">
-                </div>
-                <div class="col-3">
-                  <img src="Assets/salonA.png" class="img-fluid img-thumbnail" alt="">
-                </div>
-                <div class="col-3">
-                  <img src="Assets/salonA.png" class="img-fluid img-thumbnail" alt="">
-                </div>
-                <div class="col-3">
-                  <img src="Assets/salonA.png" class="img-fluid img-thumbnail" alt="">
-                </div>
-              </div>
+            <div class="col-lg-7" id="imagenes">
             </div>
     
             <!-- derecha: informacion de salones -->
-            <div class="col-lg-5">
-              <div class="card p-4 shadow">
-                <div class="d-flex justify-content-between align-items-start">
-                  <h4 class="mb-0">Salón A</h4>
-                  <span class="badge bg-success p-2">Disponible</span>
-                  <span class="badge bg-danger p-2 d-none">No disponible</span>
-                </div>
-                <a href="#" class="text-muted"><i class="fa-solid fa-location-dot"></i> Dirección</a>
-                <div class="my-3 bg-light p-2 rounded">
-                  <strong class="text-primary">$30.000</strong><br>
-                  <small class="text-muted">Precio por 4 horas</small>
-                </div>
-                <div class="mb-3">
-                  <h5 class="fw-bold">Descripción</h5>
-                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius nihil assumenda earum. Dicta commodi cumque, sapiente magni numquam laborum porro, corporis lau...</p>
-                </div>
-                <div class="mb-3">
-                  <h5 class="fw-bold">Características</h5>
-                  <ul class="columnas list-unstyled">
-                    <li>Capacidad 50 personas</li>
-                    <li>Estacionamiento</li>
-                    <li>Aire Acondicionado</li>
-                    <li>Superficie 120m2</li>
-                    <li>Equipo de sonido</li>
-                    <li>WI-FI</li>
-                  </ul>
-                </div>
-                <button class="btn px-4 py-2 w-100 w-md-auto text-white border-0 rounded" style="background-color: #0072CE;">
-                  Incluir en el presupuesto
-                </button>
-              </div>
+            <div class="col-lg-5" id="informacionSalon">
             </div>
           </div>
         </div>
