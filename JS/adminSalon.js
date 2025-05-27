@@ -90,7 +90,16 @@ function checkearFormularioSalon() {
 
 formAgregarSalon.addEventListener('input', checkearFormularioSalon);
 
-agregarSalonBtn.addEventListener('click', (e) => {
+function toBase64(file) {
+    return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = error => reject(error);
+  });
+};
+
+agregarSalonBtn.addEventListener('click', async (e) => {
   e.preventDefault();
 
   const titulo = document.getElementById('titulo').value;
@@ -100,7 +109,7 @@ agregarSalonBtn.addEventListener('click', (e) => {
   const disponible = document.getElementById('disponible').checked;
   const noDisponible = document.getElementById('noDisponible').checked;
   const imagen = document.getElementById('imagen').files[0];
-  const imagenURL = imagen ? URL.createObjectURL(imagen) : '';
+  const imagenBase64 = imagen ? await toBase64(imagen) : '';
 
   const estado = disponible ? 'Disponible' : noDisponible ? 'Reservado' : '';
 
@@ -112,7 +121,7 @@ agregarSalonBtn.addEventListener('click', (e) => {
     direccion: direccion,
     descripcion: descripcion,
     precio: valor,
-    imagen: imagenURL,
+    imagen: imagenBase64,
     estado: estado
   };
 
@@ -209,7 +218,7 @@ function editarSalon(e) {
   guardarCambios.disabled = false;
 };
 
-guardarCambios.addEventListener('click', (e) => {
+guardarCambios.addEventListener('click', async (e) => {
   document.body.style.overflow = 'auto';
   e.preventDefault();
 
@@ -227,10 +236,8 @@ guardarCambios.addEventListener('click', (e) => {
   if (salonIndex === -1) return;
 
   if (imagenEd) {
-    salones[salonIndex].imagen = URL.createObjectURL(imagenEd);
-  } else {
-    salones[salonIndex].imagen = '';
-  };
+    salones[salonIndex].imagen = await toBase64(imagenEd);
+  }
 
   salones[salonIndex].nombre = tituloEd;
   salones[salonIndex].direccion = direccionEd;
