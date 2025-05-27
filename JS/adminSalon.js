@@ -24,7 +24,7 @@ export function mostrarSalones(salones) {
 
     nuevaFila.innerHTML = `
       <td>${salon.id}</td>
-      <td><img src="../${salon.imagen}" width="50px"></td>
+      <td><img src="${obtenerSrcImagen(salon.imagen)}" width="50" height="50" style="object-fit: cover;"></td>
       <td>${salon.nombre}</td>
       <td>${salon.direccion}</td>
       <td>${'$' + salon.precio}</td>
@@ -90,7 +90,31 @@ function checkearFormularioSalon() {
 
 formAgregarSalon.addEventListener('input', checkearFormularioSalon);
 
-agregarSalonBtn.addEventListener('click', (e) => {
+function obtenerSrcImagen(imagen) {
+  if (!imagen) return '';
+
+  if (imagen.startsWith('data:')) {
+    return imagen;
+  }
+
+  if (imagen.match(/^[a-zA-Z]:\\/)) {
+    let rutaFile = imagen.replace(/\\/g, '/');
+    return `file:///${rutaFile}`;
+  }
+
+  return `../${imagen}`;
+}
+
+function aBase64(file) {
+    return new Promise((resolve, reject) => {
+    const lector = new FileReader();
+    lector.readAsDataURL(file);
+    lector.onload = () => resolve(lector.result);
+    lector.onerror = error => reject(error);
+  });
+};
+
+agregarSalonBtn.addEventListener('click', async (e) => {
   e.preventDefault();
 
   const titulo = document.getElementById('titulo').value;
@@ -100,7 +124,7 @@ agregarSalonBtn.addEventListener('click', (e) => {
   const disponible = document.getElementById('disponible').checked;
   const noDisponible = document.getElementById('noDisponible').checked;
   const imagen = document.getElementById('imagen').files[0];
-  const imagenURL = imagen ? URL.createObjectURL(imagen) : '';
+  const imagenBase64 = imagen ? await aBase64(imagen) : '';
 
   const estado = disponible ? 'Disponible' : noDisponible ? 'Reservado' : '';
 
@@ -112,7 +136,7 @@ agregarSalonBtn.addEventListener('click', (e) => {
     direccion: direccion,
     descripcion: descripcion,
     precio: valor,
-    imagen: imagenURL,
+    imagen: imagenBase64,
     estado: estado
   };
 
@@ -209,7 +233,7 @@ function editarSalon(e) {
   guardarCambios.disabled = false;
 };
 
-guardarCambios.addEventListener('click', (e) => {
+guardarCambios.addEventListener('click', async (e) => {
   document.body.style.overflow = 'auto';
   e.preventDefault();
 
@@ -227,10 +251,8 @@ guardarCambios.addEventListener('click', (e) => {
   if (salonIndex === -1) return;
 
   if (imagenEd) {
-    salones[salonIndex].imagen = URL.createObjectURL(imagenEd);
-  } else {
-    salones[salonIndex].imagen = '';
-  };
+    salones[salonIndex].imagen = await aBase64(imagenEd);
+  }
 
   salones[salonIndex].nombre = tituloEd;
   salones[salonIndex].direccion = direccionEd;
