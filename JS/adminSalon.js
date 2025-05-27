@@ -24,7 +24,7 @@ export function mostrarSalones(salones) {
 
     nuevaFila.innerHTML = `
       <td>${salon.id}</td>
-      <td><img src="../${salon.imagen}" width="50px"></td>
+      <td><img src="${obtenerSrcImagen(salon.imagen)}" width="50" height="50" style="object-fit: cover;"></td>
       <td>${salon.nombre}</td>
       <td>${salon.direccion}</td>
       <td>${'$' + salon.precio}</td>
@@ -90,12 +90,27 @@ function checkearFormularioSalon() {
 
 formAgregarSalon.addEventListener('input', checkearFormularioSalon);
 
-function toBase64(file) {
+function obtenerSrcImagen(imagen) {
+  if (!imagen) return '';
+
+  if (imagen.startsWith('data:')) {
+    return imagen;
+  }
+
+  if (imagen.match(/^[a-zA-Z]:\\/)) {
+    let rutaFile = imagen.replace(/\\/g, '/');
+    return `file:///${rutaFile}`;
+  }
+
+  return `../${imagen}`;
+}
+
+function aBase64(file) {
     return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = () => resolve(reader.result);
-    reader.onerror = error => reject(error);
+    const lector = new FileReader();
+    lector.readAsDataURL(file);
+    lector.onload = () => resolve(lector.result);
+    lector.onerror = error => reject(error);
   });
 };
 
@@ -109,7 +124,7 @@ agregarSalonBtn.addEventListener('click', async (e) => {
   const disponible = document.getElementById('disponible').checked;
   const noDisponible = document.getElementById('noDisponible').checked;
   const imagen = document.getElementById('imagen').files[0];
-  const imagenBase64 = imagen ? await toBase64(imagen) : '';
+  const imagenBase64 = imagen ? await aBase64(imagen) : '';
 
   const estado = disponible ? 'Disponible' : noDisponible ? 'Reservado' : '';
 
@@ -236,7 +251,7 @@ guardarCambios.addEventListener('click', async (e) => {
   if (salonIndex === -1) return;
 
   if (imagenEd) {
-    salones[salonIndex].imagen = await toBase64(imagenEd);
+    salones[salonIndex].imagen = await aBase64(imagenEd);
   }
 
   salones[salonIndex].nombre = tituloEd;
