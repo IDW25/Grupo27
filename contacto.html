@@ -19,11 +19,6 @@
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <!-- Enlace a la carpeta de estilos -->
     <link rel="stylesheet" href="CSS/styles.css">
-    <script>
-        function send() {
-            alert('Mensaje enviado!');
-        }
-    </script>
 </head>
 
 <body>
@@ -59,15 +54,11 @@
                         </li>
                     </ul>
                     <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                                <i class="fas fa-user-cog me-1"></i>Administración
+                        <li class="nav-item">
+                            <a class="nav-link text-white d-flex align-items-center user-link" href="login.html">
+                                <i class="fa-solid fa-circle-user fs-1 d-none d-lg-inline"></i>
+                                <span class="d-inline d-lg-none">Administración</span>
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="admin/gestionarSalon.html">Gestionar Salones</a></li>
-                                <li><a class="dropdown-item" href="admin/gestionarServicios.html">Gestionar Servicios</a></li>
-                                <li><a class="dropdown-item" href="admin/gestionarPresupuesto.html">Ver Presupuestos</a></li>
-                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -307,6 +298,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
+    <script>
+        function send() {
+            alert('Mensaje enviado!');
+        }
+    </script>
 
 </body>
 </html>

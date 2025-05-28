@@ -134,15 +134,8 @@ body {
   height: auto;
 }
 
-.dropdown-menu {
-  background-color: var(--light-color);
-  border: none;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-}
-
-.dropdown-item:hover {
-  background-color: rgba(var(--bs-primary-rgb), 0.1);
-  color: var(--primary-color);
+.user-link:hover {
+  border-bottom: none !important;
 }
 
 /* Media queries para responsive */
