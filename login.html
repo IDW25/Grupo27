@@ -35,8 +35,8 @@
         <div class="col-12 col-md-8 col-lg-6 col-xl-5">
             <div class="card shadow-2-strong rounded-4">
                 <div class="card-body p-5 text-center">
-                    <h3 class="mb-5">Iniciar Sesión</h3>
-                    <form>
+                    <h3 class="mb-5">Iniciar sesión</h3>
+                    <form id="loginUser">
                         <div class="form-group mb-4 text-start">
                             <label class="form-label" for="usuario">Usuario</label>
                             <input type="text" class="form-control form-control-lg" id="usuario" name="usuario" required autofocus autocomplete="off">
@@ -44,11 +44,10 @@
 
                         <div class="form-group mb-4 text-start">
                             <label class="form-label" for="contraseña">Contraseña</label>
-                            <input type="password" class="form-control form-control-lg" id="contrasena" name="contraseña" required autocomplete="off">
+                            <input type="password" class="form-control form-control-lg" id="contraseña" name="contraseña" required autocomplete="off">
                         </div>
 
-                        <div>
-                            
+                        <div id="userError">
                         </div>
 
                         <button class="btn btn-primary btn-lg btn-block w-100" type="submit">Ingresar</button>
@@ -58,5 +57,6 @@
         </div>
     </main>
     <!-- Fin del Login -->
+    <script type="module" src="JS/login.js"></script>
 </body>
 </html>
