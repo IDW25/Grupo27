@@ -37,7 +37,7 @@ export function mostrarServicios(salones) {
   document.querySelectorAll('.eliminar').forEach(boton => {
   boton.addEventListener('click', eliminarServicio);
   });
-  //Incorporo la funcionalidad editar
+  // //Incorporo la funcionalidad editar
   document.querySelectorAll('.editar').forEach(boton => {
   boton.addEventListener('click', editarServicio);
   });
@@ -91,11 +91,80 @@ agregarServBtn.addEventListener('click', () => {
 //Eliminar un servicio
 
 function eliminarServicio (e) {
-  console.log(e);
+  const boton = e.currentTarget;
+  const id = Number(boton.dataset.id);
+  idEditar = id;
+  const indice = id - 1;
+  const objeto = salones[indice];
+
+  const confirmar = window.confirm('¿Estás seguro de que deseas eliminar este servicio?');
+
+  if (confirmar) {
+    salones.splice(indice, 1);
+    guardarSalones(salones);
+    mostrarServicios(salones);
+  }
+
+  idEditar = null;
 };
 
 //Editar un servicio
+const cancelBtnEditar = document.getElementById('cancelBtnEditar');
+const editarServicioPagina = document.querySelector('.editarServicio');
 
-function editarServicio (e) {
-  console.log(e);
+cancelBtnEditar.addEventListener('click', () => {
+  editarServicioPagina.style.display = 'none';
+});
+
+
+//Incorporo la funcionalidad editar
+const formEditarServicio = document.getElementById('formEditarServicio');
+let idEditar = null;
+
+function editarServicio(e) {
+  const descripcion = document.getElementById('descripcionEd');
+  const valor = document.getElementById('valorEd');
+  const guardarServicioBtn = document.getElementById('guardarServicioBtn');
+  const boton = e.currentTarget;
+  const id = Number(boton.dataset.id);
+  idEditar = id;
+  const indice = id - 1;
+  const objeto = salones[indice];
+
+  editarServicioPagina.style.display = 'block';
+
+  descripcion.value = objeto.descripcion;
+  valor.value = objeto.precio;
+
+  guardarServicioBtn.disabled = false;
 };
+
+guardarServicioBtn.addEventListener('click', () => {
+
+  if (idEditar === null) return;
+
+  const indice = idEditar - 1;
+  const objeto = salones[indice];
+  const descripcion = document.getElementById('descripcionEd').value;
+  const valor = document.getElementById('valorEd').value;
+
+  const editado = {
+   id: idEditar,
+   nombre: objeto.nombre,
+   direccion: objeto.direccion,
+   descripcion: descripcion,
+   precio: Number(valor),
+   imagen: objeto.imagen,
+   estado: objeto.estado
+  };
+
+  salones.splice(indice, 1, editado);
+  guardarSalones(salones);
+  mostrarServicios(salones);
+
+  editarServicioPagina.style.display = 'none';
+
+  formEditarServicio.reset();
+
+  idEditar = null;
+});
