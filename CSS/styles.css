@@ -841,7 +841,7 @@ main > .filtros {
   min-width: 900px;
 }
 
-.agregarSalon, .agregarServicio, .editarPres, .editarSalones {
+.agregarSalon, .agregarServicio, .editarPres, .editarSalones, .editarServicio {
   background: rgb(0, 114, 206, .95);
   z-index: 2000;
 }
@@ -851,7 +851,7 @@ main > .filtros {
   margin-top: 7%;
 }
 
-#agregarSalon, #agregarServicio, #editarPres, #editarSalones {
+#agregarSalon, #agregarServicio, #editarPres, #editarSalones, #editarServicio {
   display: none;
 }
 

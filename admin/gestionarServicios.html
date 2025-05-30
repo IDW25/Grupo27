@@ -151,7 +151,7 @@
         </section>
 
         <!--Formulario para agregar servicio-->
-        <section id="agregarServicio" class="agregarServicio position-absolute top-0 start-0 w-100 h-100">
+        <section id="agregarServicio" class="agregarServicio position-fixed top-0 start-0 w-100 h-100">
             <div id="formAgregarServicio" class="form bg-white mx-auto p-5 d-flex position-relative flex-column gap-3 rounded">
               <h4 class="text-center">Agregar nuevo servicio</h4>
               <i id="cancelBtn" class="fa-solid fa-xmark position-absolute top-0 end-0 p-4 fs-3" style="cursor: pointer"></i>
@@ -164,6 +164,23 @@
                 <input class="w-100" id="valor" type="number" required>
               </div>
               <button id="agregarServBtn" class="btn btn-primary" disabled>Agregar servicio</button>
+            </div>
+          </section>
+
+          <!--Formulario para editar servicio-->
+          <section id="editarServicio" class="editarServicio position-fixed top-0 start-0 w-100 h-100">
+            <div id="formEditarServicio" class="form bg-white mx-auto p-5 d-flex position-relative flex-column gap-3 rounded">
+              <h4 class="text-center">Editar servicio</h4>
+              <i id="cancelBtnEditar" class="fa-solid fa-xmark position-absolute top-0 end-0 p-4 fs-3" style="cursor: pointer"></i>
+              <div class="descripcionContenedor">
+                <label for="descripcionEd">Descripción</label><br>
+                <textarea id="descripcionEd" name="descripcionServicio" class="form-control w-100" rows="4" required></textarea>
+              </div>
+              <div class="valor">
+                <label for="valorEd">Valor</label><br>
+                <input class="w-100" id="valorEd" type="number" required>
+              </div>
+              <button id="guardarServicioBtn" class="btn btn-primary" disabled>Guardar cambios</button>
             </div>
           </section>
     </main>
