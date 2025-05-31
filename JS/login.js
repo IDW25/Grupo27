@@ -3,6 +3,8 @@ if(sessionStorage.getItem("usuario")){
     window.location.href = "admin/gestionarSalon.html";
 }
 
+//Ingreso de usuario
+
 const login = document.getElementById("loginUser");
 
 login.addEventListener("submit",function(event){
@@ -12,11 +14,13 @@ login.addEventListener("submit",function(event){
 
     if (usuario === "idwadmin" && contraseña === "abc123"){
         sessionStorage.setItem("usuario", usuario);
+        alert("Se logueo con éxito!")
         window.location.href = "admin/gestionarSalon.html";
 
     } else {
         const userError = document.getElementById("userError");
         userError.innerHTML +=  '<p class="text-danger">Usuario y contraseña incorrecta. Por favor ingresa nuevamente.</p>';
+        this.reset()
     }
 })
 

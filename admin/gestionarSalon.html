@@ -88,22 +88,22 @@
                 <div class="card border-0 shadow-sm">
                     <div class="card-body p-4">
                         <h5 class="card-title mb-3">Filtrar salones</h5>
-                        <form>
+                        <form id="form-filtros-salon">
                             <div class="row g-3 align-items-center">
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Buscar por nombre...">
+                                    <input type="text" id="filtro-nombre" class="form-control" placeholder="Buscar por nombre...">
                                 </div>
                                 
                                 <div class="col-md-2">
-                                    <select class="form-select">
+                                    <select id="filtro-estado" class="form-select">
                                         <option value="">Estado</option>
-                                        <option value="disponible">Disponible</option>
-                                        <option value="reservado">Reservado</option>
+                                        <option value="Disponible">Disponible</option>
+                                        <option value="Reservado">Reservado</option>
                                     </select>
                                 </div>
 
                                 <div class="col-md-2">
-                                    <select class="form-select">
+                                    <select id="filtro-orden" class="form-select">
                                         <option value="">Ordenar por</option>
                                         <option value="price_asc">Precio: Menor a Mayor</option>
                                         <option value="price_desc">Precio: Mayor a Menor</option>
@@ -154,8 +154,8 @@
         </section>
 
         <!--Formulario para agregar salón-->
-        <section id="agregarSalon" class="agregarSalon position-fixed top-0 start-0 w-100 h-100">
-            <div id="formAgregarSalon" class="form bg-white mx-auto p-5 d-flex position-relative flex-column gap-3 rounded">
+        <section id="agregarSalon" class="agregarSalon position-fixed w-100 h-100">
+            <div id="formAgregarSalon" class="form bg-white my-4 m-auto p-5 d-flex position-relative flex-column gap-3 rounded">
               <h4 class="text-center">Agregar nuevo salón</h4>
               <i id="cancelBtn" class="fa-solid fa-xmark position-absolute top-0 end-0 p-4 fs-3" style="cursor: pointer"></i>
               <div class="titulo">
@@ -188,7 +188,7 @@
                   </div>
                   <div class="imagen w-50">
                     <label for="imagen">Agrega imagen</label><br>
-                    <input id="imagen" type="file" accept="image/*">
+                    <input id="imagen" type="file" accept="image/*"class="form-control">
                   </div>
               </div>
               <button id="agregarSalonBtn" class="btn btn-primary" disabled>Agregar salón</button>
@@ -242,6 +242,7 @@
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
     <script type="module" src="../JS/adminSalon.js" defer></script>
+    <script type="module" src="../JS/filtrosSalon.js" defer></script>
     <script type="module" src="../JS/logout.js"></script>
 </body>
 </html>

@@ -1,12 +1,18 @@
-// Filtros de ordenamiento para salones
-import { obtenerSalones } from './salones.js';
-import { renderizarCards } from './catalogoSalones.js';
+import { inicializarLocalStorage, obtenerSalones } from './salones.js';
+import { mostrarSalones } from './adminSalon.js';
 
+inicializarLocalStorage();
 
-document.getElementById("form-filtros").addEventListener("submit", (e) => {
+// Función para quitar tildes
+function quitarTildes(texto) {
+  return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
+
+//Filtros de la sección administración - Gestionar Salones
+document.getElementById("form-filtros-salon").addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const nombre = document.getElementById("filtro-nombre").value.toLowerCase();
+  const nombre = quitarTildes(document.getElementById("filtro-nombre").value.toLowerCase());
   const estado = document.getElementById("filtro-estado").value;
   const orden = document.getElementById("filtro-orden").value;
 
@@ -14,7 +20,7 @@ document.getElementById("form-filtros").addEventListener("submit", (e) => {
 
   if (nombre) {
     salones = salones.filter(salon =>
-      salon.nombre.toLowerCase().includes(nombre)
+      quitarTildes(salon.nombre.toLowerCase()).includes(nombre)
     );
   }
 
@@ -37,5 +43,5 @@ document.getElementById("form-filtros").addEventListener("submit", (e) => {
       break;
   }
 
-  renderizarCards(salones);
+  mostrarSalones(salones);
 });

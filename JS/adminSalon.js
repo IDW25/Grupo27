@@ -7,6 +7,7 @@ const salones = obtenerSalones();
 //Muestro salones en la tabla 
 mostrarSalones(salones);
 
+
 export function mostrarSalones(salones) {
 
   const contenedorBody = document.getElementById('tbody');
