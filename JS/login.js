@@ -19,7 +19,7 @@ login.addEventListener("submit",function(event){
 
     } else {
         const userError = document.getElementById("userError");
-        userError.innerHTML +=  '<p class="text-danger">Usuario y contraseña incorrecta. Por favor ingresa nuevamente.</p>';
+        userError.innerHTML =  '<p class="text-danger">Usuario y contraseña incorrecta. Por favor ingresa nuevamente.</p>';
         this.reset()
     }
 })
