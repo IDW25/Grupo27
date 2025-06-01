@@ -4,6 +4,7 @@ inicializarLocalStorage();
 
 const servicios = obtenerServicios();
 
+console.log(servicios)
 mostrarServicios(servicios);
 
 export function mostrarServicios(servicios) {
@@ -19,6 +20,7 @@ export function mostrarServicios(servicios) {
 
     nuevaFila.innerHTML = `
       <td>${servicio.id}</td>
+      <td>${servicio.nombre}</td>
       <td class="text-start">${servicio.descripcion}</td>
       <td>${'$' + servicio.precio}</td>
       <td>
@@ -104,8 +106,6 @@ agregarServBtn.addEventListener('click', () => {
   mostrarServicios(servicios);
 
   agregarServicio.style.display = 'none';
-
-  /*NO ESTOY SEGURO COMO IMPLEMENTAR ESTA PARTE. QUE SERVICIOS NOS REFERIMOS?*/
 
 });
 
