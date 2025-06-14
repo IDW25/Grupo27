@@ -1,26 +1,29 @@
-if(sessionStorage.getItem("usuario")){
-    alert("Ya se encuentra logueado!");
-    window.location.href = "admin/gestionarSalon.html";
-}
+import { ingreso } from "./authe.js";
 
-//Ingreso de usuario
+if(sessionStorage.getItem("token")){
+   alert("Ya se encuentra logueado!");
+   window.location.href = "admin/gestionarSalon.html";
+};
+
+// Ingreso de usuario y contraseña
 
 const login = document.getElementById("loginUser");
 
-login.addEventListener("submit",function(event){
+login.addEventListener("submit", async function(event){
     event.preventDefault();
     const usuario = document.getElementById("usuario").value;
     const contraseña = document.getElementById("contraseña").value;
 
-    if (usuario === "idwadmin" && contraseña === "abc123"){
-        sessionStorage.setItem("usuario", usuario);
-        alert("Se logueo con éxito!")
-        window.location.href = "admin/gestionarSalon.html";
+    const usuarioAutenticado = await ingreso(usuario,contraseña);
 
+    if (usuarioAutenticado){
+        sessionStorage.setItem("token", usuarioAutenticado.accessToken);
+        alert("Se logueo con éxito!");
+        window.location.href = "admin/gestionarSalon.html";
     } else {
         const userError = document.getElementById("userError");
         userError.innerHTML =  '<p class="text-danger">Usuario y contraseña incorrecta. Por favor ingresa nuevamente.</p>';
         this.reset()
-    }
-})
+    }   
+});
 
