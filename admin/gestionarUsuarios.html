@@ -33,16 +33,16 @@
                 <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
                     <ul class="navbar-nav text-center d-none">
                         <li class="nav-item">
-                            <a class="nav-link active" href="gestionarSalon.html"><i class="fa-solid fa-folder-open pe-2"></i>Gestionar salones</a>
+                            <a class="nav-link" href="gestionarSalon.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar salones</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="gestionarServicios.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar servicios</a>
+                            <a class="nav-link active" href="gestionarServicios.html"><i class="fa-solid fa-folder-open pe-2"></i>Gestionar servicios</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="gestionarPresupuesto.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar presupuestos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="gestionarUsuarios.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar Usuarios</a>
+                            <a class="nav-link" href="gestionarUsuarios.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar usuaruios</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link logout" href="#"><i class="fa-solid fa-right-from-bracket pe-2"></i>Salir</a>
@@ -56,25 +56,25 @@
     <main class="d-flex p-0 m-0">
 
         <!--Navegacion para pantallas grandes-->
-        <aside class="position-fixed bg-dark text-white admin" style="width: 300px; top: 0;">
+        <aside class="bg-dark text-white admin" style="width: 300px; top: 0;">
             <nav class="navbar w-100 p-0 align-items-start">
                 <div class="container py-5 mx-auto w-100">
                     <h5 class="mx-auto py-2 fw-bold">Panel de administración</h5>
                     <ul class="navbar-nav mx-auto d-block">
                         <li class="nav-item">
-                            <a class="nav-link active" href="gestionarSalon.html"><i class="fa-solid fa-folder-open pe-2"></i>Gestionar salones</a>
+                            <a class="nav-link" href="gestionarSalon.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar salones</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="gestionarServicios.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar servicios</a>
+                            <a class="nav-link active" href="gestionarServicios.html"><i class="fa-solid fa-folder-open pe-2"></i>Gestionar servicios</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="gestionarPresupuesto.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar presupuestos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="gestionarUsuarios.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar usuarios</a>
+                            <a class="nav-link" href="gestionarUsuarios.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar usuaruios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link logout" href="#"><i class="fa-solid fa-right-from-bracket pe-2"></i>Salir</a>
+                            <a  class="nav-link logout" href="#"><i class="fa-solid fa-right-from-bracket pe-2"></i>Salir</a>
                         </li>
                     </ul>
                 </div>
@@ -85,31 +85,31 @@
 
             <!-- Titulo y boton de agregar -->
             <div class="container d-flex justify-content-between align-items-center mb-3">
-                <h4 class="fw-bold m-0">Gestionar salones</h4>
-                <button id="btnNvo" class="btn btn-primary"><i class="fa-solid fa-plus"></i><span class="ps-2 tituloBtn">Nuevo salón</span></button>
+                <h4 class="fw-bold m-0">Gestionar usuarios</h4>
+                <button id="btnNvo" class="btn btn-primary"><i class="fa-solid fa-plus"></i><span class="ps-2 tituloBtn">Nuevo usuario</span></button>
             </div>
             
             <!-- Filtros -->
             <div class="container mb-3">
                 <div class="card border-0 shadow-sm">
                     <div class="card-body p-4">
-                        <h5 class="card-title mb-3">Filtrar salones</h5>
-                        <form id="form-filtros-salon">
+                        <h5 class="card-title mb-3">Filtrar usuaruios</h5>
+                        <form>
                             <div class="row g-3 align-items-center">
                                 <div class="col-md-6">
-                                    <input type="text" id="filtro-nombre" class="form-control" placeholder="Buscar por nombre...">
+                                    <input type="text" class="form-control" placeholder="Buscar por nombre...">
                                 </div>
                                 
                                 <div class="col-md-2">
-                                    <select id="filtro-estado" class="form-select">
+                                    <select class="form-select">
                                         <option value="">Estado</option>
-                                        <option value="Disponible">Disponible</option>
-                                        <option value="Reservado">Reservado</option>
+                                        <option value="disponible">Disponible</option>
+                                        <option value="reservado">Reservado</option>
                                     </select>
                                 </div>
 
                                 <div class="col-md-2">
-                                    <select id="filtro-orden" class="form-select">
+                                    <select class="form-select">
                                         <option value="">Ordenar por</option>
                                         <option value="price_asc">Precio: Menor a Mayor</option>
                                         <option value="price_desc">Precio: Mayor a Menor</option>
@@ -133,13 +133,11 @@
                     <table class="table text-center">
                       <thead>
                         <tr>
-                          <th>ID</th>
-                          <th>Imagen</th>
-                          <th>Titulo</th>
-                          <th>Direccion</th>
-                          <th>Valor</th>
-                          <th>Estado</th>
-                          <th>Acciones</th>
+                          <th>Id</th>
+                          <th>Nombre</th>
+                          <th class="w-50">Usuario</th>
+                          <th>Email</th>
+                          <th>Telefono</th>
                         </tr>
                       </thead>
                       <tbody id="tbody">
@@ -159,97 +157,50 @@
 
         </section>
 
-        <!--Formulario para agregar salón-->
-        <section id="agregarSalon" class="agregarSalon position-fixed w-100 h-100">
-            <div id="formAgregarSalon" class="form bg-white my-4 m-auto p-5 d-flex position-relative flex-column gap-3 rounded">
-              <h4 class="text-center">Agregar nuevo salón</h4>
+        <!--Formulario para agregar servicio -> AHORA SERIA AGREGAR NUEVO USUARIO-->
+        <section id="agregarServicio" class="agregarServicio position-fixed top-0 start-0 w-100 h-100">
+            <div id="formAgregarServicio" class="form bg-white mx-auto p-5 d-flex position-relative flex-column gap-3 rounded">
+              <h4 class="text-center">Agregar nuevo servicio</h4>
               <i id="cancelBtn" class="fa-solid fa-xmark position-absolute top-0 end-0 p-4 fs-3" style="cursor: pointer"></i>
-              <div class="titulo">
-                <label for="titulo">Titulo</label><br>
-                <input class="w-100" id="titulo" type="text" required>
+              <div class="nombreContenedor">
+                <label for="nombreServicio">Nombre</label><br>
+                <input class="w-100" id="nombreServicio" type="text" required>
               </div>
-              <div class="direccion">
-                <label for="direccion">Direccion</label><br>
-                <input class="w-100" id="direccion" type="text" required>
-              </div>
-              <div class="descripcion">
-                <label for="descripcion">Descripción</label><br>
-                <textarea class="w-100" id="descripcion" rows="3" required></textarea>
+              <div class="descripcionContenedor">
+                <label for="descripcionServicio">Descripción</label><br>
+                <textarea id="descripcionServicio" name="descripcionServicio" class="form-control w-100" rows="4" required></textarea>
               </div>
               <div class="valor">
                 <label for="valor">Valor</label><br>
                 <input class="w-100" id="valor" type="number" required>
               </div>
-              <div class="d-flex gap-3">
-                <div class="estado w-50">
-                    <label>Estado</label><br>
-                    <div>
-                      <input type="radio" id="disponible" name="estado" value="disponible" required>
-                      <label for="disponible">Disponible</label>
-                    </div>
-                    <div>
-                      <input type="radio" id="noDisponible" name="estado" value="noDisponible" required>
-                      <label for="noDisponible">Reservado</label>
-                    </div>
-                  </div>
-                  <div class="imagen w-50">
-                    <label for="imagen">Agrega imagen</label><br>
-                    <input id="imagen" type="file" accept="image/*"class="form-control">
-                  </div>
-              </div>
-              <button id="agregarSalonBtn" class="btn btn-primary" disabled>Agregar salón</button>
+              <button id="agregarServBtn" class="btn btn-primary" disabled>Agregar servicio</button>
             </div>
           </section>
 
-          <!-- Formulario para editar -->
-          <section id="editarSalones" class="editarSalones position-fixed w-100 h-100">
-            <div id="formEditarSalon" class="form bg-white my-4 m-auto p-5 d-flex position-relative flex-column gap-3 rounded">
-              <h4 class="text-center">Editar salón</h4>
+          <!--Formulario para editar servicio
+          <section id="editarServicio" class="editarServicio position-fixed top-0 start-0 w-100 h-100">
+            <div id="formEditarServicio" class="form bg-white mx-auto p-5 d-flex position-relative flex-column gap-3 rounded">
+              <h4 class="text-center">Editar servicio</h4>
               <i id="cancelBtnEditar" class="fa-solid fa-xmark position-absolute top-0 end-0 p-4 fs-3" style="cursor: pointer"></i>
-              <div class="titulo">
-                <label for="tituloEd">Titulo</label><br>
-                <input class="w-100" id="tituloEd" type="text" required>
-              </div>
-              <div class="direccion">
-                <label for="direccionEd">Direccion</label><br>
-                <input class="w-100" id="direccionEd" type="text" required>
-              </div>
-              <div class="descripcion">
+              <div class="descripcionContenedor">
                 <label for="descripcionEd">Descripción</label><br>
-                <textarea class="w-100" id="descripcionEd" rows="3" required></textarea>
+                <textarea id="descripcionEd" name="descripcionServicio" class="form-control w-100" rows="4" required></textarea>
               </div>
               <div class="valor">
                 <label for="valorEd">Valor</label><br>
                 <input class="w-100" id="valorEd" type="number" required>
               </div>
-              <div class="d-flex gap-3">
-                <div class="estado w-50">
-                    <label>Estado</label><br>
-                    <div>
-                      <input type="radio" id="disponibleEd" name="estado" value="disponible" required>
-                      <label for="disponibleEd">Disponible</label>
-                    </div>
-                    <div>
-                      <input type="radio" id="noDisponibleEd" name="estado" value="noDisponible" required>
-                      <label for="noDisponibleEd">Reservado</label>
-                    </div>
-                  </div>
-                  <div class="imagen w-50">
-                    <label for="imagenEd" class="form-label">Agrega imagen</label>
-                    <input id="imagenEd" type="file" accept="image/*" class="form-control">
-                  </div>
-              </div>
-              <button id="guardarCambios" class="btn btn-primary" disabled>Guardar cambios</button>
+              <button id="guardarServicioBtn" class="btn btn-primary" disabled>Guardar cambios</button>
             </div>
-          </section>
+          </section>-->
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
     <script type="module" src="../JS/logout.js"></script>
-    <script type="module" src="../JS/adminSalon.js" defer></script>
-    <script type="module" src="../JS/filtrosSalon.js" defer></script>
+    <script type="module" src="../JS/adminUsers2.js" defer></script>
     
 </body>
 </html>
