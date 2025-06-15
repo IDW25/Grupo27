@@ -1,10 +1,12 @@
-
 document.addEventListener("DOMContentLoaded", () =>{
-    if(!sessionStorage.getItem("usuario")){
+    if(!sessionStorage.getItem("token")){
     window.location.href = "../login.html";
     return;
     }
-})
+    // Mostrar el contenido si está logueado
+    document.body.classList.remove("ocultar");
+});
+
 
 //Para cerrar sesión
 
