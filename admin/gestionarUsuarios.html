@@ -93,26 +93,18 @@
             <div class="container mb-3">
                 <div class="card border-0 shadow-sm">
                     <div class="card-body p-4">
-                        <h5 class="card-title mb-3">Filtrar usuaruios</h5>
+                        <h5 class="card-title mb-3">Filtrar usuarios</h5>
                         <form>
                             <div class="row g-3 align-items-center">
-                                <div class="col-md-6">
+                                <div class="col-md-8">
                                     <input type="text" class="form-control" placeholder="Buscar por nombre...">
                                 </div>
                                 
-                                <div class="col-md-2">
-                                    <select class="form-select">
-                                        <option value="">Estado</option>
-                                        <option value="disponible">Disponible</option>
-                                        <option value="reservado">Reservado</option>
-                                    </select>
-                                </div>
 
                                 <div class="col-md-2">
                                     <select class="form-select">
                                         <option value="">Ordenar por</option>
-                                        <option value="price_asc">Precio: Menor a Mayor</option>
-                                        <option value="price_desc">Precio: Mayor a Menor</option>
+                                        <option value="Id">Id</option>
                                         <option value="name_asc">Nombre: A-Z</option>
                                         <option value="name_desc">Nombre: Z-A</option>
                                     </select>
@@ -134,8 +126,8 @@
                       <thead>
                         <tr>
                           <th>Id</th>
-                          <th>Nombre</th>
-                          <th class="w-50">Usuario</th>
+                          <th>Usuario</th>
+                          <th class="w-25">Nombre</th>
                           <th>Email</th>
                           <th>Telefono</th>
                         </tr>
@@ -157,50 +149,18 @@
 
         </section>
 
-        <!--Formulario para agregar servicio -> AHORA SERIA AGREGAR NUEVO USUARIO-->
-        <section id="agregarServicio" class="agregarServicio position-fixed top-0 start-0 w-100 h-100">
-            <div id="formAgregarServicio" class="form bg-white mx-auto p-5 d-flex position-relative flex-column gap-3 rounded">
-              <h4 class="text-center">Agregar nuevo servicio</h4>
-              <i id="cancelBtn" class="fa-solid fa-xmark position-absolute top-0 end-0 p-4 fs-3" style="cursor: pointer"></i>
-              <div class="nombreContenedor">
-                <label for="nombreServicio">Nombre</label><br>
-                <input class="w-100" id="nombreServicio" type="text" required>
-              </div>
-              <div class="descripcionContenedor">
-                <label for="descripcionServicio">Descripción</label><br>
-                <textarea id="descripcionServicio" name="descripcionServicio" class="form-control w-100" rows="4" required></textarea>
-              </div>
-              <div class="valor">
-                <label for="valor">Valor</label><br>
-                <input class="w-100" id="valor" type="number" required>
-              </div>
-              <button id="agregarServBtn" class="btn btn-primary" disabled>Agregar servicio</button>
-            </div>
-          </section>
+        <!--Formulario para agregar nuevo usuario
+        <section>
 
-          <!--Formulario para editar servicio
-          <section id="editarServicio" class="editarServicio position-fixed top-0 start-0 w-100 h-100">
-            <div id="formEditarServicio" class="form bg-white mx-auto p-5 d-flex position-relative flex-column gap-3 rounded">
-              <h4 class="text-center">Editar servicio</h4>
-              <i id="cancelBtnEditar" class="fa-solid fa-xmark position-absolute top-0 end-0 p-4 fs-3" style="cursor: pointer"></i>
-              <div class="descripcionContenedor">
-                <label for="descripcionEd">Descripción</label><br>
-                <textarea id="descripcionEd" name="descripcionServicio" class="form-control w-100" rows="4" required></textarea>
-              </div>
-              <div class="valor">
-                <label for="valorEd">Valor</label><br>
-                <input class="w-100" id="valorEd" type="number" required>
-              </div>
-              <button id="guardarServicioBtn" class="btn btn-primary" disabled>Guardar cambios</button>
-            </div>
-          </section>-->
+        </section>  -->
+
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
     <script type="module" src="../JS/logout.js"></script>
-    <script type="module" src="../JS/adminUsers2.js" defer></script>
+    <script type="module" src="../JS/adminUsers.js" defer></script>
     
 </body>
 </html>
