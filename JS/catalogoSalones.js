@@ -3,6 +3,7 @@ import { inicializarLocalStorage, obtenerSalones } from './salones.js';
 inicializarLocalStorage();
 
 const salones = obtenerSalones();
+  console.log("Salones cargados:", salones)
 
 renderizarCards(salones); 
 

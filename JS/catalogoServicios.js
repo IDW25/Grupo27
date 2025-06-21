@@ -3,6 +3,8 @@ import { serviciosIniciales, obtenerServicios, inicializarLocalStorage } from '.
 inicializarLocalStorage();
 
 const servicios = obtenerServicios();
+ console.log("Servicios cargados:", servicios)
+
 
 renderizarCardsServicios(servicios);
 
