@@ -62,14 +62,7 @@ export function mostrarDetalle(salones) {
      </div>
      <div class="mb-3">
        <h5 class="fw-bold">Características</h5>
-       <ul class="columnas list-unstyled">
-         <li>Capacidad 50 personas</li>
-         <li>Estacionamiento</li>
-         <li>Aire Acondicionado</li>
-         <li>Superficie 120m2</li>
-         <li>Equipo de sonido</li>
-         <li>WI-FI</li>
-       </ul>
+       <ul id="ul" class="columnas list-unstyled"></ul>
      </div>
      <div class="card-footer bg-transparent border-top-0">
      <a href="presupuesto.html" class="btn btn-primary w-100">Incluir en el presupuesto</a>
@@ -79,4 +72,12 @@ export function mostrarDetalle(salones) {
   
   imagenes.appendChild(nuevasImagenes);
   informacionSalon.appendChild(infoSalon);
+
+  const ul = document.getElementById('ul');
+
+  salonEncontrado.caracteristicas.forEach((i) => {
+  const li = document.createElement('li');
+      li.textContent = i;
+      ul.appendChild(li);
+    });
 }
