@@ -259,6 +259,9 @@ body {
   .hero-image-container {
     max-height: 300px;
   }
+  .mostrar-aside {
+      display: block !important;
+    }
 }
 
 /* ¿Cómo funciona? */
