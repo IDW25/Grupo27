@@ -31,27 +31,30 @@
     </header>
 
     <!-- Login -->
-    <main class="content bg-primary d-flex justify-content-center align-items-center min-vh-100">
-        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-            <div class="card shadow-2-strong rounded-4">
-                <div class="card-body p-5 text-center">
-                    <h3 class="mb-5">Iniciar sesión</h3>
-                    <form id="loginUser">
-                        <div class="form-group mb-4 text-start">
-                            <label class="form-label" for="usuario">Usuario</label>
-                            <input type="text" class="form-control form-control-lg" id="usuario" name="usuario" required autofocus autocomplete="off">
-                        </div>
+    <main class="bg-primary min-vh-100 d-flex align-items-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card shadow rounded-4">
+                        <div class="card-body p-5 text-center">
+                            <h3 class="mb-5">Iniciar sesión</h3>
+                            <form id="loginUser">
+                                <div class="form-group mb-4 text-start">
+                                    <label class="form-label" for="usuario">Usuario</label>
+                                    <input type="text" class="form-control form-control-lg" id="usuario" name="usuario" required autofocus autocomplete="off">
+                                </div>
 
-                        <div class="form-group mb-4 text-start">
-                            <label class="form-label" for="contraseña">Contraseña</label>
-                            <input type="password" class="form-control form-control-lg" id="contraseña" name="contraseña" required autocomplete="off">
-                        </div>
+                                <div class="form-group mb-4 text-start">
+                                    <label class="form-label" for="contraseña">Contraseña</label>
+                                    <input type="password" class="form-control form-control-lg" id="contraseña" name="contraseña" required autocomplete="off">
+                                </div>
 
-                        <div id="userError">
-                        </div>
+                                <div id="userError"></div>
 
-                        <button class="btn btn-primary btn-lg btn-block w-100" type="submit">Ingresar</button>
-                    </form>
+                                <button class="btn btn-primary btn-lg btn-block w-100" type="submit">Ingresar</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
