@@ -71,9 +71,9 @@ export function mostrarDetalle(salones) {
          <li>WI-FI</li>
        </ul>
      </div>
-     <button class="btn px-4 py-2 w-100 w-md-auto text-white border-0 rounded" style="background-color: #0072CE;">
-       Incluir en el presupuesto
-     </button>
+     <div class="card-footer bg-transparent border-top-0">
+     <a href="presupuesto.html" class="btn btn-primary w-100">Incluir en el presupuesto</a>
+     </div>
    </div>
   `;
   
