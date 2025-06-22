@@ -1,4 +1,4 @@
-import { serviciosIniciales, obtenerServicios, inicializarLocalStorage } from './servicios.js';
+import {obtenerServicios, inicializarLocalStorage } from './servicios.js';
 
 inicializarLocalStorage();
 
@@ -8,7 +8,7 @@ const servicios = obtenerServicios();
 
 renderizarCardsServicios(servicios);
 
-// Renderiza todos los salones consumiendo los datos desde LocalStorage
+// Renderiza todos los servicios consumiendo los datos desde LocalStorage
 export function renderizarCardsServicios(servicios) {
   const contenedor = document.getElementById("servicios-cards");
   contenedor.innerHTML = ""; // limpia el contenedor antes de renderizar

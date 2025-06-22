@@ -93,23 +93,15 @@
             <div class="container mb-3">
                 <div class="card border-0 shadow-sm">
                     <div class="card-body p-4">
-                        <h5 class="card-title mb-3">Filtrar salones</h5>
-                        <form>
+                        <h5 class="card-title mb-3">Filtrar servicios</h5>
+                        <form id="form-filtros-servicios">
                             <div class="row g-3 align-items-center">
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Buscar por nombre...">
-                                </div>
-                                
-                                <div class="col-md-2">
-                                    <select class="form-select">
-                                        <option value="">Estado</option>
-                                        <option value="disponible">Disponible</option>
-                                        <option value="reservado">Reservado</option>
-                                    </select>
+                                    <input type="text" id="filtro-nombre" class="form-control" placeholder="Buscar por nombre...">
                                 </div>
 
-                                <div class="col-md-2">
-                                    <select class="form-select">
+                                <div class="col-md-4">
+                                    <select id="filtro-orden" class="form-select">
                                         <option value="">Ordenar por</option>
                                         <option value="price_asc">Precio: Menor a Mayor</option>
                                         <option value="price_desc">Precio: Mayor a Menor</option>
@@ -145,16 +137,6 @@
                     </table>
                 </div>
             </div>
-
-            <!--Botones de la tabla-->
-            <div class="d-flex justify-content-center align-items-center gap-2 p-3">
-                <button class="btn btn-primary">Anterior</button>
-                    <span class="ms-2">1</span>
-                    <span class="m-2">2</span>
-                    <span class="me-2">3</span>
-                <button class="btn btn-primary">Siguiente</button>
-            </div>
-
         </section>
 
         <!--Formulario para agregar servicio-->
@@ -206,6 +188,7 @@
         crossorigin="anonymous"></script>
     <script type="module" src="../JS/logout.js"></script>
     <script type="module" src="../JS/adminServicios.js" defer></script>
+    <script type="module" src="../JS/filtrosServiciosAdmin.js" defer></script>
     <script type="module" src="../JS/fontAwesome.js"></script>
 </body>
 </html>

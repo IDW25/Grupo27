@@ -1,5 +1,5 @@
-// Constante de salones de eventos
-export const serviciosIniciales = [
+// Constante de servicios de eventos
+export const serviciosIniciar = [
     {
       id: 1,
       nombre: "Torta Tematica",
@@ -46,19 +46,19 @@ export const serviciosIniciales = [
   
   
   // Inicialización de localStorage
-  // Si localStorage está vacío, guarda los datos de const salonesIniciales
+  // Si localStorage está vacío, guarda los datos de const servicios
   export function inicializarLocalStorage() {
     if (!localStorage.getItem("servicios")) {
-      localStorage.setItem("servicios", JSON.stringify(serviciosIniciales));
+      localStorage.setItem("servicios", JSON.stringify(serviciosIniciar));
     }
   }
   
-  // Devuelve el array actual de salones
+  // Devuelve el array actual de servicios
   export function obtenerServicios() {
     return JSON.parse(localStorage.getItem("servicios")) || [];
   }
   
-  // Guarda un nuevo array de salones en localStorage
+  // Guarda un nuevo array de servicios en localStorage
   export function guardarServicios(servicios) {
     localStorage.setItem("servicios", JSON.stringify(servicios));
   }
