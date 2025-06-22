@@ -1,12 +1,14 @@
-import { serviciosIniciales, obtenerServicios, inicializarLocalStorage } from './servicios.js';
+import {obtenerServicios, inicializarLocalStorage } from './servicios.js';
 
 inicializarLocalStorage();
 
 const servicios = obtenerServicios();
+ console.log("Servicios cargados:", servicios)
 
-renderizarCardsServicios(servicios); 
 
-// Renderiza todos los salones consumiendo los datos desde LocalStorage
+renderizarCardsServicios(servicios);
+
+// Renderiza todos los servicios consumiendo los datos desde LocalStorage
 export function renderizarCardsServicios(servicios) {
   const contenedor = document.getElementById("servicios-cards");
   contenedor.innerHTML = ""; // limpia el contenedor antes de renderizar
@@ -25,11 +27,13 @@ export function renderizarCardsServicios(servicios) {
         <h5 class="card-title">${servicio.nombre}</h5>
         <p class="card-text mt-3">${servicio.descripcion}</p>
         <p class="card-text text-center mb-4">$${servicio.precio.toLocaleString()}</p>
-        <button class="btn btn-primary w-100">Incluir en el presupuesto</button>
+        <div class="card-footer bg-transparent border-top-0">
+          <a href="presupuesto.html" class="btn btn-primary w-100">Incluir en el presupuesto</a>
+         </div>
       </div>
     </div>
   `;
 
-  contenedor.appendChild(content);
-});
+    contenedor.appendChild(content);
+  });
 }

@@ -18,7 +18,7 @@
     <!-- Enlace a la carpeta de estilos -->
     <link rel="stylesheet" href="../CSS/styles.css">
 </head>
-<body>
+<body class="ocultar">
     <header>
     <!--Navegacion y logo-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary p-0">
@@ -40,6 +40,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="gestionarPresupuesto.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar presupuestos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gestionarUsuarios.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar usuarios</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link logout" href="#"><i class="fa-solid fa-right-from-bracket pe-2"></i>Salir</a>
@@ -66,6 +69,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="gestionarPresupuesto.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar presupuestos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gestionarUsuarios.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar usuarios</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link logout" href="#"><i class="fa-solid fa-right-from-bracket pe-2"></i>Salir</a>
@@ -142,15 +148,6 @@
                 </div>
             </div>
 
-            <!--Botones de la tabla-->
-            <div class="d-flex justify-content-center align-items-center gap-2 p-3">
-                <button class="btn btn-primary">Anterior</button>
-                    <span class="ms-2">1</span>
-                    <span class="m-2">2</span>
-                    <span class="me-2">3</span>
-                <button class="btn btn-primary">Siguiente</button>
-            </div>
-
         </section>
 
         <!--Formulario para agregar salón-->
@@ -190,6 +187,10 @@
                     <label for="imagen">Agrega imagen</label><br>
                     <input id="imagen" type="file" accept="image/*"class="form-control">
                   </div>
+              </div>
+              <div class="caracteristicas">
+                <label for="caracteristicas">Características del salon</label><br>
+                <textarea name="caracteristicas" id="caracteristicas" class="w-100 ps-2" placeholder="Separa cada item con ; (punto y coma)"></textarea>
               </div>
               <button id="agregarSalonBtn" class="btn btn-primary" disabled>Agregar salón</button>
             </div>
@@ -233,6 +234,10 @@
                     <input id="imagenEd" type="file" accept="image/*" class="form-control">
                   </div>
               </div>
+              <div class="caracteristicasEd">
+                <label for="caracteristicasEd">Características del salon</label><br>
+                <textarea name="caracteristicasEd" id="caracteristicasEd" class="w-100 ps-2" placeholder="Separa cada item con ; (punto y coma)"></textarea>
+              </div>
               <button id="guardarCambios" class="btn btn-primary" disabled>Guardar cambios</button>
             </div>
           </section>
@@ -241,8 +246,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
+    <script type="module" src="../JS/logout.js"></script>
     <script type="module" src="../JS/adminSalon.js" defer></script>
     <script type="module" src="../JS/filtrosSalon.js" defer></script>
-    <script type="module" src="../JS/logout.js"></script>
+    
 </body>
 </html>

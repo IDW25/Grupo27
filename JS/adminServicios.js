@@ -1,4 +1,5 @@
 import { guardarServicios, inicializarLocalStorage, obtenerServicios } from './servicios.js';
+import { iconos } from './fontAwesome.js';
 
 inicializarLocalStorage();
 
@@ -53,9 +54,17 @@ const agregarServicio = document.querySelector('.agregarServicio');
 const cancelBtn = document.getElementById('cancelBtn');
 const formAgregarServicio = document.getElementById('formAgregarServicio');
 const agregarServBtn = document.getElementById('agregarServBtn');
+const inputIcono = document.getElementById('icono');
+const mostrarIcono = document.getElementById('mostrarIcono');
+let iconoSeleccionado = null;
 
 
 btnNvo.addEventListener('click', () => {
+  inputIcono.value = '';
+  mostrarIcono.innerHTML = '';
+  document.getElementById('nombreServicio').value = '';
+  document.getElementById('descripcionServicio').value = '';
+  document.getElementById('valor').value = '';
   agregarServicio.style.display = 'block';
 });
 
@@ -84,7 +93,7 @@ agregarServBtn.addEventListener('click', () => {
   const nombre = document.getElementById('nombreServicio').value.trim();
   const descripcion = document.getElementById('descripcionServicio').value.trim();
   const valor = document.getElementById('valor').value.trim();
-  const icono = "fa-solid fa-face-smile-wink";
+  const icono = iconoSeleccionado;
 
   console.log(nombre, descripcion, valor);
 
@@ -107,6 +116,11 @@ agregarServBtn.addEventListener('click', () => {
 
   agregarServicio.style.display = 'none';
 
+  inputIcono.value = '';
+  mostrarIcono.innerHTML = '';
+  nombre.innerHTML = '';
+  descripcion.innerHTML = '';
+  valor.innerHTML = '';
 });
 
 //Eliminar un servicio
@@ -115,7 +129,7 @@ function eliminarServicio (e) {
   const boton = e.currentTarget;
   const id = Number(boton.dataset.id);
   idEditar = id;
-  const indice = id - 1;
+  const indice = servicios.findIndex(servicio => servicio.id === idEditar);
   const objeto = servicios[indice];
 
   const confirmar = window.confirm('¿Estás seguro de que deseas eliminar este servicio?');
@@ -149,7 +163,7 @@ function editarServicio(e) {
   const boton = e.currentTarget;
   const id = Number(boton.dataset.id);
   idEditar = id;
-  const indice = id - 1;
+  const indice = servicios.findIndex(servicio => servicio.id === idEditar);
   const objeto = servicios[indice];
 
   editarServicioPagina.style.display = 'block';
@@ -164,7 +178,7 @@ guardarServicioBtn.addEventListener('click', () => {
 
   if (idEditar === null) return;
 
-  const indice = idEditar - 1;
+  const indice = servicios.findIndex(servicio => servicio.id === idEditar);
   const objeto = servicios[indice];
   const descripcion = document.getElementById('descripcionEd').value;
   const valor = document.getElementById('valorEd').value;
@@ -186,4 +200,29 @@ guardarServicioBtn.addEventListener('click', () => {
   formEditarServicio.reset();
 
   idEditar = null;
+});
+
+//FONT AWESOME
+
+inputIcono.addEventListener('input', () => {
+
+  iconoSeleccionado = null;
+  const palabra = inputIcono.value.trim();
+  mostrarIcono.innerHTML = '';
+
+  const icono = iconos.filter(icono => icono.name.toLowerCase().includes(palabra.toLowerCase()));
+  
+  if (icono) {
+    icono.forEach(icono => {
+      const li = document.createElement('li');
+      li.style.listStyle = 'none';
+      li.innerHTML = `<i class="${icono.class}" style="color:#0072ce; padding: 20px 20px; font-size: 1.5em; cursor: pointer;"></i>`
+      mostrarIcono.appendChild(li);
+      li.addEventListener('click', () => {
+        iconoSeleccionado = icono.class;
+        mostrarIcono.innerHTML = `<p style="color:#0072ce; padding: 0 20px;">Icono seleccionado: <i class="${iconoSeleccionado}" style="color:#0072ce; padding: 20px 20px; font-size: 1.5em; cursor: pointer;"></i></p>`;
+        inputIcono.value = `${icono.name}`;
+     });
+    });
+  };
 });

@@ -79,11 +79,13 @@ function checkearFormularioSalon() {
   const valor = document.getElementById('valor').value;
   const disponible = document.getElementById('disponible').checked;
   const noDisponible = document.getElementById('noDisponible').checked;
+  const caracteristicas = document.getElementById('caracteristicas').value;
 
   const llenadoRequerido =  titulo !== "" && 
                             direccion !== "" && 
                             valor !== "" && 
-                            (disponible || noDisponible);
+                            (disponible || noDisponible) &&
+                            caracteristicas !== "";
   if (llenadoRequerido) {
     document.getElementById('agregarSalonBtn').disabled = false;
   }
@@ -115,6 +117,14 @@ function aBase64(file) {
   });
 };
 
+function procesarCaracteristicas(texto) {
+  return texto
+    .split(";")
+    .map(c => c.trim())
+    .filter(c => c !== "")
+    .map(c => c.charAt(0).toUpperCase() + c.slice(1));
+}
+
 agregarSalonBtn.addEventListener('click', async (e) => {
   e.preventDefault();
 
@@ -129,6 +139,9 @@ agregarSalonBtn.addEventListener('click', async (e) => {
 
   const estado = disponible ? 'Disponible' : noDisponible ? 'Reservado' : '';
 
+  const caracteristicas = document.getElementById('caracteristicas').value;
+  const listaCaract = procesarCaracteristicas(caracteristicas);
+
   const contenedorBody = document.getElementById('tbody');
   const nuevoID = contenedorBody.rows.length + 1;
   const nuevoSalon = {
@@ -138,7 +151,8 @@ agregarSalonBtn.addEventListener('click', async (e) => {
     descripcion: descripcion,
     precio: valor,
     imagen: imagenBase64,
-    estado: estado
+    estado: estado,
+    caracteristicas: listaCaract
   };
 
   salones.push(nuevoSalon);
@@ -156,6 +170,7 @@ agregarSalonBtn.addEventListener('click', async (e) => {
   document.getElementById('disponible').checked = false;
   document.getElementById('noDisponible').checked = false;
   document.getElementById('imagen').value = '';
+  document.getElementById('caracteristicas').value = '';
 
   agregarSalonBtn.disabled = true;
 });
@@ -205,8 +220,9 @@ formEditarSalon.addEventListener('input', () => {
   const valorEd = document.getElementById('valorEd').value.trim();
   const disponibleEd = document.getElementById('disponibleEd').checked;
   const noDisponibleEd = document.getElementById('noDisponibleEd').checked;
+  const caracteristicas = document.getElementById('caracteristicasEd').value;
 
-  guardarCambios.disabled = !(tituloEd && direccionEd && descripcionEd && valorEd && (disponibleEd || noDisponibleEd));
+  guardarCambios.disabled = !(tituloEd && direccionEd && descripcionEd && valorEd && (disponibleEd || noDisponibleEd) && caracteristicas);
 });
 
 let idSalonEditando = null;
@@ -230,6 +246,7 @@ function editarSalon(e) {
   document.getElementById('valorEd').value = salonEditar.precio;
   document.getElementById('disponibleEd').checked = (salonEditar.estado === 'Disponible');
   document.getElementById('noDisponibleEd').checked = (salonEditar.estado === 'Reservado');
+  document.getElementById('caracteristicasEd').value = salonEditar.caracteristicas.join('; ');
 
   guardarCambios.disabled = false;
 };
@@ -247,6 +264,8 @@ guardarCambios.addEventListener('click', async (e) => {
   const disponibleEd = document.getElementById('disponibleEd').checked;
   const noDisponibleEd = document.getElementById('noDisponibleEd').checked;
   const imagenEd = document.getElementById('imagenEd').files[0];
+  const caracteristicas = document.getElementById('caracteristicasEd').value;
+  const listaCaracteristicas = procesarCaracteristicas(caracteristicas);
   
   const salonIndex = salones.findIndex(salon => salon.id === idSalonEditando);
   if (salonIndex === -1) return;
@@ -260,6 +279,7 @@ guardarCambios.addEventListener('click', async (e) => {
   salones[salonIndex].descripcion = descripcionEd;
   salones[salonIndex].precio = valorEd;
   salones[salonIndex].estado = disponibleEd ? 'Disponible' : noDisponibleEd ? 'Reservado' : '';
+  salones[salonIndex].caracteristicas = listaCaracteristicas;
 
   guardarSalones(salones);
   mostrarSalones(salones);

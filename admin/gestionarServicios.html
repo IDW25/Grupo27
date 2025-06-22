@@ -18,7 +18,7 @@
     <!-- Enlace a la carpeta de estilos -->
     <link rel="stylesheet" href="../CSS/styles.css">
 </head>
-<body>
+<body class="ocultar">
     <header>
     <!--Navegacion y logo-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary p-0">
@@ -40,6 +40,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="gestionarPresupuesto.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar presupuestos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gestionarUsuarios.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar usuarios</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link logout" href="#"><i class="fa-solid fa-right-from-bracket pe-2"></i>Salir</a>
@@ -68,6 +71,9 @@
                             <a class="nav-link" href="gestionarPresupuesto.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar presupuestos</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="gestionarUsuarios.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar usuarios</a>
+                        </li>
+                        <li class="nav-item">
                             <a  class="nav-link logout" href="#"><i class="fa-solid fa-right-from-bracket pe-2"></i>Salir</a>
                         </li>
                     </ul>
@@ -87,23 +93,15 @@
             <div class="container mb-3">
                 <div class="card border-0 shadow-sm">
                     <div class="card-body p-4">
-                        <h5 class="card-title mb-3">Filtrar salones</h5>
-                        <form>
+                        <h5 class="card-title mb-3">Filtrar servicios</h5>
+                        <form id="form-filtros-servicios">
                             <div class="row g-3 align-items-center">
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Buscar por nombre...">
-                                </div>
-                                
-                                <div class="col-md-2">
-                                    <select class="form-select">
-                                        <option value="">Estado</option>
-                                        <option value="disponible">Disponible</option>
-                                        <option value="reservado">Reservado</option>
-                                    </select>
+                                    <input type="text" id="filtro-nombre" class="form-control" placeholder="Buscar por nombre...">
                                 </div>
 
-                                <div class="col-md-2">
-                                    <select class="form-select">
+                                <div class="col-md-4">
+                                    <select id="filtro-orden" class="form-select">
                                         <option value="">Ordenar por</option>
                                         <option value="price_asc">Precio: Menor a Mayor</option>
                                         <option value="price_desc">Precio: Mayor a Menor</option>
@@ -139,16 +137,6 @@
                     </table>
                 </div>
             </div>
-
-            <!--Botones de la tabla-->
-            <div class="d-flex justify-content-center align-items-center gap-2 p-3">
-                <button class="btn btn-primary">Anterior</button>
-                    <span class="ms-2">1</span>
-                    <span class="m-2">2</span>
-                    <span class="me-2">3</span>
-                <button class="btn btn-primary">Siguiente</button>
-            </div>
-
         </section>
 
         <!--Formulario para agregar servicio-->
@@ -167,6 +155,11 @@
               <div class="valor">
                 <label for="valor">Valor</label><br>
                 <input class="w-100" id="valor" type="number" required>
+              </div>
+              <div>
+                <label for="icono">Busca tu ícono:</label>
+                <input id="icono" name="icono" type="text" required>
+                <ul id="mostrarIcono" class="d-flex flex-wrap gap-1 ps-0 mb-0"></ul>
               </div>
               <button id="agregarServBtn" class="btn btn-primary" disabled>Agregar servicio</button>
             </div>
@@ -193,7 +186,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
-    <script type="module" src="../JS/adminServicios.js" defer></script>
     <script type="module" src="../JS/logout.js"></script>
+    <script type="module" src="../JS/adminServicios.js" defer></script>
+    <script type="module" src="../JS/filtrosServiciosAdmin.js" defer></script>
+    <script type="module" src="../JS/fontAwesome.js"></script>
 </body>
 </html>

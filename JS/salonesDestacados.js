@@ -6,7 +6,9 @@ inicializarLocalStorage();
 
 const contenedor = document.getElementById("salones-destacados");
 const salones = obtenerSalones();
+  console.log("Salones cargados:", salones)
 const destacados = salones.slice(0, 3);
+  console.log("Salones cargados (3):", destacados)
 
 destacados.forEach(salon => {
   const columna = document.createElement("div");
