@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 // Función para cargar presupuestos desde localStorage
-export function cargarPresupuestos() {
+function cargarPresupuestos() {
   const presupuestos = JSON.parse(localStorage.getItem("presupuestos")) || []
   console.log("Presupuestos cargados:", presupuestos)
   mostrarPresupuestos(presupuestos)
