@@ -33,13 +33,13 @@
                 <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
                     <ul class="navbar-nav text-center d-none">
                         <li class="nav-item">
-                            <a class="nav-link active" href="gestionarSalon.html"><i class="fa-solid fa-folder-open pe-2"></i>Gestionar salones</a>
+                            <a class="nav-link" href="gestionarSalon.html"><i class="fa-solid fa-folder-open pe-2"></i>Gestionar salones</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="gestionarServicios.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar servicios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="gestionarPresupuesto.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar presupuestos</a>
+                            <a class="nav-link active" href="gestionarPresupuesto.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar presupuestos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="gestionarUsuarios.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar usuarios</a>
@@ -62,13 +62,13 @@
                     <h5 class="mx-auto py-2 fw-bold">Panel de administración</h5>
                     <ul class="navbar-nav mx-auto d-block">
                         <li class="nav-item">
-                            <a class="nav-link active" href="gestionarSalon.html"><i class="fa-solid fa-folder-open pe-2"></i>Gestionar salones</a>
+                            <a class="nav-link" href="gestionarSalon.html"><i class="fa-solid fa-folder-open pe-2"></i>Gestionar salones</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="gestionarServicios.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar servicios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="gestionarPresupuesto.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar presupuestos</a>
+                            <a class="nav-link active" href="gestionarPresupuesto.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar presupuestos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="gestionarUsuarios.html"><i class="fa-solid fa-folder pe-2"></i>Gestionar usuarios</a>
@@ -98,10 +98,10 @@
                     <div class="card-body p-4">
                         <h5 class="card-title mb-3">Filtrar presupuestos
                         </h5>
-                        <form>
+                        <form class="form-filtros-presupuestos">
                             <div class="row g-3 align-items-center">
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Buscar por nombre...">
+                                    <input type="text" id ="filtro-nombre" class="form-control" placeholder="Buscar por nombre...">
                                 </div>
                                 
                                 <div class="col-md-2">
@@ -109,7 +109,7 @@
                                 </div>
 
                                 <div class="col-md-2">
-                                    <select class="form-select">
+                                    <select id="filtro-orden" class="form-select">
                                         <option value="">Ordenar por</option>
                                         <option value="price_asc">Precio: Menor a Mayor</option>
                                         <option value="price_desc">Precio: Mayor a Menor</option>
@@ -156,16 +156,6 @@
                     </table>
                 </div>
             </div>
-
-            <!--Botones de la tabla-->
-            <div class="d-flex justify-content-center align-items-center gap-2 p-3">
-                <button class="btn btn-primary">Anterior</button>
-                    <span class="ms-2">1</span>
-                    <span class="m-2">2</span>
-                    <span class="me-2">3</span>
-                <button class="btn btn-primary">Siguiente</button>
-            </div>
-
         </section>
 
         <!--Formulario para editar presupuesto-->

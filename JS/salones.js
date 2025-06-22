@@ -1,6 +1,5 @@
-
 // Constante de salones de eventos
-export const salonesIniciales = [
+export const salonesIniciar = [
   {
     id: 1,
     nombre: "Castillo Saltarín",
@@ -157,10 +156,10 @@ export const salonesIniciales = [
 ];
 
 // Inicialización de localStorage
-// Si localStorage está vacío, guarda los datos de const salonesIniciales
+// Si localStorage está vacío, guarda los datos de const salonesIniciar
 export function inicializarLocalStorage() {
   if (!localStorage.getItem("salones")) {
-    localStorage.setItem("salones", JSON.stringify(salonesIniciales));
+    localStorage.setItem("salones", JSON.stringify(salonesIniciar));
   }
 }
 

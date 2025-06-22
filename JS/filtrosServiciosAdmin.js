@@ -1,8 +1,8 @@
-// Filtros de ordenamiento para servicios
-import { renderizarCardsServicios } from './catalogoServicios.js';
-import { obtenerServicios } from './servicios.js';
+import { obtenerServicios} from './servicios.js';
+import { mostrarServicios } from './adminServicios.js';
 
-document.getElementById("form-filtros").addEventListener("submit", (e) => {
+//Filtros de la sección administración - Gestionar Servicios
+document.getElementById("form-filtros-servicios").addEventListener("submit", (e) => {
   e.preventDefault();
 
   const nombre = document.getElementById("filtro-nombre").value.toLowerCase();
@@ -31,6 +31,5 @@ document.getElementById("form-filtros").addEventListener("submit", (e) => {
       break;
   }
 
-  renderizarCardsServicios(servicios);
-
+  mostrarServicios(servicios);
 });

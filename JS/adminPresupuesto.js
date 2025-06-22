@@ -7,9 +7,10 @@ function cargarPresupuestos() {
   const presupuestos = JSON.parse(localStorage.getItem("presupuestos")) || []
   console.log("Presupuestos cargados:", presupuestos)
   mostrarPresupuestos(presupuestos)
-}
+};
 
 // Función para mostrar presupuestos en la tabla
+
 function mostrarPresupuestos(presupuestos) {
   const tbody = document.querySelector("tbody")
 
