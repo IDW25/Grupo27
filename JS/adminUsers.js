@@ -1,15 +1,48 @@
+// Lista de usuarios y filtros de gestionarUsuarios
+
 document.addEventListener('DOMContentLoaded', async () => {
   const tbody = document.getElementById('tbody');
+  const formFiltros = document.getElementById('form-filtros');
+  const inputNombre = document.getElementById('filtro-nombre');
+  const selectOrden = document.getElementById('filtro-orden');
 
-  // Intento traer los datos de usuarios de la API  
+  let usuarios = [];
+
   try {
-    const listaUsuarios = await fetch('https://dummyjson.com/users');
-    
-    const data = await listaUsuarios.json();
-    const usuarios = data.users;
+    const respuesta = await fetch('https://dummyjson.com/users');
+    const data = await respuesta.json();
+    usuarios = data.users;
+    renderTabla(usuarios);
+  } catch (error) {
+    console.error('Error al obtener los usuarios:', error);
+    alert('¡Error con la API de usuarios!');
+  }
 
-    // Recorro la lista de usuarios para cargarlos en la tabla
-    usuarios.forEach((usuario) => {
+  formFiltros.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const textoNombre = inputNombre.value.toLowerCase().trim();
+    const orden = selectOrden.value;
+
+    let filtrados = usuarios.filter(usuario => {
+      const nombreCompleto = `${usuario.firstName} ${usuario.lastName}`.toLowerCase();
+      return nombreCompleto.includes(textoNombre);
+    });
+
+    if (orden === 'id') {
+      filtrados.sort((a, b) => a.id - b.id);
+    } else if (orden === 'name_asc') {
+      filtrados.sort((a, b) => a.firstName.localeCompare(b.firstName));
+    } else if (orden === 'name_desc') {
+      filtrados.sort((a, b) => b.firstName.localeCompare(a.firstName));
+    }
+
+    renderTabla(filtrados);
+  });
+
+  function renderTabla(lista) {
+    tbody.innerHTML = '';
+    lista.forEach(usuario => {
       const fila = document.createElement('tr');
       fila.innerHTML = `
         <td>${usuario.id}</td>
@@ -20,9 +53,5 @@ document.addEventListener('DOMContentLoaded', async () => {
       `;
       tbody.appendChild(fila);
     });
-
-  } catch (error) {
-    console.error('Error al obtener los usuarios:', error);
-    alert('¡Error con la API de usuarios!');
   }
 });
