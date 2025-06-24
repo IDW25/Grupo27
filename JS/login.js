@@ -18,7 +18,7 @@ login.addEventListener("submit", async function(event){
 
     if (usuarioAutenticado){
         sessionStorage.setItem("token", usuarioAutenticado.accessToken);
-        alert("Se logueo con éxito!");
+        alert(`Se logueó ${usuario} con éxito!`);
         window.location.href = "admin/gestionarSalon.html";
     } else {
         const userError = document.getElementById("userError");

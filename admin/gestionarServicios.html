@@ -140,8 +140,8 @@
         </section>
 
         <!--Formulario para agregar servicio-->
-        <section id="agregarServicio" class="agregarServicio position-fixed top-0 start-0 w-100 h-100">
-            <div id="formAgregarServicio" class="form bg-white mx-auto p-5 d-flex position-relative flex-column gap-3 rounded">
+        <section id="agregarServicio" class="agregarServicio position-fixed top-0 start-0 w-100 h-100 ">
+            <div id="formAgregarServicio" class="form bg-white my-3 m-auto p-5 d-flex position-relative flex-column gap-3 rounded">
               <h4 class="text-center">Agregar nuevo servicio</h4>
               <i id="cancelBtn" class="fa-solid fa-xmark position-absolute top-0 end-0 p-4 fs-3" style="cursor: pointer"></i>
               <div class="nombreContenedor">
@@ -159,14 +159,14 @@
               <div>
                 <label for="icono">Busca tu ícono:</label>
                 <input id="icono" name="icono" type="text" required>
-                <ul id="mostrarIcono" class="d-flex flex-wrap gap-1 ps-0 mb-0"></ul>
+                <ul id="mostrarIcono" class="d-flex flex-wrap gap-2 list-unstyled border p-2 mt-2 overflow-auto" style="max-height: 150px;"></ul>
               </div>
               <button id="agregarServBtn" class="btn btn-primary" disabled>Agregar servicio</button>
             </div>
-          </section>
+        </section>
 
           <!--Formulario para editar servicio-->
-          <section id="editarServicio" class="editarServicio position-fixed top-0 start-0 w-100 h-100">
+        <section id="editarServicio" class="editarServicio position-fixed top-0 start-0 w-100 h-100">
             <div id="formEditarServicio" class="form bg-white mx-auto p-5 d-flex position-relative flex-column gap-3 rounded">
               <h4 class="text-center">Editar servicio</h4>
               <i id="cancelBtnEditar" class="fa-solid fa-xmark position-absolute top-0 end-0 p-4 fs-3" style="cursor: pointer"></i>
@@ -180,7 +180,7 @@
               </div>
               <button id="guardarServicioBtn" class="btn btn-primary" disabled>Guardar cambios</button>
             </div>
-          </section>
+        </section>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"

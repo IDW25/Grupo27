@@ -553,30 +553,6 @@ footer {
   padding: 40px 0;           
 }
 
-/*BOTON FLOTANTE WHATSAPP*/
-.btn-whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 100;
-  background-color: #25D366;
-  color: var(--light-color);
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  text-decoration: none;
-}
-
-/*ESTILO IMAGEN WHATSAPP*/
-.btn-whatsapp img.whatsapp-icon {
-  width: 25px;
-  height: 25px;
-} 
-
 /*ESTILOS PRESUPUESTO*/
 .container-form { /*CONTENEDOR FORMULARIO Y RESUMEN*/
   margin-left: 5rem;
