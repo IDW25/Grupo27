@@ -4,6 +4,6 @@ Integrantes Grupo 27:
 - Ortiz Micaela Giselle
 - Sanchez Ezequiel Eduardo
 
-- Credenciales para ingresar a admin: usar API
+Credenciales para ingresar a admin: usar API
 - Usuario de prueba: emilys
 - Contraseña: emilyspass
